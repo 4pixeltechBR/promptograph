@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Cache index
+        uses: actions/cache@v4
+        with:
+          path: data/index_filtered.json
+          key: index-${{ hashFiles('generator/refine_index.py') }}
+      - name: Run smoke test
+        run: |
+          python3 -c "import sys; sys.path.insert(0, '.'); from generator.parser import scan_all_repos; print('Import OK')"
+          python3 -c "import sys; sys.path.insert(0, '.'); from generator.builder import build_prompt, PRESET_TEMPLATES; p = build_prompt(PRESET_TEMPLATES['claude_coding_agent']['spec']); print(f'Generated {len(p)} chars')"
+          python3 -c "import sys; sys.path.insert(0, '.'); from validators.quality import validate_prompt; r = validate_prompt('You are Claude, a helpful assistant. Be warm. Use markdown. Refuse harmful requests.'); assert r['score'] > 50, f'Score too low: {r[\"score\"]}'; print(f'Validation: {r[\"score\"]}%')"
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check Python syntax
+        run: |
+          python3 -m py_compile server.py
+          python3 -m py_compile generator/*.py
+          python3 -m py_compile validators/*.py
+
+  deploy-pages:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'static'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
