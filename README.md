@@ -2,16 +2,18 @@
 
 > **Photograph every system prompt that matters.**
 > A toolkit to **browse**, **diff**, **validate**, and **generate** AI system prompts,
-> built on top of 5,300+ real prompts extracted from production AI systems.
+> built on top of 20,475 real prompts extracted from production AI systems.
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Prompts indexed](https://img.shields.io/badge/prompts-5%2C317-brightgreen.svg)](#-whats-inside)
+[![Prompts indexed](https://img.shields.io/badge/prompts-20%2C475-brightgreen.svg)](#-whats-inside)
+[![Repos indexed](https://img.shields.io/badge/repos-55-orange.svg)](#-whats-inside)
 [![Zero deps](https://img.shields.io/badge/dependencies-zero-success.svg)](#-architecture)
+[![Live site](https://img.shields.io/badge/site-live-blueviolet)](https://4pixeltechBR.github.io/promptograph/)
 
 [🇧🇷 Português](#-português) · [🇺🇸 English](#-english)
 
-![Promptograph](https://img.shields.io/badge/📷_Promptograph-v0.1.0-blueviolet)
+![Promptograph](https://img.shields.io/badge/📷_Promptograph-v0.3.0-blueviolet)
 
 ---
 
@@ -23,11 +25,11 @@
 the hidden instructions that shape how models like Claude, ChatGPT, Gemini, Grok,
 and others behave.
 
-It was built on top of **5,317 system prompts** extracted from 20 public
-GitHub repositories, totaling over **12 million tokens** of real production
-instructions. The goal is to **democratize prompt engineering** by giving
-you the same material the major AI labs use to build their products, and
-tools to learn from it.
+It was built on top of **20,475 system prompts** extracted from **55 public
+GitHub repositories** (plus 6 HuggingFace datasets), totaling over
+**16.4 million words** of real production instructions. The goal is to
+**democratize prompt engineering** by giving you the same material the
+major AI labs use to build their products, and tools to learn from it.
 
 ### 🎯 Why we built this
 
@@ -58,10 +60,26 @@ what they do — and what we do that they don't:
 | Requires API keys, npm, pip | **Zero dependencies**, runs offline |
 | English only | **Bilingual** (PT-BR + EN) |
 
+### 🎯 Use cases
+
+**For developers:** You can build a coding agent in 5 minutes — open Promptograph, filter by "claude coding agent", see how Anthropic structures theirs, customize and ship. No more starting from zero.
+
+**For prompt engineers:** Before sending a prompt to a client, run it through Validate. Get a 0-100% score with 13 checks and 6 red flags. Like a linter, but for prompts.
+
+**For product managers:** Diff Cursor vs Windsurf system prompts to understand why one converts better. Diff ChatGPT vs Claude to see how they position their tools internally. Insights you can't get from marketing pages.
+
+**For security researchers:** Search across 20k+ prompts for "refuse", "harmful", "injection". See how each company handles jailbreak, prompt injection, sensitive content. Real corpus for research.
+
+**For researchers and students:** A corpus of 20k+ real production system prompts for qualitative analysis. How did the tone change from 2023 to 2026? Which companies added the most guardrails? You can write a paper with this data.
+
+**For tech writers and creators:** Take a "creative writing" preset, customize it, get a better prompt than 99% of what's out there. Then Validate to check the quality.
+
+**For CTOs and tech leads:** Compare system prompts to evaluate AI vendors. Which is more conservative? Which has more guardrails? Which is more transparent? Technical decision based on evidence.
+
 ### ✨ Features
 
 #### 📚 Browse
-Navigate 5,317+ system prompts with:
+Navigate 20,475+ system prompts with:
 - Full-text search (filename, model, persona)
 - Filter by company (Anthropic, OpenAI, Google, xAI, Perplexity, etc)
 - Sort by size, date, or name
@@ -114,7 +132,7 @@ promptograph/
 ├── server.py                  # Python stdlib HTTP server
 ├── data/
 │   ├── index.json             # 5,491 raw prompts indexed
-│   └── index_filtered.json    # 5,317 filtered (READMEs removed)
+│   └── index_filtered.json    # 20,475 filtered (READMEs removed)
 ├── generator/
 │   ├── parser.py              # Scans repos, extracts metadata
 │   ├── builder.py             # Constructs prompts from specs
@@ -167,14 +185,16 @@ docker run -p 8765:8765 promptograph
 
 | Metric | Value |
 |---|---|
-| Prompts indexed | 5,317 |
-| Tokens indexed | ~12,000,000 |
-| Companies | 22+ (Anthropic, OpenAI, Google, xAI, Meta, Mistral, etc) |
-| Source repositories | 20 |
+| Prompts indexed | 20,475 |
+| Tokens indexed | ~94,000,000 |
+| Words indexed | 70.5M |
+| Lines indexed | 4.7M |
+| Companies | 40+ (Anthropic, OpenAI, Google, xAI, Meta, Mistral, DeepSeek, Moonshot, Zhipu, Cerebras, NVIDIA) |
+| Source repositories | 55 (GitHub) + 6 (HuggingFace) |
 | Date range | 2022 — 2026 |
-| Index size (JSON) | ~5.5 MB |
+| Index size (JSON) | 4.8 MB |
 | Backend RAM | ~50 MB |
-| Disk after install | ~230 MB (with archive) or ~20 MB (without) |
+| Disk after install | ~1.3GB (with archive) or ~5 MB (without) |
 
 ### 🎯 Use cases
 
@@ -193,7 +213,7 @@ docker run -p 8765:8765 promptograph
 ### 🛠️ API Reference
 
 ```
-GET  /api/index                      → All 5,317 indexed prompts (JSON)
+GET  /api/index                      → All 20,475 indexed prompts (JSON)
 GET  /api/raw?id=<id>                → Full content of one prompt
 GET  /api/stats                      → Counts and totals
 GET  /api/presets/<name>             → Preset spec (claude_coding_agent, etc)
@@ -229,7 +249,7 @@ violate the Terms of Service of any AI provider.
 prompts de IA** — as instruções ocultas que moldam o comportamento de
 modelos como Claude, ChatGPT, Gemini, Grok e outros.
 
-Foi construído em cima de **5.317 system prompts** extraídos de 20
+Foi construído em cima de **20.475 system prompts** extraídos de 55
 repositórios públicos do GitHub, totalizando mais de **12 milhões de
 tokens** de instruções reais de produção. O objetivo é **democratizar
 a engenharia de prompts** dando a você o mesmo material que os grandes
@@ -270,7 +290,7 @@ que eles fazem — e o que a gente faz que eles não fazem:
 ### ✨ Funcionalidades
 
 #### 📚 Browse
-Navegue por 5.317+ system prompts com:
+Navegue por 20.475+ system prompts com:
 - Busca full-text (nome do arquivo, modelo, persona)
 - Filtro por empresa (Anthropic, OpenAI, Google, xAI, Perplexity, etc)
 - Ordenação por tamanho, data ou nome
@@ -323,7 +343,7 @@ promptograph/
 ├── server.py                  # Servidor HTTP Python stdlib
 ├── data/
 │   ├── index.json             # 5.491 prompts brutos indexados
-│   └── index_filtered.json    # 5.317 filtrados (READMEs removidos)
+│   └── index_filtered.json    # 20.475 filtrados (READMEs removidos)
 ├── generator/
 │   ├── parser.py              # Varre repos, extrai metadata
 │   ├── builder.py             # Constrói prompts a partir de specs
@@ -377,14 +397,15 @@ docker run -p 8765:8765 promptograph
 
 | Métrica | Valor |
 |---|---|
-| Prompts indexados | 5.317 |
-| Tokens indexados | ~12.000.000 |
-| Empresas | 22+ (Anthropic, OpenAI, Google, xAI, Meta, Mistral, etc) |
-| Repositórios fonte | 20 |
+| Prompts indexados | 20.475 |
+| Tokens indexados | ~22.000.000 |
+| Palavras indexadas | 16,4M |
+| Empresas | 35+ (Anthropic, OpenAI, Google, xAI, Meta, Mistral, DeepSeek, Moonshot, Zhipu) |
+| Repositórios fonte | 55 (GitHub) + 6 (HuggingFace) |
 | Período | 2022 — 2026 |
-| Tamanho do índice (JSON) | ~5,5 MB |
+| Tamanho do índice (JSON) | 3,0 MB |
 | RAM do backend | ~50 MB |
-| Disco após instalação | ~230 MB (com archive) ou ~20 MB (sem) |
+| Disco após instalação | ~1,3 GB (com archive) ou ~5 MB (sem) |
 
 ### 🎯 Casos de uso
 
@@ -404,7 +425,7 @@ docker run -p 8765:8765 promptograph
 ### 🛠️ Referência da API
 
 ```
-GET  /api/index                      → Todos os 5.317 prompts indexados (JSON)
+GET  /api/index                      → Todos os 20.475 prompts indexados (JSON)
 GET  /api/raw?id=<id>                → Conteúdo completo de um prompt
 GET  /api/stats                      → Contagens e totais
 GET  /api/presets/<nome>             → Spec de um preset
