@@ -1,4 +1,6 @@
-// app.js — Frontend do Meta-Prompt Engine
+// app.js — Frontend do Promptograph
+// "Photograph every system prompt that matters."
+// https://github.com/4pixeltechBR/promptograph
 // SPA pura em vanilla JS, consome a API em /api/*
 
 const $ = (s) => document.querySelector(s);
@@ -22,7 +24,20 @@ async function init() {
         renderGenerate();
     } catch (e) {
         console.error('Init failed:', e);
-        $('#content').innerHTML = '<p class="error">Erro ao carregar índice. Verifique se o backend está rodando.</p>';
+        $('#content').innerHTML = `
+            <div class="v-summary" style="border-color: #f59e0b; text-align: left;">
+                <h3>⚠️ Backend API not available</h3>
+                <p class="v-verdict" style="text-align: left;">This is a <strong>static preview</strong> of <strong>Promptograph v0.3.0</strong>'s UI. The interactive features (browse <strong>20,475+</strong> prompts across <strong>55</strong> repos, diff, validate, generate) require the Python backend running.</p>
+                <p style="text-align: left; margin-top: 12px;"><strong>To enable full features:</strong></p>
+                <pre style="text-align: left;">git clone https://github.com/4pixeltechBR/promptograph.git
+cd promptograph
+python3 server.py 8765
+# Then open http://localhost:8765</pre>
+                <p style="text-align: left; margin-top: 12px;">Or use Docker:</p>
+                <pre style="text-align: left;">docker build -t promptograph .
+docker run -p 8765:8765 promptograph</pre>
+            </div>
+        `;
     }
 }
 
