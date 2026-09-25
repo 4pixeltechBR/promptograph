@@ -31,19 +31,19 @@ Estamos preparando, saneando e empacotando o projeto **Promptograph** para relea
 - [x] FASE R1 — Arqueologia (Mapeamento profundo do repo local, git diff e inventário de ativos em E:\Skills)
 - [x] FASE R2 — Triagem & Matriz de Risco (Classificação de ativos: 34 Verdes, 5 Amarelas, 8 Falsos Positivos, 5 Vermelhas Isoladas)
 - [x] FASE R3 — Estabilização & Blindagem (.gitignore estrito, desacoplamento de goal.py, zero vazamento de caminhos pessoais)
-- [x] FASE R4 — Remediação & Integração de Valor (FastMCP Server v0.2.0 com 7 tools, 226 skills em 37 categorias, manifesto gerado)
-- [➔] FASE R5 — Documentação, Validação Final e Graduação (README bilíngue atualizado, suíte de testes 100% verde, release GitHub)
-- [ ] → Trilha Verde (Evolução contínua pós-release: v0.3.0 e registry web)
+- [x] FASE R4 — Remediação & Integração de Valor (FastMCP Server v0.3.1 com 7 tools, 226 skills em 37 categorias, manifesto gerado)
+- [x] FASE R5 — Documentação, Validação Final e Graduação (README bilíngue atualizado, suíte de testes 100% verde, release GitHub v0.3.1)
+- [➔] → Trilha Verde (Evolução contínua: expansão de blueprints, registry web e indexação contínua de skills)
 
 Marcação: `[➔]` fase atual · `[x]` concluída · `[ ]` futura
 
 ---
 
 ## Fase atual
-- **Fase:** FASE R5 — Documentação, Validação Final e Graduação
-- **Sub-tarefa ativa:** R5.1 — Revisão final de diff git, validação de integridade dos arquivos e autorização do usuário para commit e push
-- **Está pronto quando:** Commit atômico criado sob identidade `4pixeltechBR` e sincronizado com `https://github.com/4pixeltechBR/promptograph`
-- **Próximo passo explícito:** Obter confirmação final do usuário e realizar o commit e push oficial.
+- **Fase:** Trilha Verde — Evolução Contínua
+- **Sub-tarefa ativa:** G1.0 — Monitoramento do repositório público, documentação de integração MCP para usuários e catalogação incremental
+- **Está pronto quando:** Repositório publicado e ativo em `https://github.com/4pixeltechBR/promptograph` com tags v0.2.0 e v0.3.1 disponíveis
+- **Próximo passo explícito:** Divulgação, conexões em plataformas como Awesome-MCP-Servers e expansão de novas tools sob demanda.
 
 ---
 
