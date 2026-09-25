@@ -1,0 +1,2654 @@
+[
+  {
+    "id": "ebu-r128-audio-loudness-normalizer",
+    "name": "EBU R128 & ITU-R BS.1770-4 Dual-Pass Audio Loudness Normalizer",
+    "category": "01_Voz_e_Audio_Realtime",
+    "description": ">",
+    "tags": [
+      "voz_e_audio_realtime",
+      "r128",
+      "audio",
+      "loudness"
+    ]
+  },
+  {
+    "id": "edge-tts-neural-voice-synthesizer",
+    "name": "Edge-TTS Neural Voice Synthesizer & WordBoundary Engine",
+    "category": "01_Voz_e_Audio_Realtime",
+    "description": ">",
+    "tags": [
+      "voz_e_audio_realtime",
+      "edge",
+      "neural",
+      "voice"
+    ]
+  },
+  {
+    "id": "hectorg-jarvis-voice-desktop-agent",
+    "name": "🤖 HectorG Jarvis: Autonomous Voice & Desktop Agent",
+    "category": "01_Voz_e_Audio_Realtime",
+    "description": "Arquitetura completa de Agente Autônomo de Voz e Automação Desktop (Jarvis) com detecção acústica, ElevenLabs, Claude in Chrome, Ollama e orquestração de subagentes operando 24/7 e",
+    "tags": [
+      "voz_e_audio_realtime",
+      "hectorg",
+      "jarvis",
+      "voice"
+    ]
+  },
+  {
+    "id": "pithagoras-voice-agent",
+    "name": "⚡ Pithagoras Local Voice Agent",
+    "category": "01_Voz_e_Audio_Realtime",
+    "description": "Agente de voz local ultrarrápido com latência imperceptível (<300ms) para Discord, Telegram e Slack rodando em GPUs locais modestas (12GB VRAM).",
+    "tags": [
+      "voz_e_audio_realtime",
+      "pithagoras",
+      "voice",
+      "agent"
+    ]
+  },
+  {
+    "id": "voicebox-ai-voice-studio",
+    "name": "🎙️ Voicebox — Open-Source AI Voice Studio",
+    "category": "01_Voz_e_Audio_Realtime",
+    "description": "Estúdio open-source de áudio e voz em Rust/Tauri que substitui o ElevenLabs com 7 motores de TTS locais, clonagem vocal zero-shot e servidor MCP para agentes.",
+    "tags": [
+      "voz_e_audio_realtime",
+      "voicebox",
+      "voice",
+      "studio"
+    ]
+  },
+  {
+    "id": "huggingface-smolagents",
+    "name": "Hugging Face smolagents (`huggingface/smolagents`)",
+    "category": "03_Grafos_de_Agentes_e_Orquestracao",
+    "description": "Em vez de serializar argumentos em JSON para cada chamada de ferramenta, o `CodeAgent` gera código Python compacto que executa loops, condicionais e transformações de dados em uma ",
+    "tags": [
+      "grafos_de_agentes_e_orquestracao",
+      "huggingface",
+      "smolagents"
+    ]
+  },
+  {
+    "id": "openai-agents-python-sdk",
+    "name": "OpenAI Agents SDK (`openai/openai-agents-python`)",
+    "category": "03_Grafos_de_Agentes_e_Orquestracao",
+    "description": "Agentes são funções de primeira classe capazes de transferir a conversa para especialistas sem perder o estado contextual:",
+    "tags": [
+      "grafos_de_agentes_e_orquestracao",
+      "openai",
+      "agents",
+      "python"
+    ]
+  },
+  {
+    "id": "typesafe-ai",
+    "name": "Build with TypeSafe",
+    "category": "03_Grafos_de_Agentes_e_Orquestracao",
+    "description": ">",
+    "tags": [
+      "grafos_de_agentes_e_orquestracao",
+      "typesafe"
+    ]
+  },
+  {
+    "id": "kaggle-dual-t4-32gb-ollama-tunnel",
+    "name": "🚀 Kaggle Dual-T4 32GB VRAM Server + Cloudflare Tunnel",
+    "category": "04_Inferencia_e_Local_LLM_Engine",
+    "description": "Notebooks Jupyter e scripts para provisionar servidores gratuitos de 32GB VRAM (Dual GPU NVIDIA T4) no Kaggle para rodar Ollama 32B com Cloudflare Tunnel sem timeout.",
+    "tags": [
+      "inferencia_e_local_llm_engine",
+      "kaggle",
+      "dual",
+      "32gb"
+    ]
+  },
+  {
+    "id": "cognee-cognitive-graphs",
+    "name": "Cognee Cognitive Memory (`topoteretes/cognee`)",
+    "category": "06_Grafos_e_Memoria_Assimetrica",
+    "description": "```python",
+    "tags": [
+      "grafos_e_memoria_assimetrica",
+      "cognee",
+      "cognitive",
+      "graphs"
+    ]
+  },
+  {
+    "id": "graphify",
+    "name": "/graphify",
+    "category": "06_Grafos_e_Memoria_Assimetrica",
+    "description": "Use for any question about a codebase, its architecture, file relationships, or project content — especially when graphify-out/ exists, where the question should be treated as a gr",
+    "tags": [
+      "grafos_e_memoria_assimetrica",
+      "graphify"
+    ]
+  },
+  {
+    "id": "hipporag-neurobiological-memory",
+    "name": "HippoRAG 2 (`OSU-NLP-Group/HippoRAG`)",
+    "category": "06_Grafos_e_Memoria_Assimetrica",
+    "description": "Mapeia a interação entre o neocórtex e o hipocampo biológico. Permite que o agente descubra conexões não óbvias entre documentos dispersos através da propagação de relevância em gr",
+    "tags": [
+      "grafos_e_memoria_assimetrica",
+      "hipporag",
+      "neurobiological",
+      "memory"
+    ]
+  },
+  {
+    "id": "letta-memgpt-v2",
+    "name": "Letta / MemGPT v2 (`letta-ai/letta`)",
+    "category": "06_Grafos_e_Memoria_Assimetrica",
+    "description": "1. **Core Memory:** Blocos de identidade do agente e perfil do usuário injetados no contexto ativo, editáveis em tempo real via `core_memory_append` e `core_memory_replace`.",
+    "tags": [
+      "grafos_e_memoria_assimetrica",
+      "letta",
+      "memgpt"
+    ]
+  },
+  {
+    "id": "zep-graphiti-temporal-memory",
+    "name": "Zep / Graphiti Temporal Memory (`getzep/graphiti`)",
+    "category": "06_Grafos_e_Memoria_Assimetrica",
+    "description": "- **Fatos com Timestamps:** Em vez de sobrescrever informações antigas, o grafo registra a linha do tempo (`valid_at`, `invalid_at`), preservando a evolução de preferências e regra",
+    "tags": [
+      "grafos_e_memoria_assimetrica",
+      "graphiti",
+      "temporal",
+      "memory"
+    ]
+  },
+  {
+    "id": "agent-reach-multi-channel-monitor",
+    "name": "Agent Reach: Internet para Agentes de IA",
+    "category": "08_Automacao_Web_Crawlers_e_Browser_Agents",
+    "description": "Infraestrutura modular e resiliente para agentes de IA acessarem a internet (Panniantong/agent-reach). Lê e monitora canais de YouTube (transcrições e metadados), RSS feeds, Reddit",
+    "tags": [
+      "automacao_web_crawlers_e_browser_agents",
+      "agent",
+      "reach",
+      "multi"
+    ]
+  },
+  {
+    "id": "distributed-spider-bloom-queue",
+    "name": "Distributed Spider Queue with Redis Cluster & Bloom Deduplication",
+    "category": "08_Automacao_Web_Crawlers_e_Browser_Agents",
+    "description": ">",
+    "tags": [
+      "automacao_web_crawlers_e_browser_agents",
+      "distributed",
+      "spider",
+      "bloom"
+    ]
+  },
+  {
+    "id": "dynamic-dom-mutation-streaming-scraper",
+    "name": "Dynamic DOM Mutation Observer Streaming Scraper",
+    "category": "08_Automacao_Web_Crawlers_e_Browser_Agents",
+    "description": ">",
+    "tags": [
+      "automacao_web_crawlers_e_browser_agents",
+      "dynamic",
+      "mutation",
+      "streaming"
+    ]
+  },
+  {
+    "id": "playwright-stealth-browser-swarm",
+    "name": "Playwright Stealth Browser Swarm",
+    "category": "08_Automacao_Web_Crawlers_e_Browser_Agents",
+    "description": ">",
+    "tags": [
+      "automacao_web_crawlers_e_browser_agents",
+      "playwright",
+      "stealth",
+      "browser"
+    ]
+  },
+  {
+    "id": "scrapling-adaptive-crawler-mcp",
+    "name": "Scrapling: Web Scraping Adaptativo & Stealth MCP",
+    "category": "08_Automacao_Web_Crawlers_e_Browser_Agents",
+    "description": "Framework de web scraping adaptativo e indetectável em Python (D4Vinci/Scrapling). Usa seletores que sobrevivem a mudanças de layout, contorna Cloudflare Turnstile/Interstitial nat",
+    "tags": [
+      "automacao_web_crawlers_e_browser_agents",
+      "scrapling",
+      "adaptive",
+      "crawler"
+    ]
+  },
+  {
+    "id": "deepseek-r1-reasoning-harness",
+    "name": "Reasoning Chains & Test-Time Compute Harness",
+    "category": "11_Engenharia_de_Prompts_e_Sabedoria",
+    "description": "1. **Incentivo à Autorreflexão:** Tags `<thinking>` e blocos de validação de hipóteses antes de emitir a resposta definitiva.",
+    "tags": [
+      "engenharia_de_prompts_e_sabedoria",
+      "deepseek",
+      "reasoning",
+      "harness"
+    ]
+  },
+  {
+    "id": "hermes3-goap-action-planning",
+    "name": "Nous Research Hermes 3 GOAP & Skill Evolution",
+    "category": "11_Engenharia_de_Prompts_e_Sabedoria",
+    "description": "```xml",
+    "tags": [
+      "engenharia_de_prompts_e_sabedoria",
+      "hermes3",
+      "goap",
+      "action"
+    ]
+  },
+  {
+    "id": "humanizer",
+    "name": "Humanizer: Remove AI Writing Patterns",
+    "category": "11_Engenharia_de_Prompts_e_Sabedoria",
+    "description": "|",
+    "tags": [
+      "engenharia_de_prompts_e_sabedoria",
+      "humanizer"
+    ]
+  },
+  {
+    "id": "promptograph",
+    "name": "📷 Promptograph — Engenharia Reversa, Validação & Geração de System Prompts",
+    "category": "11_Engenharia_de_Prompts_e_Sabedoria",
+    "description": "Ferramenta para navegar, comparar (diff), validar deterministicamente (0-100%, 13 regras heurísticas) e gerar system prompts de IA de nível de produção. Construída sobre uma base d",
+    "tags": [
+      "engenharia_de_prompts_e_sabedoria",
+      "promptograph"
+    ]
+  },
+  {
+    "id": "prompts-chat",
+    "name": "🎭 Prompts.chat — Biblioteca Universal de Personas & Prompts de IA",
+    "category": "11_Engenharia_de_Prompts_e_Sabedoria",
+    "description": "Biblioteca universal com mais de 2.160 prompts e personas curadas de IA (Awesome ChatGPT Prompts por Fatih Kadir Akın). Cobre simulação de terminais, especialistas técnicos, reviso",
+    "tags": [
+      "engenharia_de_prompts_e_sabedoria",
+      "prompts",
+      "chat"
+    ]
+  },
+  {
+    "id": "agentic-inbox-cloudflare",
+    "name": "📬 Agentic Inbox — Cloudflare AI Email Agent",
+    "category": "13_Servidores_MCP_e_Integracoes",
+    "description": "Agente de e-mail autônomo serverless da Cloudflare com 13 ferramentas MCP para triagem, auto-drafting, resumo inteligente e armazenamento isolado em Durable Objects (SQLite).",
+    "tags": [
+      "servidores_mcp_e_integracoes",
+      "agentic",
+      "inbox",
+      "cloudflare"
+    ]
+  },
+  {
+    "id": "anthropic-knowledge-work-plugins",
+    "name": "🧠 Anthropic Knowledge Work Plugins: 212 Skills Corporativas",
+    "category": "13_Servidores_MCP_e_Integracoes",
+    "description": "Suíte oficial da Anthropic contendo 212 skills nativas de alta produtividade para trabalhadores do conhecimento (Knowledge Workers). Cobre 16 domínios profissionais incluindo Engen",
+    "tags": [
+      "servidores_mcp_e_integracoes",
+      "anthropic",
+      "knowledge",
+      "work"
+    ]
+  },
+  {
+    "id": "awesome-mcp-servers",
+    "name": "🔌 Awesome MCP Servers: Catálogo Mestre Global",
+    "category": "13_Servidores_MCP_e_Integracoes",
+    "description": "Catálogo mestre e motor de descoberta com mais de 1.000 servidores Model Context Protocol (MCP) categorizados em bancos de dados, nuvem, automação de navegador, ferramentas de dev,",
+    "tags": [
+      "servidores_mcp_e_integracoes",
+      "awesome",
+      "servers"
+    ]
+  },
+  {
+    "id": "fastmcp-python-framework",
+    "name": "FastMCP Python Framework",
+    "category": "13_Servidores_MCP_e_Integracoes",
+    "description": "```python",
+    "tags": [
+      "servidores_mcp_e_integracoes",
+      "fastmcp",
+      "python",
+      "framework"
+    ]
+  },
+  {
+    "id": "tubementor",
+    "name": "TubeMentor v0.3 — Orquestrador",
+    "category": "15_SocialMedia_Growth_e_Bots",
+    "description": ">-",
+    "tags": [
+      "socialmedia_growth_e_bots",
+      "tubementor"
+    ]
+  },
+  {
+    "id": "agency-agents",
+    "name": "🏢 Agency Agents: Hub de 303 Agentes Especializados",
+    "category": "18_Swarms_MultiAgente",
+    "description": "Hub e framework de orquestração de 303 agentes de IA especializados cobrindo 18 divisões departamentais completas para agências autônomas (Marketing, Vídeo Curto, Mídia Paga, Desig",
+    "tags": [
+      "swarms_multiagente",
+      "agency",
+      "agents"
+    ]
+  },
+  {
+    "id": "distributed-sqlite-chroma-agent-memory",
+    "name": "Distributed SQLite WAL & Dense Vector Hybrid Agent Memory",
+    "category": "18_Swarms_MultiAgente",
+    "description": ">",
+    "tags": [
+      "swarms_multiagente",
+      "distributed",
+      "sqlite",
+      "chroma"
+    ]
+  },
+  {
+    "id": "dynamic-mcp-federation-tool-dispatcher",
+    "name": "Dynamic MCP Federation & Tool Dispatcher",
+    "category": "18_Swarms_MultiAgente",
+    "description": ">",
+    "tags": [
+      "swarms_multiagente",
+      "dynamic",
+      "federation",
+      "tool"
+    ]
+  },
+  {
+    "id": "hierarchical-multi-agent-supervisor",
+    "name": "Hierarchical Multi-Agent Supervisor Swarm",
+    "category": "18_Swarms_MultiAgente",
+    "description": ">",
+    "tags": [
+      "swarms_multiagente",
+      "hierarchical",
+      "multi",
+      "agent"
+    ]
+  },
+  {
+    "id": "human-in-the-loop-escalation-gateway",
+    "name": "Human-in-the-Loop (HITL) Escalation Gateway",
+    "category": "18_Swarms_MultiAgente",
+    "description": ">",
+    "tags": [
+      "swarms_multiagente",
+      "human",
+      "loop",
+      "escalation"
+    ]
+  },
+  {
+    "id": "multi-agent-debate-consensus-engine",
+    "name": "Multi-Agent Debate & Consensus Engine",
+    "category": "18_Swarms_MultiAgente",
+    "description": ">",
+    "tags": [
+      "swarms_multiagente",
+      "multi",
+      "agent",
+      "debate"
+    ]
+  },
+  {
+    "id": "opentelemetry-langfuse-agent-telemetry",
+    "name": "OpenTelemetry & Langfuse Multi-Agent Telemetry",
+    "category": "18_Swarms_MultiAgente",
+    "description": ">",
+    "tags": [
+      "swarms_multiagente",
+      "opentelemetry",
+      "langfuse",
+      "agent"
+    ]
+  },
+  {
+    "id": "semantic-cache-dynamic-prompt-router",
+    "name": "Semantic Cache & Dynamic Prompt Router",
+    "category": "18_Swarms_MultiAgente",
+    "description": ">",
+    "tags": [
+      "swarms_multiagente",
+      "semantic",
+      "cache",
+      "dynamic"
+    ]
+  },
+  {
+    "id": "brainstorming",
+    "name": "Brainstorming Ideas Into Designs",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design befo",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "brainstorming"
+    ]
+  },
+  {
+    "id": "clean-code",
+    "name": "Skill de Código Limpo (Clean Code)",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Esta skill incorpora os princípios do 'Código Limpo' (Clean Code) de Robert C. Martin (Uncle Bob). Use-a para transformar 'código que funciona' em 'código limpo'.",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "clean",
+      "code"
+    ]
+  },
+  {
+    "id": "d2-diagram-architecture-engine",
+    "name": "D2 Diagram Architecture Engine",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Motor de diagramação declarativa de vanguarda utilizando D2 Lang (terrastruct/d2). Produz diagramas de arquitetura de software, fluxos de dados, topologias de swarms de agentes e e",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "diagram",
+      "architecture",
+      "engine"
+    ]
+  },
+  {
+    "id": "debugging-strategies",
+    "name": "Estratégias de Depuração (Debugging Strategies)",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Transforme a depuração de adivinhações frustrantes em resolução sistemática de problemas com estratégias comprovadas, ferramentas poderosas e abordagens metódicas.",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "debugging",
+      "strategies"
+    ]
+  },
+  {
+    "id": "dispatching-parallel-agents",
+    "name": "Dispatching Parallel Agents",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "dispatching",
+      "parallel",
+      "agents"
+    ]
+  },
+  {
+    "id": "landing-page",
+    "name": "Landing Page",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Fluxo completo de criação de landing pages públicas — do discovery à entrega do build estático. Usar quando o usuário pedir para criar/gerar/desenhar uma landing page, site de prod",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "landing",
+      "page"
+    ]
+  },
+  {
+    "id": "performance-profiling",
+    "name": "Análise de Desempenho (Performance Profiling)",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Princípios de análise de desempenho (profiling). Técnicas de medição, análise e otimização.",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "performance",
+      "profiling"
+    ]
+  },
+  {
+    "id": "pydantic-outlines-json-guardrails",
+    "name": "Pydantic v2 & Outlines CFG JSON Guardrails",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": ">",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "pydantic",
+      "outlines",
+      "json"
+    ]
+  },
+  {
+    "id": "receiving-code-review",
+    "name": "Code Review Reception",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verificati",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "receiving",
+      "code",
+      "review"
+    ]
+  },
+  {
+    "id": "requesting-code-review",
+    "name": "Requesting Code Review",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "requesting",
+      "code",
+      "review"
+    ]
+  },
+  {
+    "id": "self-healing-resilient-task-executor",
+    "name": "Self-Healing Resilient Task Executor",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": ">",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "self",
+      "healing",
+      "resilient"
+    ]
+  },
+  {
+    "id": "software-architecture",
+    "name": "Desenvolvimento de Arquitetura de Software (Software Architecture)",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Guia de arquitetura de software com foco em qualidade. Esta skill deve ser usada quando o usuário deseja escrever código, projetar arquiteturas, analisar códigos ou qualquer caso r",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "software",
+      "architecture"
+    ]
+  },
+  {
+    "id": "software-mapper",
+    "name": "Software Mapper — Orquestrador DEVE",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Framework de engenharia reversa, análise de arquitetura, fluxo de dados e auditoria de saúde/débito técnico para qualquer codebase. Gera diagramas Mermaid, mapeia APIs e documenta ",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "software",
+      "mapper"
+    ]
+  },
+  {
+    "id": "subagent-driven-development",
+    "name": "Subagent-Driven Development",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Use when executing implementation plans with independent tasks in the current session",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "subagent",
+      "driven",
+      "development"
+    ]
+  },
+  {
+    "id": "systematic-debugging",
+    "name": "Systematic Debugging",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "systematic",
+      "debugging"
+    ]
+  },
+  {
+    "id": "systematic-debugging-ptbr",
+    "name": "Depuração Sistemática (Systematic Debugging)",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Use ao encontrar qualquer bug, falha de teste ou comportamento inesperado, antes de propor correções.",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "systematic",
+      "debugging",
+      "ptbr"
+    ]
+  },
+  {
+    "id": "token-saver",
+    "name": "Token Saver — Guia Definitivo de Economia",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": ">",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "token",
+      "saver"
+    ]
+  },
+  {
+    "id": "using-superpowers",
+    "name": "Using Skills",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "using",
+      "superpowers"
+    ]
+  },
+  {
+    "id": "vibe-governance",
+    "name": "Vibe Governance — Governança Cognitiva para Dev com IA",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": ">",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "vibe",
+      "governance"
+    ]
+  },
+  {
+    "id": "vibedev",
+    "name": "VibeDev — Governança para Vibe Coders",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": ">",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "vibedev"
+    ]
+  },
+  {
+    "id": "writing-plans",
+    "name": "Writing Plans",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "writing",
+      "plans"
+    ]
+  },
+  {
+    "id": "writing-skills",
+    "name": "Writing Skills",
+    "category": "19_Engenharia_de_Software_de_Elite",
+    "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+    "tags": [
+      "engenharia_de_software_de_elite",
+      "writing",
+      "skills"
+    ]
+  },
+  {
+    "id": "clip-semantic-broll-matcher",
+    "name": "CLIP Semantic B-Roll Matcher & MMR Diversity Engine",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": ">",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "clip",
+      "semantic",
+      "broll"
+    ]
+  },
+  {
+    "id": "comfyui-8gb-vram-production-workflows",
+    "name": "🎨 ComfyUI 8GB VRAM Production Workflows",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Suíte com 15 workflows ComfyUI afinados para placas RTX de 8GB de VRAM (LTX 2.3/2.5 Audio-to-Video, Wan 2.2 Turbo 14B Q6, MiniMax H3 LoRA Inpainting, RTX 2-Pass Upscale).",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "comfyui",
+      "vram",
+      "production"
+    ]
+  },
+  {
+    "id": "comfyui-agentic-mcp",
+    "name": "ComfyUI Agentic Control Plane",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Permite que agentes LLM escrevam workflows do ComfyUI em funções Python tipadas assíncronas, sem abrir navegador e com versionamento Git.",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "comfyui",
+      "agentic"
+    ]
+  },
+  {
+    "id": "elton-studio-v2",
+    "name": "🎞️ Elton Studio V2 — Automação de Vídeo Remotion",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Sistema automatizado de edição de vídeo em Python e Remotion que gera composições completas com trilha sonora, sobreposições e cortes automáticos.",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "elton",
+      "studio"
+    ]
+  },
+  {
+    "id": "generative-video-kling-higgsfield-pipeline",
+    "name": "Generative Video Pipeline (Kling AI, Higgsfield & Seedance)",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": ">",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "generative",
+      "video",
+      "kling"
+    ]
+  },
+  {
+    "id": "hyperframes-html-video-engine",
+    "name": "⚡ Hyperframes — HTML Video Engine for AI Agents",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Motor de vídeo programático aberto da HeyGen que converte código HTML, CSS e animações GSAP em vídeos MP4 de alta fidelidade sem a fragilidade do Remotion ou React.",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "hyperframes",
+      "html",
+      "video"
+    ]
+  },
+  {
+    "id": "lottie-svg-motion-graphics-generator",
+    "name": "Lottie & SVG Motion Graphics Programmatic Generator",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": ">",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "lottie",
+      "motion",
+      "graphics"
+    ]
+  },
+  {
+    "id": "ltx-video-realtime",
+    "name": "Lightricks LTX-Video",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Projetado para pipelines de agentes em lote onde latência é a métrica crítica. Gera clipes consistentes em segundos por tomada.",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "video",
+      "realtime"
+    ]
+  },
+  {
+    "id": "microsoft-trellis-3dgs-mesh",
+    "name": "Microsoft TRELLIS 3D Generative Pipeline",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "1. **3D Gaussian Splatting (.ply):** Pré-visualização em tempo real ultra-leve.",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "microsoft",
+      "trellis",
+      "3dgs"
+    ]
+  },
+  {
+    "id": "mira-animator",
+    "name": "MIRA Animator — Framework de Apresentações Animadas (Prof. Sandeco)",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Transforme projetos de código, livros e PDFs em apresentações HTML animadas com metáforas visuais (SVG/D3.js/Tailwind) e vídeos (16:9 e 9:16 Shorts/Reels). Filosofia Reversa (leitu",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "mira",
+      "animator"
+    ]
+  },
+  {
+    "id": "mmaudio-foleycrafter-syncer",
+    "name": "Video-to-Audio & Foley AI Syncer (MMAudio & FoleyCrafter)",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Extrai os frames do vídeo gerado, analisa a velocidade e o timing dos impactos físicos visuais e sintetiza efeitos de foley com sincronia milimétrica.",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "mmaudio",
+      "foleycrafter",
+      "syncer"
+    ]
+  },
+  {
+    "id": "moneyprinter-turbo",
+    "name": "🎬 MoneyPrinterTurbo — Gerador Autônomo de Vídeos Dinâmicos",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Gerador autônomo de vídeos dinâmicos em lote (Shorts/Reels/TikTok) a partir de um tema ou texto com TTS neural, B-roll inteligente e legendas automáticas animadas.",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "moneyprinter",
+      "turbo"
+    ]
+  },
+  {
+    "id": "photo-studio",
+    "name": "Photo-Studio: Diretor de Fotografia e Engenheiro de Prompts com IA",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "A skill **`photo-studio`** atua como um Diretor de Fotografia, Supervisor de Arte e Engenheiro de Prompts de elite. Ela analisa imagens de entrada, sugere técnicas ópticas e de ilu",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "photo",
+      "studio"
+    ]
+  },
+  {
+    "id": "scroll-world",
+    "name": "scroll-world",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": ">",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "scroll",
+      "world"
+    ]
+  },
+  {
+    "id": "seedance-vox-director",
+    "name": "🎥 Seedance 2.5 Director & VOX Style Engine",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Framework de direção de cena cinematográfica para Seedance 2.5 e estilo editorial de documentários no padrão VOX com regras de ritmo, motion graphics e decupagem.",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "seedance",
+      "director"
+    ]
+  },
+  {
+    "id": "skyreels-v2-film-engine",
+    "name": "🎬 SkyReels-V2 & SkyCaptioner",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Modelo generativo para produção de filmes de duração infinita com consistência de cena e motor de legendagem estruturada SkyCaptioner V1.",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "skyreels",
+      "film",
+      "engine"
+    ]
+  },
+  {
+    "id": "slidev-marp-presentation-engine",
+    "name": "Slidev & Marp Presentation Engine",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "Plataforma de engenharia de apresentações executivas como código utilizando Marp CLI e Slidev. Gera pitch decks (estilo Y Combinator e Sequoia), relatórios navegáveis em HTML, PDFs",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "slidev",
+      "marp",
+      "presentation"
+    ]
+  },
+  {
+    "id": "wan21-video-dit-engine",
+    "name": "Alibaba Wan2.1 / Wan2.2 DiT Video Engine",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": "- **Wan2.1-1.3B:** ~8-10GB VRAM (ideal para geração rápida em GPUs domésticas).",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "wan21",
+      "video",
+      "engine"
+    ]
+  },
+  {
+    "id": "watch-video",
+    "name": "Watch Video — Analisador de Vídeo Cloud-First",
+    "category": "20_Midia_Video_e_Animacao_3D",
+    "description": ">",
+    "tags": [
+      "midia_video_e_animacao_3d",
+      "watch",
+      "video"
+    ]
+  },
+  {
+    "id": "account-research-supreme",
+    "name": "Account Research Supreme",
+    "category": "22_Negocios_Gestao_Vendas_e_Produto",
+    "description": "|",
+    "tags": [
+      "negocios_gestao_vendas_e_produto",
+      "account",
+      "research",
+      "supreme"
+    ]
+  },
+  {
+    "id": "inteligencia-conversacional",
+    "name": "Inteligencia Conversacional (4Pixel Tech)",
+    "category": "22_Negocios_Gestao_Vendas_e_Produto",
+    "description": "|",
+    "tags": [
+      "negocios_gestao_vendas_e_produto",
+      "inteligencia",
+      "conversacional"
+    ]
+  },
+  {
+    "id": "whatsapp-analyzer",
+    "name": "WhatsApp Analyzer",
+    "category": "22_Negocios_Gestao_Vendas_e_Produto",
+    "description": "|",
+    "tags": [
+      "negocios_gestao_vendas_e_produto",
+      "whatsapp",
+      "analyzer"
+    ]
+  },
+  {
+    "id": "awwwards-ui-magic-components",
+    "name": "Awwwards UI & Magic Components Engine",
+    "category": "24_Ecommerce_Design_e_Copywriting",
+    "description": "Catálogo desacoplado de componentes visuais avançados (estilo Aceternity UI, Magic UI e Awwwards) com Tailwind CSS, Framer Motion e Lenis Smooth Scroll para websites de alto impact",
+    "tags": [
+      "ecommerce_design_e_copywriting",
+      "awwwards",
+      "magic",
+      "components"
+    ]
+  },
+  {
+    "id": "coreyhaines-marketingskills",
+    "name": "🚀 Corey Haines Marketing Skills — Suíte de Agentes Autônomos de Marketing",
+    "category": "24_Ecommerce_Design_e_Copywriting",
+    "description": "Mega-suíte com 50 Agent Skills especializadas e 65 ferramentas CLI zero-dependency para marketing de crescimento, CRO, copywriting, ads, AI-SEO (AEO), outbound B2B e loops autônomo",
+    "tags": [
+      "ecommerce_design_e_copywriting",
+      "coreyhaines",
+      "marketingskills"
+    ]
+  },
+  {
+    "id": "ecommerce-visual-copywriting",
+    "name": "电商视觉策划与执行 SOP",
+    "category": "24_Ecommerce_Design_e_Copywriting",
+    "description": "|",
+    "tags": [
+      "ecommerce_design_e_copywriting",
+      "ecommerce",
+      "visual",
+      "copywriting"
+    ]
+  },
+  {
+    "id": "emil-kowalski-design-motion",
+    "name": "Emil Kowalski Design & Motion Engineering Skill",
+    "category": "24_Ecommerce_Design_e_Copywriting",
+    "description": "Elite Frontend Motion & Tactile Micro-Interactions inspired by Emil Kowalski (Linear, animations.dev). Enforces spring physics over linear easings, zero-layout-reflow GPU rules, ta",
+    "tags": [
+      "ecommerce_design_e_copywriting",
+      "emil",
+      "kowalski",
+      "design"
+    ]
+  },
+  {
+    "id": "executive-documents-typst-engine",
+    "name": "Executive Documents Typst Engine",
+    "category": "24_Ecommerce_Design_e_Copywriting",
+    "description": "Motor de geração de documentos e relatórios técnicos em Typst (substituto moderno de alta performance do LaTeX). Produz PDFs editoriais executivos, whitepapers e propostas comercia",
+    "tags": [
+      "ecommerce_design_e_copywriting",
+      "executive",
+      "documents",
+      "typst"
+    ]
+  },
+  {
+    "id": "lumora-creative-frontend-studio",
+    "name": "💎 Lumora Creative Frontend Studio Engine",
+    "category": "24_Ecommerce_Design_e_Copywriting",
+    "description": "Motor de engenharia criativa front-end para websites e landing pages de estúdio de elite (nível Awwwards / Apple / Linear) em arquivo único HTML puro sem bundlers, com física de mo",
+    "tags": [
+      "ecommerce_design_e_copywriting",
+      "lumora",
+      "creative",
+      "frontend"
+    ]
+  },
+  {
+    "id": "seo-fundamentals",
+    "name": "Fundamentos de SEO",
+    "category": "24_Ecommerce_Design_e_Copywriting",
+    "description": "Princípios essenciais de SEO, incluindo E-E-A-T, Core Web Vitals, bases técnicas, qualidade de conteúdo e como os mecanismos de busca modernos avaliam as páginas.",
+    "tags": [
+      "ecommerce_design_e_copywriting",
+      "fundamentals"
+    ]
+  },
+  {
+    "id": "huggingface-lerobot",
+    "name": "Hugging Face LeRobot (huggingface/lerobot)",
+    "category": "25_Robotica_PhysicalAI_e_EmbodiedAgents",
+    "description": "Framework unificado da Hugging Face para robótica física e embodied AI. Cobre teleoperação, datasets LeRobotDataset, treinamento e inferência de políticas neurais (ACT, Diffusion P",
+    "tags": [
+      "robotica_physicalai_e_embodiedagents",
+      "huggingface",
+      "lerobot"
+    ]
+  },
+  {
+    "id": "micro-ros-edge-embedded",
+    "name": "micro-ROS & Embedded Physical AI",
+    "category": "25_Robotica_PhysicalAI_e_EmbodiedAgents",
+    "description": "Integração de microcontroladores (ESP32, STM32, RP2040) ao ecossistema ROS 2 e agentes LLM via micro-ROS, XRCE-DDS e computação em edge (NVIDIA Jetson / Raspberry Pi 5).",
+    "tags": [
+      "robotica_physicalai_e_embodiedagents",
+      "micro",
+      "edge",
+      "embedded"
+    ]
+  },
+  {
+    "id": "nasa-jpl-rosa-agent",
+    "name": "NASA JPL ROSA (",
+    "category": "25_Robotica_PhysicalAI_e_EmbodiedAgents",
+    "description": "Agente de Inteligência Artificial para robótica desenvolvido pelo NASA JPL para comando em linguagem natural, telemetria, diagnóstico e execução de ações em ROS 1 e ROS 2 (Humble/J",
+    "tags": [
+      "robotica_physicalai_e_embodiedagents",
+      "nasa",
+      "rosa",
+      "agent"
+    ]
+  },
+  {
+    "id": "openvla-foundation-model",
+    "name": "OpenVLA (openvla/openvla)",
+    "category": "25_Robotica_PhysicalAI_e_EmbodiedAgents",
+    "description": "Vision-Language-Action (VLA) foundation model de 7B parâmetros treinado em 970k trajetórias robóticas reais (Open X-Embodiment). Suporta controle de garras 7-DOF e fine-tuning LoRA",
+    "tags": [
+      "robotica_physicalai_e_embodiedagents",
+      "openvla",
+      "foundation",
+      "model"
+    ]
+  },
+  {
+    "id": "cloudflare-edge-agents",
+    "name": "Cloudflare Workers AI Agents SDK",
+    "category": "26_DevOps_SRE_e_CloudNative_Agents",
+    "description": "Agentes stateful de baixíssima latência distribuídos em mais de 300 data centers globais.",
+    "tags": [
+      "devops_sre_e_cloudnative_agents",
+      "cloudflare",
+      "edge",
+      "agents"
+    ]
+  },
+  {
+    "id": "dagger-container-use",
+    "name": "Dagger Container-Use (`dagger/container-use`)",
+    "category": "26_DevOps_SRE_e_CloudNative_Agents",
+    "description": "Impede que agentes executem comandos destrutivos no filesystem do host. Cada agente opera em um contêiner efêmero atrelado a uma branch Git dedicada, com cache determinístico do mo",
+    "tags": [
+      "devops_sre_e_cloudnative_agents",
+      "dagger",
+      "container"
+    ]
+  },
+  {
+    "id": "k8sgpt-ai-sre-sentinel",
+    "name": "K8sGPT & CNCF SRE Sentinel",
+    "category": "26_DevOps_SRE_e_CloudNative_Agents",
+    "description": "Diagnóstico determinístico e remediação orientada a políticas de clusters Kubernetes. Analisa Pods, Ingresses, NetworkPolicies, HPA e Services com sanitização de segredos antes do ",
+    "tags": [
+      "devops_sre_e_cloudnative_agents",
+      "k8sgpt",
+      "sentinel"
+    ]
+  },
+  {
+    "id": "terraform-audit-codegen",
+    "name": "Terraform AI Audit & Codegen",
+    "category": "26_DevOps_SRE_e_CloudNative_Agents",
+    "description": "1. `terraform fmt -check` e `tflint` obrigatórios antes de planos.",
+    "tags": [
+      "devops_sre_e_cloudnative_agents",
+      "terraform",
+      "audit",
+      "codegen"
+    ]
+  },
+  {
+    "id": "anthropic-computer-use-sandbox",
+    "name": "Anthropic Computer Use Reference Sandbox",
+    "category": "27_ComputerUse_GUI_e_DesktopMobile_Agents",
+    "description": "`VLM Snapshot -> Coordenadas de Pixel -> xdotool click/type -> Frame de Validação -> Próximo Passo`",
+    "tags": [
+      "computeruse_gui_e_desktopmobile_agents",
+      "anthropic",
+      "computer",
+      "sandbox"
+    ]
+  },
+  {
+    "id": "bytedance-ui-tars",
+    "name": "ByteDance UI-TARS (`bytedance/ui-tars`)",
+    "category": "27_ComputerUse_GUI_e_DesktopMobile_Agents",
+    "description": "- **Modelo:** VLM Nativo All-in-One (famílias 2B, 7B e 72B).",
+    "tags": [
+      "computeruse_gui_e_desktopmobile_agents",
+      "bytedance",
+      "tars"
+    ]
+  },
+  {
+    "id": "microsoft-omniparser-v2",
+    "name": "Microsoft OmniParser v2 (`microsoft/OmniParser`)",
+    "category": "27_ComputerUse_GUI_e_DesktopMobile_Agents",
+    "description": "1. **Detector de Interativos:** YOLOv11 fine-tunado em controles desktop e mobile.",
+    "tags": [
+      "computeruse_gui_e_desktopmobile_agents",
+      "microsoft",
+      "omniparser"
+    ]
+  },
+  {
+    "id": "openadapt-desktop-replay",
+    "name": "OpenAdapt (`OpenAdaptAI/OpenAdapt`)",
+    "category": "27_ComputerUse_GUI_e_DesktopMobile_Agents",
+    "description": "Grava os cliques, teclas e janelas de um usuário e utiliza VLMs para replicar tarefas em softwares legados (ERPs, SAP, navegadores), adaptando trajetórias mesmo que janelas mudem d",
+    "tags": [
+      "computeruse_gui_e_desktopmobile_agents",
+      "openadapt",
+      "desktop",
+      "replay"
+    ]
+  },
+  {
+    "id": "tencent-appagent-mobile",
+    "name": "Tencent AppAgent & Alibaba Mobile-Agent",
+    "category": "27_ComputerUse_GUI_e_DesktopMobile_Agents",
+    "description": "1. **Fase de Exploração:** O agente clica e navega pelo aplicativo mobile de forma autônoma, gerando um Documento de Conhecimento com a função de cada tela.",
+    "tags": [
+      "computeruse_gui_e_desktopmobile_agents",
+      "tencent",
+      "appagent",
+      "mobile"
+    ]
+  },
+  {
+    "id": "gpt-researcher-engine",
+    "name": "GPT Researcher (`assafelovic/gpt-researcher`)",
+    "category": "28_DeepResearch_e_Knowledge_Synthesis",
+    "description": "- **Planner Agent:** Gera árvore de subtarefas e perguntas de busca.",
+    "tags": [
+      "deepresearch_e_knowledge_synthesis",
+      "researcher",
+      "engine"
+    ]
+  },
+  {
+    "id": "langchain-open-deep-research",
+    "name": "LangChain Open Deep Research",
+    "category": "28_DeepResearch_e_Knowledge_Synthesis",
+    "description": "Arquitetura em grafo cíclico que divide perguntas complexas em sub-consultas, gerencia estado persistente e agrega dados brutos via Firecrawl.",
+    "tags": [
+      "deepresearch_e_knowledge_synthesis",
+      "langchain",
+      "open",
+      "deep"
+    ]
+  },
+  {
+    "id": "seeker",
+    "name": "Seeker — Deep Investigator Skill",
+    "category": "28_DeepResearch_e_Knowledge_Synthesis",
+    "description": ">",
+    "tags": [
+      "deepresearch_e_knowledge_synthesis",
+      "seeker"
+    ]
+  },
+  {
+    "id": "stanford-storm-curation",
+    "name": "Stanford STORM (`stanford-oval/storm`)",
+    "category": "28_DeepResearch_e_Knowledge_Synthesis",
+    "description": "1. **Multi-Perspective Questioning:** Simula personas de especialistas para formular perguntas de nicho.",
+    "tags": [
+      "deepresearch_e_knowledge_synthesis",
+      "stanford",
+      "storm",
+      "curation"
+    ]
+  },
+  {
+    "id": "alphafold3-agent-skills",
+    "name": "AlphaFold 3 Agent Toolset (`ByteTora/alphafold3-skills`)",
+    "category": "29_BioTech_Quimica_e_Descoberta_Molecular",
+    "description": "1. Formatação de arquivos JSON de entrada de sequências e ligantes para o AlphaFold 3 Server/Local.",
+    "tags": [
+      "biotech_quimica_e_descoberta_molecular",
+      "alphafold3",
+      "agent",
+      "skills"
+    ]
+  },
+  {
+    "id": "evolutionaryscale-esm3",
+    "name": "ESM-3 Biology Foundation Model",
+    "category": "29_BioTech_Quimica_e_Descoberta_Molecular",
+    "description": "- Geração condicional de proteínas baseada em restrições funcionais.",
+    "tags": [
+      "biotech_quimica_e_descoberta_molecular",
+      "evolutionaryscale",
+      "esm3"
+    ]
+  },
+  {
+    "id": "ur-whitelab-chemcrow",
+    "name": "ChemCrow (`ur-whitelab/chemcrow-public`)",
+    "category": "29_BioTech_Quimica_e_Descoberta_Molecular",
+    "description": "- Planejamento de rotas de síntese orgânica.",
+    "tags": [
+      "biotech_quimica_e_descoberta_molecular",
+      "whitelab",
+      "chemcrow"
+    ]
+  },
+  {
+    "id": "agentskills-io-universal-spec",
+    "name": "Universal Agent Skills Specification (`agentskills.io`)",
+    "category": "30_SkillsMP_e_Indice_Ocupacional_Global",
+    "description": "Todo arquivo `SKILL.md` deve conter:",
+    "tags": [
+      "skillsmp_e_indice_ocupacional_global",
+      "agentskills",
+      "universal",
+      "spec"
+    ]
+  },
+  {
+    "id": "skillsmp-directory-integrator",
+    "name": "SkillsMP Directory Integrator (`skillsmp.com`)",
+    "category": "30_SkillsMP_e_Indice_Ocupacional_Global",
+    "description": "Conecta o agente ao maior índice aberto de Agent Skills do mundo.",
+    "tags": [
+      "skillsmp_e_indice_ocupacional_global",
+      "skillsmp",
+      "directory",
+      "integrator"
+    ]
+  },
+  {
+    "id": "hazyresearch-legalbench",
+    "name": "LegalBench Reasoning Engine (`HazyResearch/legalbench`)",
+    "category": "31_LegalTech_e_Auditoria_Contratual",
+    "description": "1. **Issue-Spotting:** Identificação precisa de riscos e controvérsias em fatos narrados.",
+    "tags": [
+      "legaltech_e_auditoria_contratual",
+      "hazyresearch",
+      "legalbench"
+    ]
+  },
+  {
+    "id": "lawgent-legal-workflow",
+    "name": "Lawgent (`WenzhuoXu/lawgent`)",
+    "category": "31_LegalTech_e_Auditoria_Contratual",
+    "description": "- **Strict Citation Grounding:** Toda afirmação jurídica é ancorada em artigos de lei ou acórdãos verificados.",
+    "tags": [
+      "legaltech_e_auditoria_contratual",
+      "lawgent",
+      "legal",
+      "workflow"
+    ]
+  },
+  {
+    "id": "lgpd-gdpr-compliance-auditor",
+    "name": "LGPD & GDPR Compliance Auditor",
+    "category": "31_LegalTech_e_Auditoria_Contratual",
+    "description": "1. **Mapeamento de Dados (ROPA):** Identifica dados pessoais sensíveis, finalidade e tempo de retenção.",
+    "tags": [
+      "legaltech_e_auditoria_contratual",
+      "lgpd",
+      "gdpr",
+      "compliance"
+    ]
+  },
+  {
+    "id": "opencontracts-doc-intelligence",
+    "name": "OpenContracts (`Open-Source-Legal/OpenContracts`)",
+    "category": "31_LegalTech_e_Auditoria_Contratual",
+    "description": "Plataforma colaborativa open-source para análise de grandes bases de contratos e documentos jurídicos:",
+    "tags": [
+      "legaltech_e_auditoria_contratual",
+      "opencontracts",
+      "intelligence"
+    ]
+  },
+  {
+    "id": "chateda-automage-flow",
+    "name": "ChatEDA (`zewei/ChatEDAv1`)",
+    "category": "32_Hardware_EDA_e_Silicon_Design",
+    "description": "$$\\text{Requisitos Naturais / RTL} \\xrightarrow{\\text{AutoMage Agent}} \\text{Scripts EDA (Tcl/Python)} \\xrightarrow{\\text{OpenROAD / Yosys}} \\text{Layout Físico GDSII}$$",
+    "tags": [
+      "hardware_eda_e_silicon_design",
+      "chateda",
+      "automage",
+      "flow"
+    ]
+  },
+  {
+    "id": "gateflow-systemverilog-assistant",
+    "name": "GateFlow SystemVerilog Assistant",
+    "category": "32_Hardware_EDA_e_Silicon_Design",
+    "description": "- Padrões de código síncrono não-bloqueante (`<=`) vs combinacional bloqueante (`=`).",
+    "tags": [
+      "hardware_eda_e_silicon_design",
+      "gateflow",
+      "systemverilog",
+      "assistant"
+    ]
+  },
+  {
+    "id": "nvidia-chipnemo-eda",
+    "name": "NVIDIA ChipNeMo EDA Framework",
+    "category": "32_Hardware_EDA_e_Silicon_Design",
+    "description": "1. **Engineering Assistant:** Consulta a documentação de arquitetura de processadores e GPUs.",
+    "tags": [
+      "hardware_eda_e_silicon_design",
+      "nvidia",
+      "chipnemo"
+    ]
+  },
+  {
+    "id": "nvlabs-verilogcoder",
+    "name": "NVIDIA VerilogCoder (`NVlabs/VerilogCoder`)",
+    "category": "32_Hardware_EDA_e_Silicon_Design",
+    "description": "- **Graph-based Planning:** Decompõe circuitos digitais complexos em submódulos interconectados.",
+    "tags": [
+      "hardware_eda_e_silicon_design",
+      "nvlabs",
+      "verilogcoder"
+    ]
+  },
+  {
+    "id": "clifford-geometric-algebra-networks",
+    "name": "Clifford Geometric Algebra Networks (`microsoft/cliffordlayers`)",
+    "category": "34_Vanguarda_Cientifica_DeepMath_e_Fisica_Diferenciavel",
+    "description": "Vetores comuns não capturam planos de rotação de forma simétrica. A Álgebra de Clifford unifica escalares, vetores, bivetores e pseudoescalares em um único **multivetor**:",
+    "tags": [
+      "vanguarda_cientifica_deepmath_e_fisica_diferenciavel",
+      "clifford",
+      "geometric",
+      "algebra"
+    ]
+  },
+  {
+    "id": "computational-physics-nbody-verlet-simulator",
+    "name": "Computational Physics Symplectic N-Body & Velocity Verlet Simulation Engine",
+    "category": "34_Vanguarda_Cientifica_DeepMath_e_Fisica_Diferenciavel",
+    "description": "Gravitational N-body orbital dynamics using Barnes-Hut spatial decomposition and symplectic Velocity Verlet integration, combined with Smoothed Particle Hydrodynamics (SPH) for ast",
+    "tags": [
+      "vanguarda_cientifica_deepmath_e_fisica_diferenciavel",
+      "computational",
+      "physics",
+      "nbody"
+    ]
+  },
+  {
+    "id": "evosax-jax-evolutionary-strategies",
+    "name": "Evosax: JAX-Accelerated Evolutionary Strategies (`RobertTLange/evosax`)",
+    "category": "34_Vanguarda_Cientifica_DeepMath_e_Fisica_Diferenciavel",
+    "description": "Quando o ambiente é não-diferenciável ou o espaço de recompensas é esparso/caótico (onde backpropagation falha):",
+    "tags": [
+      "vanguarda_cientifica_deepmath_e_fisica_diferenciavel",
+      "evosax",
+      "evolutionary",
+      "strategies"
+    ]
+  },
+  {
+    "id": "genesis-universal-physics-simulation",
+    "name": "Genesis Physics Simulation Platform (`Genesis-Embodied-AI/genesis-world`)",
+    "category": "34_Vanguarda_Cientifica_DeepMath_e_Fisica_Diferenciavel",
+    "description": "Ao contrário dos motores legados (Bullet, MuJoCo, PhysX) que separam corpos rígidos de fluidos, o **Genesis** unifica:",
+    "tags": [
+      "vanguarda_cientifica_deepmath_e_fisica_diferenciavel",
+      "genesis",
+      "universal",
+      "physics"
+    ]
+  },
+  {
+    "id": "hyperbolic-deep-learning-geoopt",
+    "name": "Hyperbolic Deep Learning & Riemannian Optimization (`geoopt/geoopt`)",
+    "category": "34_Vanguarda_Cientifica_DeepMath_e_Fisica_Diferenciavel",
+    "description": "No espaço euclidiano tradicional $\\mathbb{R}^n$, o volume de uma esfera cresce como um polinômio ($r^n$). Em árvores hierárquicas e grafos de conhecimento, o número de nós cresce *",
+    "tags": [
+      "vanguarda_cientifica_deepmath_e_fisica_diferenciavel",
+      "hyperbolic",
+      "deep",
+      "learning"
+    ]
+  },
+  {
+    "id": "lean4-formal-mathematical-proof-agent",
+    "name": "Lean 4 Formal Mathematical Proof Agent (`leanprover/lean4`)",
+    "category": "34_Vanguarda_Cientifica_DeepMath_e_Fisica_Diferenciavel",
+    "description": "Diferente de um LLM que inventa passos lógicos plausíveis, o agente acoplado ao Lean 4 só tem sua demonstração aceita se ela compilar no microkernel formal do provador de teoremas:",
+    "tags": [
+      "vanguarda_cientifica_deepmath_e_fisica_diferenciavel",
+      "lean4",
+      "formal",
+      "mathematical"
+    ]
+  },
+  {
+    "id": "pysr-symbolic-regression-physics",
+    "name": "PySR High-Performance Symbolic Regression (`MilesCranmer/PySR`)",
+    "category": "34_Vanguarda_Cientifica_DeepMath_e_Fisica_Diferenciavel",
+    "description": "Em vez de ajustar bilhões de pesos opacos em uma rede neural profunda, o PySR descobre a fórmula analítica legível por humanos:",
+    "tags": [
+      "vanguarda_cientifica_deepmath_e_fisica_diferenciavel",
+      "pysr",
+      "symbolic",
+      "regression"
+    ]
+  },
+  {
+    "id": "algorithmic-execution-twap-vwap-pov",
+    "name": "Institutional Algorithmic Execution Engine (TWAP / VWAP / POV / Almgren-Chriss)",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Automated institutional execution algorithms (TWAP with randomized intervals, dynamic VWAP based on intraday volume distributions, and Percentage-of-Volume POV tracking) with Almgr",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "algorithmic",
+      "execution",
+      "twap"
+    ]
+  },
+  {
+    "id": "avellaneda-stoikov-market-simulator",
+    "name": "Avellaneda-Stoikov Agent-Based Market Microstructure Simulator",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Artificial stock market simulation featuring heterogeneous agents (momentum trend followers, fundamentalists, noise traders, and Avellaneda-Stoikov market makers) operating on a co",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "avellaneda",
+      "stoikov",
+      "market"
+    ]
+  },
+  {
+    "id": "avellaneda-stoikov-rl-market-maker",
+    "name": "Avellaneda-Stoikov com Reinforcement Learning",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "O formador de mercado ajusta sua cotação baseado no quanto de ativo já tem em carteira ($q$), evitando carregar risco excessivo:",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "avellaneda",
+      "stoikov",
+      "market"
+    ]
+  },
+  {
+    "id": "hft-latency-slippage-simulator",
+    "name": "High-Frequency Execution Latency & Queue Slippage Simulator",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Microsecond-precision event-driven exchange execution simulator modeling network wire latency, exchange matching FIFO queues, queue-jump cancellations, and non-linear market impact",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "latency",
+      "slippage",
+      "simulator"
+    ]
+  },
+  {
+    "id": "hierarchical-risk-parity-machine-learning",
+    "name": "Hierarchical Risk Parity (HRP)",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "1. **Tree Clustering:** Agrupa ativos correlacionados em uma árvore genealógica de clusters usando distâncias métricas não-euclidianas.",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "hierarchical",
+      "risk",
+      "parity"
+    ]
+  },
+  {
+    "id": "kalman-filter-dynamic-hedge-ratio",
+    "name": "Kalman Filter Dynamic Hedge Ratio Estimation Engine",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Recursive Bayesian state-space estimation of time-varying hedge ratios and cointegration beta without lookahead bias or arbitrary rolling window parameters.",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "kalman",
+      "filter",
+      "dynamic"
+    ]
+  },
+  {
+    "id": "lob-deep-learning-microstructure",
+    "name": "Limit Order Book (LOB) Deep Learning (`DeepLOB` / `DeepMarket`)",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Ao contrário de candles diários ou de 5 minutos, o LOB captura a pressão de compra e venda nível a nível no livro de ofertas:",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "deep",
+      "learning",
+      "microstructure"
+    ]
+  },
+  {
+    "id": "lob-order-flow-imbalance-vpin",
+    "name": "Limit Order Book (LOB) Order Flow Imbalance (OFI) & VPIN Toxicity Engine",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Limit Order Book (LOB) Level 2 and Level 3 microstructure analytics engine computing multi-level Order Flow Imbalance (OFI), Volume-Synchronized Probability of Toxicity (VPIN), and",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "order",
+      "flow",
+      "imbalance"
+    ]
+  },
+  {
+    "id": "merton-heston-jump-diffusion-pricer",
+    "name": "Monte Carlo Jump-Diffusion (Merton & Heston) Option Pricing Engine",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Accelerated Monte Carlo pricing for exotic and European derivatives under Merton Jump-Diffusion and Heston Stochastic Volatility dynamics with antithetic and quasi-Monte Carlo vari",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "merton",
+      "heston",
+      "jump"
+    ]
+  },
+  {
+    "id": "mev-mempool-private-bundles-execution",
+    "name": "MEV Defense & Private Bundle Routing (`Flashbots`)",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "No mempool aberto, bots de busca (Searchers) monitoram ordens pendentes e executam ataques sanduíche (comprando antes da sua ordem e vendendo imediatamente depois pelo preço inflac",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "mempool",
+      "private",
+      "bundles"
+    ]
+  },
+  {
+    "id": "polymarket-grok-trading-bots",
+    "name": "📈 Polymarket Grok Trading Bots & Arbitrage Suite",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Suíte completa com mais de 260 scripts em Python para trading algorítmico, arbitragem e apostas no Polymarket integrados ao Grok e OpenAI com smart contracts USDC.",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "polymarket",
+      "grok",
+      "trading"
+    ]
+  },
+  {
+    "id": "portfolio-risk-parity-cvar-optimizer",
+    "name": "Portfolio Equal Risk Parity (ERC) & CVaR Optimization Engine",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Equal Risk Contribution (ERC) portfolio allocation and Conditional Value at Risk (CVaR / Expected Shortfall) optimization utilizing Ledoit-Wolf shrinkage covariance.",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "portfolio",
+      "risk",
+      "parity"
+    ]
+  },
+  {
+    "id": "random-matrix-theory-portfolio-denoising",
+    "name": "Random Matrix Theory & Marcenko-Pastur Denoising (`pyRMT`)",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Quando o número de ativos $N$ é comparável ao número de observações temporais $T$ ($N/T \\to q \\in (0, 1)$), a maioria dos autovalores da matriz de correlação observada é puro ruído",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "random",
+      "matrix",
+      "theory"
+    ]
+  },
+  {
+    "id": "statistical-arbitrage-cointegration-pairs",
+    "name": "Statistical Arbitrage & Cointegration Pairs Trading Engine",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Statistical arbitrage engine implementing Engle-Granger and Johansen cointegration testing, Ornstein-Uhlenbeck continuous mean-reversion drift and half-life estimation, and dynamic",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "statistical",
+      "arbitrage",
+      "cointegration"
+    ]
+  },
+  {
+    "id": "stochastic-volatility-surface-svi-calibrator",
+    "name": "Stochastic Volatility Surface & Arbitrage-Free SVI Calibrator",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "Option implied volatility surface reconstruction, Black-Scholes analytical inversion via Brent's method, SVI (Stochastic Volatility Inspired) parametric calibration, and arbitrage-",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "stochastic",
+      "volatility",
+      "surface"
+    ]
+  },
+  {
+    "id": "uniswap-v3-jit-liquidity-concentrated-amm",
+    "name": "Uniswap v3 Concentrated Liquidity & JIT Simulation",
+    "category": "35_Financas_Quantitativas_HFT_DeFi_e_MEV_Institucional",
+    "description": "$$(x + L/\\sqrt{p_b})(y + L\\sqrt{p_a}) = L^2$$",
+    "tags": [
+      "financas_quantitativas_hft_defi_e_mev_institucional",
+      "uniswap",
+      "liquidity",
+      "concentrated"
+    ]
+  },
+  {
+    "id": "academic-patent-prior-art-discovery-agent",
+    "name": "Academic & Patent Prior Art Discovery Agent",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "- **Decomposição de Reivindicações (Claims):** Separa cada patente em elementos obrigatórios e opcionais.",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "academic",
+      "patent",
+      "prior"
+    ]
+  },
+  {
+    "id": "automated-citation-hallucination-verifier",
+    "name": "Automated Citation & Hallucination Cross-Verifier",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "Quando um agente produz um relatório de pesquisa, este módulo atua como revisor adversarial:",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "automated",
+      "citation",
+      "hallucination"
+    ]
+  },
+  {
+    "id": "automated-lipsync-facial-reattribution",
+    "name": "Automated LipSync & Facial Reattribution (`LivePortrait` / `Wav2Lip-HD`)",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "Sincronizar áudio não é apenas mover a boca; é animar sobrancelhas, piscadas e rotação craniana sutil em harmonia com a entonação da fala.",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "automated",
+      "lipsync",
+      "facial"
+    ]
+  },
+  {
+    "id": "comfyui-headless-api-batch-runner",
+    "name": "ComfyUI Headless API Batch Runner",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "Em produção industrial, a interface gráfica do ComfyUI consome memória e impede automação escalável. O workflow exportado em formato API JSON é acionado via WebSocket/HTTP por agen",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "comfyui",
+      "headless",
+      "batch"
+    ]
+  },
+  {
+    "id": "complex-pdf-table-multimodal-extractor",
+    "name": "Complex PDF & Multimodal Document Extractor (`Docling` / `Marker`)",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "PDFs complexos possuem células mescladas, tabelas sem bordas visíveis e textos em múltiplas colunas que viram um emaranhado ilegível em parsers tradicionais.",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "complex",
+      "table",
+      "multimodal"
+    ]
+  },
+  {
+    "id": "distributed-residential-proxy-mesh",
+    "name": "Distributed Residential Proxy Mesh",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "- **Sticky Sessions:** Mantém o mesmo endereço IP durante todo o funil transacional para não disparar alertas de fraude bancária ou bloqueios de sessão.",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "distributed",
+      "residential",
+      "proxy"
+    ]
+  },
+  {
+    "id": "ffmpeg-programmatic-colorgrade-sfx-mastering",
+    "name": "Programmatic Video Assembly & Mastering (`FFmpeg` + `PySceneDetect`)",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "O agente compõe vídeos completos através de scripts parametrizados:",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "ffmpeg",
+      "programmatic",
+      "colorgrade"
+    ]
+  },
+  {
+    "id": "generative-storyboard-to-video-director",
+    "name": "Generative Storyboard to Video Director",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "A maioria das pessoas pede \"um vídeo bonito\". O agente diretor traduz a narrativa em termos técnicos:",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "generative",
+      "storyboard",
+      "video"
+    ]
+  },
+  {
+    "id": "graphrag-dynamic-knowledge-triplet-extractor",
+    "name": "GraphRAG Knowledge Triplet Extractor",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "Vetores sozinhos não entendem causalidade ou genealogia. Ao extrair triplas:",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "graphrag",
+      "dynamic",
+      "knowledge"
+    ]
+  },
+  {
+    "id": "mobile-app-mitm-api-reverse-scraper",
+    "name": "Mobile App MITM & API Reverse Scraper (`mitmproxy`)",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "As interfaces web públicas têm dezenas de proteções (Cloudflare, captchas, ofuscação de código). Os aplicativos mobile, por outro lado, se comunicam diretamente com endpoints JSON ",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "mobile",
+      "mitm",
+      "reverse"
+    ]
+  },
+  {
+    "id": "recursive-multi-hop-hypothesis-decomposition",
+    "name": "Recursive Multi-Hop Hypothesis Decomposition",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "Se a pergunta é *\"Qual o impacto da regulação X na margem de lucro de semicondutores na Coreia?\"*, o agente constrói a árvore lógica:",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "recursive",
+      "multi",
+      "hypothesis"
+    ]
+  },
+  {
+    "id": "semantic-deduplication-cross-source-clustering",
+    "name": "Semantic Deduplication & Cross-Source Clustering",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "Em um evento de notícias, centenas de jornais publicam quase o mesmo texto com pequenas variações.",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "semantic",
+      "deduplication",
+      "cross"
+    ]
+  },
+  {
+    "id": "temporal-video-consistency-rife-film",
+    "name": "Temporal Video Consistency (`RIFE` & `Google FILM`)",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "Modelos de difusão de vídeo quadro a quadro sofrem com inconsistências sutis de textura e iluminação entre frames adjacentes.",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "temporal",
+      "video",
+      "consistency"
+    ]
+  },
+  {
+    "id": "turnstile-antibot-reinforcement-solver",
+    "name": "Turnstile & Anti-Bot Reinforcement Solver",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "Muitos sistemas de desafio oferecem alternativas de acessibilidade por áudio. O agente intercepta o fluxo sonoro, remove ruídos com filtros de passa-faixa e transcreve o código fon",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "turnstile",
+      "antibot",
+      "reinforcement"
+    ]
+  },
+  {
+    "id": "websocket-grpc-realtime-stream-sniffer",
+    "name": "WebSocket & gRPC Real-Time Stream Sniffer",
+    "category": "37_Pipelines_Cinematograficos_Scraping_Invisivel_e_DeepResearch",
+    "description": "Sites modernos não atualizam dados recarregando páginas; eles mantêm canais duplex abertos (WebSockets) ou fluxos binários Protobuf (gRPC-Web).",
+    "tags": [
+      "pipelines_cinematograficos_scraping_invisivel_e_deepresearch",
+      "websocket",
+      "grpc",
+      "realtime"
+    ]
+  },
+  {
+    "id": "canbus-automotive-telemetry-uds-agent",
+    "name": "Automotive CAN Bus & UDS Diagnostic Agent (`python-can` / `can-utils`)",
+    "category": "38_CyberFisica_SCADA_PLC_e_Automotivo_CANBus",
+    "description": "Veículos modernos possuem mais de 70 ECUs interconectadas pelo barramento diferencial CAN (CAN High / CAN Low a 500kbps):",
+    "tags": [
+      "cyberfisica_scada_plc_e_automotivo_canbus",
+      "canbus",
+      "automotive",
+      "telemetry"
+    ]
+  },
+  {
+    "id": "openplc-iec61131-ladder-logic-compiler",
+    "name": "OpenPLC & IEC 61131-3 Logic Compiler (`OpenPLC`)",
+    "category": "38_CyberFisica_SCADA_PLC_e_Automotivo_CANBus",
+    "description": "Lógica industrial não pode travar ou congelar por exceções de software. Ela opera em ciclos de varredura rígidos (*scan cycles* de 1ms a 10ms):",
+    "tags": [
+      "cyberfisica_scada_plc_e_automotivo_canbus",
+      "openplc",
+      "iec61131",
+      "ladder"
+    ]
+  },
+  {
+    "id": "scada-modbus-opcua-industrial-agent",
+    "name": "SCADA, Modbus & OPC-UA Industrial Agent (`pymodbus` / `asyncua`)",
+    "category": "38_CyberFisica_SCADA_PLC_e_Automotivo_CANBus",
+    "description": "Diferente do mundo de TI convencional (REST/JSON), o chão de fábrica opera em barramentos industriais determinísticos com registradores de memória mapeados:",
+    "tags": [
+      "cyberfisica_scada_plc_e_automotivo_canbus",
+      "scada",
+      "modbus",
+      "opcua"
+    ]
+  },
+  {
+    "id": "gods-eye-view-3d-globe",
+    "name": "🛰️ God's Eye View — Live Spatial Intelligence",
+    "category": "39_Inteligencia_Geoespacial_GEOINT_SAR_e_Satelites",
+    "description": "Simulador 3D de globo terrestre e inteligência espacial em tempo real com mais de 550 scripts em Cesium, Three.js e Vite para visualização de camadas geoespaciais e satélites.",
+    "tags": [
+      "inteligencia_geoespacial_geoint_sar_e_satelites",
+      "gods",
+      "view",
+      "globe"
+    ]
+  },
+  {
+    "id": "multispectral-sentinel2-landsat-geoint",
+    "name": "Multispectral GEOINT & Environmental Tracking (`Rasterio` / `Earth Engine`)",
+    "category": "39_Inteligencia_Geoespacial_GEOINT_SAR_e_Satelites",
+    "description": "Combina o infravermelho próximo (NIR) e o infravermelho de ondas curtas (SWIR) para quantificar clorofila e umidade com resolução de 10 metros por pixel:",
+    "tags": [
+      "inteligencia_geoespacial_geoint_sar_e_satelites",
+      "multispectral",
+      "sentinel2",
+      "landsat"
+    ]
+  },
+  {
+    "id": "satellite-multispectral-change-detection",
+    "name": "Satellite Multispectral Change Detection & GEOINT Analysis",
+    "category": "39_Inteligencia_Geoespacial_GEOINT_SAR_e_Satelites",
+    "description": ">",
+    "tags": [
+      "inteligencia_geoespacial_geoint_sar_e_satelites",
+      "satellite",
+      "multispectral",
+      "change"
+    ]
+  },
+  {
+    "id": "synthetic-aperture-radar-sar-sentinel1",
+    "name": "Synthetic Aperture Radar (SAR) Intelligence (`SNAP` / `Sentinel-1`)",
+    "category": "39_Inteligencia_Geoespacial_GEOINT_SAR_e_Satelites",
+    "description": "Câmeras comuns de satélite são inúteis quando há nuvens ou à noite. O SAR emite seus próprios pulsos de micro-ondas e mede a retroespalhamento (*backscatter* em decibéis $\\sigma^0$",
+    "tags": [
+      "inteligencia_geoespacial_geoint_sar_e_satelites",
+      "synthetic",
+      "aperture",
+      "radar"
+    ]
+  },
+  {
+    "id": "torchgeo-satellite-deep-learning",
+    "name": "TorchGeo Deep Learning Satellite Vision (`TorchGeo` / `GeoPandas`)",
+    "category": "39_Inteligencia_Geoespacial_GEOINT_SAR_e_Satelites",
+    "description": "Ao contrário do PyTorch padrão (que trata imagens como tensores genéricos), o TorchGeo preserva sistemas de coordenadas geográficas (CRS / EPSG:4326), bounding boxes geoespaciais e",
+    "tags": [
+      "inteligencia_geoespacial_geoint_sar_e_satelites",
+      "torchgeo",
+      "satellite",
+      "deep"
+    ]
+  },
+  {
+    "id": "mavlink-px4-ardupilot-drone-autopilot",
+    "name": "MAVLink Autopilot Drone Control (`pymavlink` / `dronekit`)",
+    "category": "40_Aeroespacial_Drones_Autonomos_e_Mavlink",
+    "description": "O protocolo MAVLink opera com empacotamento binário ultra-leve para links de rádio e telemetria de 433MHz/915MHz ou Wi-Fi:",
+    "tags": [
+      "aeroespacial_drones_autonomos_e_mavlink",
+      "mavlink",
+      "ardupilot",
+      "drone"
+    ]
+  },
+  {
+    "id": "orbital-mechanics-cubesat-tle-astrodynamics",
+    "name": "Astrodynamics & Satellite Orbit Tracking (`poliastro` / `sgp4`)",
+    "category": "40_Aeroespacial_Drones_Autonomos_e_Mavlink",
+    "description": "Calcula os seis elementos orbitais keplerianos (Semieixo maior, Excentricidade, Inclinação, RAAN, Argumento do periastro, Anomalia média) para prever com precisão milimétrica a pos",
+    "tags": [
+      "aeroespacial_drones_autonomos_e_mavlink",
+      "orbital",
+      "mechanics",
+      "cubesat"
+    ]
+  },
+  {
+    "id": "visual-inertial-odometry-gps-denied-nav",
+    "name": "Visual-Inertial Odometry (VIO) em GPS-Denied (`OpenVINS` / `VINS-Mono`)",
+    "category": "40_Aeroespacial_Drones_Autonomos_e_Mavlink",
+    "description": "Combina o rastreamento de pontos de interesse visuais ópticos na câmera com a integração de acelerações do acelerômetro e giroscópio através de um Filtro de Kalman Estendido (EKF).",
+    "tags": [
+      "aeroespacial_drones_autonomos_e_mavlink",
+      "visual",
+      "inertial",
+      "odometry"
+    ]
+  },
+  {
+    "id": "biopython-genomic-sequence-indexer",
+    "name": "Genomic Sequence Indexing & Parsing (`Biopython` / `pysam`)",
+    "category": "41_Genomica_Clinica_Bioinformatica_NGS_e_CRISPR",
+    "description": "Busca rápida por padrões moleculares, tradução de códons de RNA mensageiro em cadeias de aminoácidos e análise de ilhas CpG em genomas eucarióticos.",
+    "tags": [
+      "genomica_clinica_bioinformatica_ngs_e_crispr",
+      "biopython",
+      "genomic",
+      "sequence"
+    ]
+  },
+  {
+    "id": "crispr-cas9-offtarget-guide-designer",
+    "name": "CRISPR-Cas9 Guide Designer & Off-Target Scorer (`DeepCRISPR`)",
+    "category": "41_Genomica_Clinica_Bioinformatica_NGS_e_CRISPR",
+    "description": "Garante que a tesoura molecular clive exatamente o gene defeituoso sem cortar regiões essenciais em outras partes do genoma:",
+    "tags": [
+      "genomica_clinica_bioinformatica_ngs_e_crispr",
+      "crispr",
+      "cas9",
+      "offtarget"
+    ]
+  },
+  {
+    "id": "ngs-genomic-variant-calling-gatk",
+    "name": "NGS Genomic Variant Calling Pipeline (`GATK` / `BWA-MEM` / `Samtools`)",
+    "category": "41_Genomica_Clinica_Bioinformatica_NGS_e_CRISPR",
+    "description": "Processa bilhões de leituras de nucleotídeos (A, C, T, G) em arquivos brutos FASTQ:",
+    "tags": [
+      "genomica_clinica_bioinformatica_ngs_e_crispr",
+      "genomic",
+      "variant",
+      "calling"
+    ]
+  },
+  {
+    "id": "counterfactual-regret-minimization-cfr",
+    "name": "Counterfactual Regret Minimization (CFR) (`Libratus` / `Pluribus` Core)",
+    "category": "43_Teoria_dos_Jogos_CFR_e_Motores_Posicionais",
+    "description": "Diferente do xadrez (onde o tabuleiro é 100% visível), em jogos com informação oculta o agente precisa calcular estratégias mistas de Equilíbrio de Nash:",
+    "tags": [
+      "teoria_dos_jogos_cfr_e_motores_posicionais",
+      "counterfactual",
+      "regret",
+      "minimization"
+    ]
+  },
+  {
+    "id": "openspiel-reinforcement-learning-games",
+    "name": "OpenSpiel Multi-Agent Game Theory (`google-deepmind/open_spiel`)",
+    "category": "43_Teoria_dos_Jogos_CFR_e_Motores_Posicionais",
+    "description": "Ambiente formal para testar dinâmicas de cooperação, traição (Dilema do Prisioneiro), leilões simultâneos e jogos de soma zero entre modelos autônomos.",
+    "tags": [
+      "teoria_dos_jogos_cfr_e_motores_posicionais",
+      "openspiel",
+      "reinforcement",
+      "learning"
+    ]
+  },
+  {
+    "id": "stockfish-nnue-positional-evaluator",
+    "name": "Stockfish NNUE Positional Evaluation",
+    "category": "43_Teoria_dos_Jogos_CFR_e_Motores_Posicionais",
+    "description": "Redes neurais tradicionais são lentas demais para buscas profundas de árvore alfa-beta. O NNUE armazena apenas camadas lineares de quantização int8 e só recalcula os neurônios corr",
+    "tags": [
+      "teoria_dos_jogos_cfr_e_motores_posicionais",
+      "stockfish",
+      "nnue",
+      "positional"
+    ]
+  },
+  {
+    "id": "deepmind-graphcast-weather-forecasting",
+    "name": "DeepMind GraphCast Global Weather Forecasting",
+    "category": "44_Modelagem_Climatica_Numerica_e_Earth_Systems_AI",
+    "description": "Em vez de resolver equações diferenciais parciais de Navier-Stokes que levam horas em supercomputadores milionários, o GraphCast projeta o globo em um grafo multiescala e prevê o t",
+    "tags": [
+      "modelagem_climatica_numerica_e_earth_systems_ai",
+      "deepmind",
+      "graphcast",
+      "weather"
+    ]
+  },
+  {
+    "id": "ecmwf-era5-atmospheric-reanalysis-agent",
+    "name": "ERA5 Climate Reanalysis Pipeline (`Xarray` / `CDS API`)",
+    "category": "44_Modelagem_Climatica_Numerica_e_Earth_Systems_AI",
+    "description": "Acesso estruturado a mais de 70 anos de histórico climático global com variáveis de temperatura, geopotencial, umidade específica e vetores de vento em 37 níveis de pressão da trop",
+    "tags": [
+      "modelagem_climatica_numerica_e_earth_systems_ai",
+      "ecmwf",
+      "era5",
+      "atmospheric"
+    ]
+  },
+  {
+    "id": "fourcastnet-nvidia-spherical-fourier",
+    "name": "NVIDIA FourCastNet Global Atmospheric Model",
+    "category": "44_Modelagem_Climatica_Numerica_e_Earth_Systems_AI",
+    "description": "Resolve a física atmosférica no domínio da frequência usando Transformadas Rápidas de Fourier (FFT), capturando interações de escala global entre ventos de alta altitude (correntes",
+    "tags": [
+      "modelagem_climatica_numerica_e_earth_systems_ai",
+      "fourcastnet",
+      "nvidia",
+      "spherical"
+    ]
+  },
+  {
+    "id": "digital-signal-processing-filter-banks",
+    "name": "High-Performance Digital Signal Processing (DSP) (`Scipy.signal`)",
+    "category": "45_Engenharia_Acustica_Beamforming_e_Sinais_Sonar",
+    "description": "Implementação de filtros Chebyshev, Butterworth e transformadas Hilbert para análise instantânea de fase e amplitude de sinais físicos e acústicos.",
+    "tags": [
+      "engenharia_acustica_beamforming_e_sinais_sonar",
+      "digital",
+      "signal",
+      "processing"
+    ]
+  },
+  {
+    "id": "hydroacoustic-passive-sonar-processing",
+    "name": "Hydroacoustic Passive Sonar Intelligence (`LOFAR` / `DEMON`)",
+    "category": "45_Engenharia_Acustica_Beamforming_e_Sinais_Sonar",
+    "description": "A água do mar atenua ondas de rádio, tornando o som o único meio de comunicação e detecção subaquática:",
+    "tags": [
+      "engenharia_acustica_beamforming_e_sinais_sonar",
+      "hydroacoustic",
+      "passive",
+      "sonar"
+    ]
+  },
+  {
+    "id": "microphone-array-spatial-beamforming",
+    "name": "Microphone Array Spatial Beamforming (`PyRoomAcoustics`)",
+    "category": "45_Engenharia_Acustica_Beamforming_e_Sinais_Sonar",
+    "description": "Diferente de um microfone comum que capta som de todas as direções, uma matriz de 4 a 16 microfones calcula o atraso temporal de fase ($\\Delta t$) entre cada sensor e cria um feixe",
+    "tags": [
+      "engenharia_acustica_beamforming_e_sinais_sonar",
+      "microphone",
+      "array",
+      "spatial"
+    ]
+  },
+  {
+    "id": "botorch-bayesian-optimization-multiobjective",
+    "name": "BoTorch Multi-Objective Bayesian Optimization (`pytorch/botorch`)",
+    "category": "46_Vantagens_Assimetricas_DeepEngineering_e_HiperEficiencia",
+    "description": "Ajustar 20 parâmetros simultâneos em um sistema complexo (como latência vs acurácia vs custo de API) por intuição humana leva meses de testes frustrantes.",
+    "tags": [
+      "vantagens_assimetricas_deepengineering_e_hipereficiencia",
+      "botorch",
+      "bayesian",
+      "optimization"
+    ]
+  },
+  {
+    "id": "kv-cache-eviction-attention-sinks-compression",
+    "name": "KV-Cache Compression & Attention Sinks (`StreamingLLM` / `SnapKV`)",
+    "category": "46_Vantagens_Assimetricas_DeepEngineering_e_HiperEficiencia",
+    "description": "Pesquisadores descobriram que os primeiros 4 tokens de um prompt recebem uma quantidade astronômica de atenção, independentemente do seu significado semântico (atuando como um \"ral",
+    "tags": [
+      "vantagens_assimetricas_deepengineering_e_hipereficiencia",
+      "cache",
+      "eviction",
+      "attention"
+    ]
+  },
+  {
+    "id": "self-play-finetuning-spin-synthetic-data",
+    "name": "Self-Play Fine-Tuning (`uclaml/SPIN`)",
+    "category": "46_Vantagens_Assimetricas_DeepEngineering_e_HiperEficiencia",
+    "description": "A maioria dos times gasta fortunas pagando humanos para avaliar respostas ou depende da API do GPT-4 para gerar dados de treino.",
+    "tags": [
+      "vantagens_assimetricas_deepengineering_e_hipereficiencia",
+      "self",
+      "play",
+      "finetuning"
+    ]
+  },
+  {
+    "id": "state-space-models-mamba2-linear-attention",
+    "name": "State-Space Models: Mamba-2 & Linear Attention (`state-spaces/mamba`)",
+    "category": "46_Vantagens_Assimetricas_DeepEngineering_e_HiperEficiencia",
+    "description": "A atenção dos Transformers escala quadraticamente: dobrar o contexto multiplica o custo de memória por quatro.",
+    "tags": [
+      "vantagens_assimetricas_deepengineering_e_hipereficiencia",
+      "state",
+      "space",
+      "models"
+    ]
+  },
+  {
+    "id": "test-time-compute-prm-mcts-reasoning",
+    "name": "Test-Time Compute: PRM & MCTS (`THUDM/ReST-MCTS*`)",
+    "category": "46_Vantagens_Assimetricas_DeepEngineering_e_HiperEficiencia",
+    "description": "Modelos tradicionais cospem o primeiro token imediatamente. A arquitetura de Process Supervision trata o raciocínio como uma **árvore de busca de xadrez**:",
+    "tags": [
+      "vantagens_assimetricas_deepengineering_e_hipereficiencia",
+      "test",
+      "time",
+      "compute"
+    ]
+  },
+  {
+    "id": "triton-fused-kernels-liger-acceleration",
+    "name": "Triton Fused GPU Kernels (`openai/triton` / `linkedin/Liger-Kernel`)",
+    "category": "46_Vantagens_Assimetricas_DeepEngineering_e_HiperEficiencia",
+    "description": "Em modelos modernos, o gargalo da GPU não é o poder de cálculo matemático (FLOPS), mas a **Largura de Banda de Memória (Memory Bandwidth Bound)**.",
+    "tags": [
+      "vantagens_assimetricas_deepengineering_e_hipereficiencia",
+      "triton",
+      "fused",
+      "kernels"
+    ]
+  },
+  {
+    "id": "equality-saturation-egraphs-optimization",
+    "name": "Equality Saturation & E-Graphs (`egraphs-good/egg` / `egglog`)",
+    "category": "47_Engenharia_Algoritmica_Extrema_e_Sintese_de_Programas",
+    "description": "Em otimizadores convencionais, se você aplicar a Regra A antes da Regra B, você pode destruir a oportunidade de aplicar a Regra C.",
+    "tags": [
+      "engenharia_algoritmica_extrema_e_sintese_de_programas",
+      "equality",
+      "saturation",
+      "egraphs"
+    ]
+  },
+  {
+    "id": "homomorphic-encryption-arithmetic-circuits",
+    "name": "Fully Homomorphic Encryption (FHE) Circuits (`zama-ai/concrete` / `TFHE-rs`)",
+    "category": "47_Engenharia_Algoritmica_Extrema_e_Sintese_de_Programas",
+    "description": "$$\\text{Enc}(x), \\text{Enc}(y) \\xrightarrow{\\text{Circuito Homomórfico } f} \\text{Enc}(f(x, y))$$",
+    "tags": [
+      "engenharia_algoritmica_extrema_e_sintese_de_programas",
+      "homomorphic",
+      "encryption",
+      "arithmetic"
+    ]
+  },
+  {
+    "id": "neural-algorithmic-reasoning-clrs",
+    "name": "Neural Algorithmic Reasoning (`google-deepmind/clrs`)",
+    "category": "47_Engenharia_Algoritmica_Extrema_e_Sintese_de_Programas",
+    "description": "Modelos de Deep Learning comuns falham ao executar algoritmos exatos em instâncias maiores do que viram no treino. O **Neural Algorithmic Reasoner**:",
+    "tags": [
+      "engenharia_algoritmica_extrema_e_sintese_de_programas",
+      "neural",
+      "algorithmic",
+      "reasoning"
+    ]
+  },
+  {
+    "id": "smt-program-synthesis-rosette-z3",
+    "name": "SMT Program Synthesis & Invariant Discovery (`Z3Prover/z3` / `emina/rosette`)",
+    "category": "47_Engenharia_Algoritmica_Extrema_e_Sintese_de_Programas",
+    "description": "Em vez de escrever código imperativo, você define a especificação:",
+    "tags": [
+      "engenharia_algoritmica_extrema_e_sintese_de_programas",
+      "program",
+      "synthesis",
+      "rosette"
+    ]
+  },
+  {
+    "id": "stochastic-superoptimization-assembly-synthesis",
+    "name": "Stochastic Superoptimization & Assembly Synthesis (`StanfordPL/stoke` / `google/souper`)",
+    "category": "47_Engenharia_Algoritmica_Extrema_e_Sintese_de_Programas",
+    "description": "Compiladores padrão (GCC, LLVM) usam regras heurísticas fixas de reescrita. A **Superotimização Estocástica** trata a otimização de código como um problema de busca estocástica no ",
+    "tags": [
+      "engenharia_algoritmica_extrema_e_sintese_de_programas",
+      "stochastic",
+      "superoptimization",
+      "assembly"
+    ]
+  },
+  {
+    "id": "succinct-data-structures-wavelet-trees",
+    "name": "Succinct Data Structures & Wavelet Trees (`simongog/sdsl-lite`)",
+    "category": "47_Engenharia_Algoritmica_Extrema_e_Sintese_de_Programas",
+    "description": "Normalmente, criar um índice para busca rápida dobra ou triplica o tamanho dos dados em disco.",
+    "tags": [
+      "engenharia_algoritmica_extrema_e_sintese_de_programas",
+      "succinct",
+      "data",
+      "structures"
+    ]
+  },
+  {
+    "id": "chronolocation-imint-shadow-analysis",
+    "name": "Chronolocation & IMINT Shadow Analysis (`SunCalc` / `Overpass Turbo`)",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": "O comprimento e a orientação da sombra de um objeto vertical (como um poste de luz) dependem unicamente da latitude, longitude e do tempo exato (UTC):",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "chronolocation",
+      "imint",
+      "shadow"
+    ]
+  },
+  {
+    "id": "chronolocation-solar-azimuth-shadow-analysis",
+    "name": "Chronolocation & Solar Azimuth Shadow Analysis",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": ">",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "chronolocation",
+      "solar",
+      "azimuth"
+    ]
+  },
+  {
+    "id": "email-header-forensics-infrastructure-tracing",
+    "name": "Email Header Forensics & Network Hop Tracing",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": "Cada servidor SMTP que repassa a mensagem adiciona um carimbo obrigatório no topo do cabeçalho:",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "email",
+      "header",
+      "forensics"
+    ]
+  },
+  {
+    "id": "exif-c2pa-multimedia-metadata-forensics",
+    "name": "Multimedia Metadata Forensics (`ExifTool` / `C2PA`)",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": "Câmeras digitais e smartphones embutem dezenas de metadados técnicos no arquivo:",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "exif",
+      "c2pa",
+      "multimedia"
+    ]
+  },
+  {
+    "id": "facial-biometrics-vector-clustering",
+    "name": "Facial Biometrics Vector Clustering & OSINT Triage",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": ">",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "facial",
+      "biometrics",
+      "vector"
+    ]
+  },
+  {
+    "id": "flight-maritime-surveillance-tracking",
+    "name": "Flight & Maritime Surveillance Tracking (ADS-B / AIS)",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": ">",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "flight",
+      "maritime",
+      "surveillance"
+    ]
+  },
+  {
+    "id": "maigret-recursive-digital-footprint",
+    "name": "Recursive Digital Footprint Mapping (`soxoj/maigret` / `megadose/holehe`)",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": "Enquanto scanners convencionais apenas checam respostas HTTP 200/404 em URLs de perfis, o **Maigret**:",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "maigret",
+      "recursive",
+      "digital"
+    ]
+  },
+  {
+    "id": "prnu-sensor-noise-camera-forensics",
+    "name": "PRNU Sensor Noise Camera Forensics",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": ">",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "prnu",
+      "sensor",
+      "noise"
+    ]
+  },
+  {
+    "id": "social-graph-entity-resolution",
+    "name": "Social Graph Entity Resolution & De-Anonymization",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": ">",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "social",
+      "graph",
+      "entity"
+    ]
+  },
+  {
+    "id": "social-network-analysis-disinformation-mapping",
+    "name": "Social Network Analysis (SNA) com Gephi",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": "Quando milhares de contas interagem em torno de um tema, o grafo revela a estrutura oculta da rede:",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "social",
+      "network",
+      "analysis"
+    ]
+  },
+  {
+    "id": "spiderfoot-osint-graph-automation",
+    "name": "SpiderFoot OSINT Automation (`smicallef/spiderfoot`)",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": "O SpiderFoot opera com mais de 200 módulos de inteligência que se alimentam em cadeia:",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "spiderfoot",
+      "osint",
+      "graph"
+    ]
+  },
+  {
+    "id": "youtube-investigative-osint-toolkit",
+    "name": "🕵️ YouTube Investigative & OSINT Toolkit",
+    "category": "48_OSINT_Avancado_IMINT_e_Investigacao_Digital",
+    "description": "Arsenal de inteligência de fontes abertas (OSINT), perícia forense e mineração de dados no YouTube. Absorve Amnesty Dataviewer (timestamp UTC exato e busca reversa de thumbnails), ",
+    "tags": [
+      "osint_avancado_imint_e_investigacao_digital",
+      "youtube",
+      "investigative",
+      "osint"
+    ]
+  },
+  {
+    "id": "anti-shadowban-multi-platform-distributor",
+    "name": "Anti-Shadowban Multi-Platform Distributor",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": "Postar exatamente o mesmo arquivo MP4 em 5 contas ou redes diferentes resulta em supressão de alcance porque o YouTube, TikTok e Meta geram hashes perceptuais de vídeo (**pHash**) ",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "anti",
+      "shadowban",
+      "multi"
+    ]
+  },
+  {
+    "id": "ass-ffmpeg-styled-caption-burnin",
+    "name": "ASS Styled Dynamic Caption Burn-In Engine (FFmpeg libass)",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": ">",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "ffmpeg",
+      "styled",
+      "caption"
+    ]
+  },
+  {
+    "id": "auto-viral-shorts-clipping-pipeline",
+    "name": "Autonomous Viral Shorts Clipping & Repurposing Pipeline",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": ">",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "auto",
+      "viral",
+      "shorts"
+    ]
+  },
+  {
+    "id": "dark-channel-miner-pipeline",
+    "name": "🕵️ Dark Channel Miner & Autonomous Production Pipeline",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": "Pipeline de espionagem, mineração de dados e orquestração de canais dark no YouTube (descoberta de nichos virais, decupagem de roteiros e produção autônoma).",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "dark",
+      "channel",
+      "miner"
+    ]
+  },
+  {
+    "id": "flow-agency-autonomous-orchestrator",
+    "name": "Flow Agency Autonomous Swarm Orchestrator",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": "```",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "flow",
+      "agency",
+      "autonomous"
+    ]
+  },
+  {
+    "id": "multiplatform-autonomous-content-publisher",
+    "name": "Multiplatform Autonomous Content Publisher",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": ">",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "multiplatform",
+      "autonomous",
+      "content"
+    ]
+  },
+  {
+    "id": "neuro-retention-predictor-hook-scorer",
+    "name": "Neuro-Retention Predictor & 3-Second Hook Scorer",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": ">",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "neuro",
+      "retention",
+      "predictor"
+    ]
+  },
+  {
+    "id": "neuromarketing-hook-pattern-interrupt",
+    "name": "Neuromarketing Hook & Pattern Interrupt",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": "1. **Quebra Visual Imediata:** Início com movimento acelerado, objeto incomum ou close extremo nos primeiros 0.5s.",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "neuromarketing",
+      "hook",
+      "pattern"
+    ]
+  },
+  {
+    "id": "remotion-headless-render-engine",
+    "name": "Remotion Headless Programmatic Video Engine (React + WebGL + FFmpeg)",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": ">",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "remotion",
+      "headless",
+      "render"
+    ]
+  },
+  {
+    "id": "roteiro-deep-time",
+    "name": "Roteiro Deep Time",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": "Sistema para escrever roteiros de canal de documentário curto de desfamiliarização: pega um hábito cotidiano e prova que, por quase toda a história humana, ele não existia ou era r",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "roteiro",
+      "deep",
+      "time"
+    ]
+  },
+  {
+    "id": "smart-reframe-yolo-mediapipe-tracking",
+    "name": "Smart Reframe: YOLO + MediaPipe 16:9 to 9:16 Crop Engine",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": ">",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "smart",
+      "reframe",
+      "yolo"
+    ]
+  },
+  {
+    "id": "vidiq-outlier-arbitrage-engine",
+    "name": "Outlier Video Arbitrage & Trend Harvester",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": "Canais pequenos com média de 2.000 visualizações que subitamente atingem 500.000 visualizações descobriram uma **anomalia de retenção algorítmica**.",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "vidiq",
+      "outlier",
+      "arbitrage"
+    ]
+  },
+  {
+    "id": "whisperx-word-level-subtitle-pipeline",
+    "name": "WhisperX Word-Level Subtitle & Phoneme Forced Alignment Pipeline",
+    "category": "49_HiperCrescimento_Viral_Engenharia_de_Shorts_e_Agencia_Autonoma",
+    "description": ">",
+    "tags": [
+      "hipercrescimento_viral_engenharia_de_shorts_e_agencia_autonoma",
+      "whisperx",
+      "word",
+      "level"
+    ]
+  },
+  {
+    "id": "cold-boot-memory-remanence-forensics",
+    "name": "Cryogenic Cold Boot & Memory Remanence Forensics (`bios_memimage` / `aeskeyfind`)",
+    "category": "50_Inteligencia_de_Sinais_Invisiveis_zkML_e_Radar_Passivo",
+    "description": "A memÃ³ria dinÃ¢mica de acesso aleatÃ³rio (DRAM) armazena bits como cargas eletrostÃ¡ticas em capacitores microscÃ³picos que perdem sua carga em centenas de milissegundos se nÃ£o f",
+    "tags": [
+      "inteligencia_de_sinais_invisiveis_zkml_e_radar_passivo",
+      "cold",
+      "boot",
+      "memory"
+    ]
+  },
+  {
+    "id": "covert-acoustic-mesh-ultrasonic-networking",
+    "name": "Covert Acoustic Mesh & Ultrasonic Air-Gap Communications (`quiet` / `ggwave`)",
+    "category": "50_Inteligencia_de_Sinais_Invisiveis_zkML_e_Radar_Passivo",
+    "description": "MÃ¡quinas em redes isoladas (*air-gapped*) tÃªm placas de rede desativadas, portas USB lacradas e ausÃªncia de adaptadores Wi-Fi ou Bluetooth. Contudo, transdutores piezoelÃ©tricos",
+    "tags": [
+      "inteligencia_de_sinais_invisiveis_zkml_e_radar_passivo",
+      "covert",
+      "acoustic",
+      "mesh"
+    ]
+  },
+  {
+    "id": "event-camera-neuromorphic-vision",
+    "name": "Neuromorphic Event-Based Vision (`Prophesee Metavision` / `Tonic`)",
+    "category": "50_Inteligencia_de_Sinais_Invisiveis_zkML_e_Radar_Passivo",
+    "description": "CÃ¢meras convencionais capturam matrizes completas de pixels em intervalos fixos (ex: 30 ou 60 FPS), gerando redundÃ¢ncia colossal em cenas estÃ¡ticas e *motion blur* catastrÃ³fico",
+    "tags": [
+      "inteligencia_de_sinais_invisiveis_zkml_e_radar_passivo",
+      "event",
+      "camera",
+      "neuromorphic"
+    ]
+  },
+  {
+    "id": "passive-radar-coherent-sdr",
+    "name": "Passive Radar Coherent Bistatic Signal Processing (`KrakenSDR` / `Blah2`)",
+    "category": "50_Inteligencia_de_Sinais_Invisiveis_zkML_e_Radar_Passivo",
+    "description": "Ao contrÃ¡rio do radar monostÃ¡tico convencional, onde transmissor e receptor estÃ£o colocalizados e emitem pulsos de alta potÃªncia, o radar passivo opera como um sistema bistÃ¡ti",
+    "tags": [
+      "inteligencia_de_sinais_invisiveis_zkml_e_radar_passivo",
+      "passive",
+      "radar",
+      "coherent"
+    ]
+  },
+  {
+    "id": "post-quantum-cryptographic-lattices",
+    "name": "Post-Quantum Lattice Cryptography & Shor-Immunity (`liboqs` / `Kyber` / `Dilithium`)",
+    "category": "50_Inteligencia_de_Sinais_Invisiveis_zkML_e_Radar_Passivo",
+    "description": "O algoritmo quÃ¢ntico de Shor resolve o problema da fatoraÃ§Ã£o de inteiros (RSA) e do logaritmo discreto em curvas elÃ­pticas (ECDSA/Ed25519) em tempo polinomial $O((\\log N)^3)$. ",
+    "tags": [
+      "inteligencia_de_sinais_invisiveis_zkml_e_radar_passivo",
+      "post",
+      "quantum",
+      "cryptographic"
+    ]
+  },
+  {
+    "id": "rf-sdr-modulation-signal-intelligence",
+    "name": "RF/SDR Modulation Signal Intelligence (SIGINT)",
+    "category": "50_Inteligencia_de_Sinais_Invisiveis_zkML_e_Radar_Passivo",
+    "description": ">",
+    "tags": [
+      "inteligencia_de_sinais_invisiveis_zkml_e_radar_passivo",
+      "modulation",
+      "signal",
+      "intelligence"
+    ]
+  },
+  {
+    "id": "tempest-van-eck-eavesdropping-sdr",
+    "name": "TEMPEST & Van Eck Phreaking SDR Video Reconstruction (`TempestSDR`)",
+    "category": "50_Inteligencia_de_Sinais_Invisiveis_zkML_e_Radar_Passivo",
+    "description": "Cabos de vÃ­deo digitais de alta taxa de dados (HDMI/DisplayPort usando TMDS) e controladores grÃ¡ficos funcionam involuntariamente como transmissores de rÃ¡dio nÃ£o blindados. A t",
+    "tags": [
+      "inteligencia_de_sinais_invisiveis_zkml_e_radar_passivo",
+      "tempest",
+      "eavesdropping"
+    ]
+  },
+  {
+    "id": "visual-microphone-optical-vibrometry",
+    "name": "Visual Microphone & Optical Laser Vibrometry Audio Reconstruction (`MIT CSAIL`)",
+    "category": "50_Inteligencia_de_Sinais_Invisiveis_zkML_e_Radar_Passivo",
+    "description": "Ondas sonoras no ar exercem pressÃ£o mecÃ¢nica microscÃ³pica sobre superfÃ­cies fÃ­sicas adjacentes (ex: sacos de plÃ¡stico, folhas de ficus, copos d'Ã¡gua, vidros de janelas). O d",
+    "tags": [
+      "inteligencia_de_sinais_invisiveis_zkml_e_radar_passivo",
+      "visual",
+      "microphone",
+      "optical"
+    ]
+  },
+  {
+    "id": "zkml-verifiable-neural-inference",
+    "name": "Zero-Knowledge Machine Learning (zkML) Verifiable Inference (`ezkl` / `Halo2`)",
+    "category": "50_Inteligencia_de_Sinais_Invisiveis_zkML_e_Radar_Passivo",
+    "description": "Em sistemas convencionais, confiar no resultado de uma IA requer executar o modelo localmente ou confiar cegamente no provedor de nuvem. Com zkML, um provador gera um argumento cri",
+    "tags": [
+      "inteligencia_de_sinais_invisiveis_zkml_e_radar_passivo",
+      "zkml",
+      "verifiable",
+      "neural"
+    ]
+  },
+  {
+    "id": "sites-landing-pages-pt-br",
+    "name": "Sites e Landing Pages PT-BR para Pequenos Negócios Locais",
+    "category": "51_Sites_LandingPages_PT_BR",
+    "description": "Você é um especialista em construir landing pages de alta conversão para pequenos negócios brasileiros. Você conhece a realidade de quem fatura entre R$ 5 mil e R$ 80 mil por mês, ",
+    "tags": [
+      "sites_landingpages_pt_br",
+      "sites",
+      "landing",
+      "pages"
+    ]
+  }
+]

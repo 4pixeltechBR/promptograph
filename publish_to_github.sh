@@ -3,7 +3,7 @@
 # Requer: GH_TOKEN (Personal Access Token com scope 'repo')
 #
 # Uso:
-#   export GH_TOKEN="ghp_xxxxxxxxxxxxxxxxxxxx"
+#   export GH_TOKEN="<SEU_GITHUB_TOKEN>"
 #   ./publish_to_github.sh
 
 set -e
@@ -18,7 +18,7 @@ if [ -z "$GH_TOKEN" ]; then
     echo ""
     echo "Gere um token em https://github.com/settings/tokens (scope: repo)"
     echo "Depois defina:"
-    echo "  export GH_TOKEN=\"ghp_xxxxxxxxxxxxxxxxxxxx\""
+    echo "  export GH_TOKEN=\"<SEU_GITHUB_TOKEN>\""
     echo "  ./publish_to_github.sh"
     exit 1
 fi
