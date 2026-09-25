@@ -200,26 +200,31 @@ docker run -p 8765:8765 promptograph
 | Metric | Value |
 |---|---|
 | Prompts indexed | 5,317 |
+| Curated Skills indexed | 226+ |
+| Skill Categories | 37 domains (Agents, Audio, Video, Quant, Clean Code, etc) |
+| FastMCP Server | Included (stdio transport) |
 | Tokens indexed | ~12,000,000 |
 | Companies | 22+ (Anthropic, OpenAI, Google, xAI, Meta, Mistral, etc) |
 | Source repositories | 20 |
 | Date range | 2022 — 2026 |
-| Index size (JSON) | ~5.5 MB |
+| Index size (JSON) | ~5.5 MB (prompts) + ~380 KB (skills) |
 | Backend RAM | ~50 MB |
-| Disk after install | ~230 MB (with archive) or ~20 MB (without) |
+| Disk after install | ~230 MB (with archive) or ~25 MB (standalone) |
 
 ### 🎯 Use cases
 
 1. **Learn prompt engineering** — read 5,000+ real examples, identify
    patterns, build intuition
-2. **Build a custom AI agent** — start from a preset, tweak, validate
-3. **Audit your product's prompt** — paste it, get a score, see what's
+2. **Equip autonomous AI agents** — stream curated operational skills
+   and prompt blueprints in real time via FastMCP
+3. **Build a custom AI agent** — start from a preset, tweak, validate
+4. **Audit your product's prompt** — paste it, get a score, see what's
    missing
-4. **Compare models** — diff Claude Fable 5 vs Claude Opus 4.8 to
+5. **Compare models** — diff Claude Fable 5 vs Claude Opus 4.8 to
    understand what changed
-5. **Security research** — identify prompt patterns vulnerable to
+6. **Security research** — identify prompt patterns vulnerable to
    injection
-6. **Benchmark / regression test** — track how a prompt evolves over
+7. **Benchmark / regression test** — track how a prompt evolves over
    time
 
 ### 🛠️ API Reference
@@ -375,8 +380,38 @@ promptograph/
 └── README.md (este arquivo)
 ```
 
-**Stack:** Python 3.10+ (stdlib only) + Vanilla HTML/JS. Zero npm, zero
-dependências pip, zero build step.
+### 🔌 Servidor FastMCP para Agentes de IA
+
+O Promptograph inclui um servidor nativo do **Model Context Protocol (MCP)** construído com `FastMCP`. Conecte-o ao **Claude Desktop**, **Claude Code**, **Cursor**, **Windsurf** ou **Antigravity** para dar aos seus assistentes e agentes acesso em tempo real à sabedoria de 5.317 system prompts de produção e a mais de 226 blueprints operacionais de skills.
+
+#### Configuração MCP
+
+Adicione o Promptograph ao arquivo de configuração de MCPs do seu agente (ex: `claude_desktop_config.json`, `.cursor/mcp.json` ou similar):
+
+```json
+{
+  "mcpServers": {
+    "promptograph": {
+      "command": "python",
+      "args": ["scripts/promptograph_mcp_server.py"]
+    }
+  }
+}
+```
+
+#### Conjunto de Ferramentas MCP
+
+| Ferramenta | Categoria | Descrição |
+|---|---|---|
+| `promptograph_search` | Prompts | Busca em 5.317 prompts reais por empresa, modelo ou texto |
+| `promptograph_validate` | Prompts | Pontua qualquer prompt (0-100%, Nota A+ a F) com 13 regras heurísticas |
+| `promptograph_generate` | Prompts | Gera prompts testados usando presets (Claude, GPT, Cursor, Devin) |
+| `promptograph_stats` | Prompts | Métricas de tokens, distribuição de empresas e modelos |
+| `promptograph_skills_search` | Skills | Descobre 226+ skills curadas distribuídas em 37 domínios de engenharia |
+| `promptograph_skills_get` | Skills | Recupera o blueprint operacional executável (`SKILL.md`) de qualquer skill |
+| `promptograph_skills_categories`| Skills | Relatório completo de categorias disponíveis e contagens |
+
+---
 
 ### 🚀 Quick Start
 
@@ -410,27 +445,32 @@ docker run -p 8765:8765 promptograph
 | Métrica | Valor |
 |---|---|
 | Prompts indexados | 5.317 |
+| Skills Curadas indexadas | 226+ |
+| Categorias de Skills | 37 domínios (Agentes, Áudio, Vídeo, Quant, Clean Code, etc) |
+| Servidor FastMCP | Incluso (transporte stdio nativo) |
 | Tokens indexados | ~12.000.000 |
 | Empresas | 22+ (Anthropic, OpenAI, Google, xAI, Meta, Mistral, etc) |
 | Repositórios fonte | 20 |
 | Período | 2022 — 2026 |
-| Tamanho do índice (JSON) | ~5,5 MB |
+| Tamanho do índice (JSON) | ~5,5 MB (prompts) + ~380 KB (skills) |
 | RAM do backend | ~50 MB |
-| Disco após instalação | ~230 MB (com archive) ou ~20 MB (sem) |
+| Disco após instalação | ~230 MB (com archive) ou ~25 MB (standalone) |
 
 ### 🎯 Casos de uso
 
 1. **Aprender engenharia de prompts** — leia 5.000+ exemplos reais,
    identifique padrões, construa intuição
-2. **Construir um agente de IA customizado** — comece de um preset,
+2. **Equipar agentes autônomos de IA** — injete skills operacionais e
+   blueprints prontas em tempo real via FastMCP sem inchar o contexto
+3. **Construir um agente de IA customizado** — comece de um preset,
    ajuste, valide
-3. **Auditar o prompt do seu produto** — cole, receba um score, veja o
+4. **Auditar o prompt do seu produto** — cole, receba um score, veja o
    que falta
-4. **Comparar modelos** — faça diff entre Claude Fable 5 e Claude
+5. **Comparar modelos** — faça diff entre Claude Fable 5 e Claude
    Opus 4.8 pra entender o que mudou
-5. **Pesquisa de segurança** — identifique padrões de prompt
+6. **Pesquisa de segurança** — identifique padrões de prompt
    vulneráveis a injeção
-6. **Benchmark / regression test** — acompanhe como um prompt evolui
+7. **Benchmark / regression test** — acompanhe como um prompt evolui
    com o tempo
 
 ### 🛠️ Referência da API
