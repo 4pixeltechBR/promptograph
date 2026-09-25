@@ -1,19 +1,21 @@
 # 📷 Promptograph
 
-> **Photograph every system prompt that matters.**
-> A toolkit to **browse**, **diff**, **validate**, and **generate** AI system prompts,
-> built on top of 20,475 real prompts extracted from production AI systems.
+> **Photograph every system prompt that matters & Equip AI Agents with Curated Skills.**
+> A production toolkit and **FastMCP Server** to **browse**, **diff**, **validate**, and **generate** AI system prompts,
+> built on top of **20,475 real prompts** from 55 public repos, plus instant access to **226+ curated engineering skills** across 37 domains.
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Prompts indexed](https://img.shields.io/badge/prompts-20%2C475-brightgreen.svg)](#-whats-inside)
+[![Skills indexed](https://img.shields.io/badge/skills-226%2B-blueviolet.svg)](#-agent-skills-registry)
+[![MCP Server](https://img.shields.io/badge/MCP-FastMCP_Ready-orange.svg)](#-fastmcp-server-for-ai-agents)
 [![Repos indexed](https://img.shields.io/badge/repos-55-orange.svg)](#-whats-inside)
 [![Zero deps](https://img.shields.io/badge/dependencies-zero-success.svg)](#-architecture)
 [![Live site](https://img.shields.io/badge/site-live-blueviolet)](https://4pixeltechBR.github.io/promptograph/)
 
 [🇧🇷 Português](#-português) · [🇺🇸 English](#-english)
 
-![Promptograph](https://img.shields.io/badge/📷_Promptograph-v0.3.0-blueviolet)
+![Promptograph](https://img.shields.io/badge/📷_Promptograph-v0.3.1-blueviolet)
 
 ---
 
@@ -153,7 +155,38 @@ promptograph/
 ```
 
 **Stack:** Python 3.10+ (stdlib only) + Vanilla HTML/JS. Zero npm, zero pip
-dependencies, zero build step.
+### 🔌 FastMCP Server for AI Agents
+
+Promptograph features a native **Model Context Protocol (MCP)** server built with `FastMCP`. Connect it to **Claude Desktop**, **Claude Code**, **Cursor**, **Windsurf**, or **Antigravity** to give your AI assistants real-time access to production prompt wisdom and 226+ operational skills blueprints.
+
+#### MCP Configuration
+
+Add Promptograph to your MCP settings (e.g., `claude_desktop_config.json`, `.cursor/mcp.json` or your agent config):
+
+```json
+{
+  "mcpServers": {
+    "promptograph": {
+      "command": "python",
+      "args": ["scripts/promptograph_mcp_server.py"]
+    }
+  }
+}
+```
+
+#### MCP Toolset
+
+| Tool | Category | Description |
+|---|---|---|
+| `promptograph_search` | Prompts | Search 5,317 real prompts by company, model, or text |
+| `promptograph_validate` | Prompts | Score any prompt (0-100%, Grade A+ to F) via 13 heuristic rules |
+| `promptograph_generate` | Prompts | Generate battle-tested prompts using presets (Claude, GPT, Cursor, Devin) |
+| `promptograph_stats` | Prompts | Get token counts, company distributions, and model metrics |
+| `promptograph_skills_search` | Skills | Discover 226+ curated skills across 37 high-leverage domains |
+| `promptograph_skills_get` | Skills | Retrieve full executable blueprint (`SKILL.md`) for any skill |
+| `promptograph_skills_categories`| Skills | Explore the complete breakdown of skill categories |
+
+---
 
 ### 🚀 Quick Start
 

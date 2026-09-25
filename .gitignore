@@ -24,25 +24,59 @@ env/
 Thumbs.db
 *~
 
-# Data / runtime (regenerable)
+# Data / runtime (regenerable & caches)
 data/raw_index.json
 *.log
 *.tmp
+*.bak
 
-# Test artifacts
-.coverage
-htmlcov/
-.pytest_cache/
+# Segredos, Chaves e Credenciais (Blindagem Obrigatória)
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.id_rsa
+credentials.json
+token.json
+client_secrets.json
+*.session
+session.json
+
+# Binários pesados e Modelos (>50MB)
+*.exe
+*.dll
+*.dylib
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.weights
+*.ttc
+
+# Arquivos de mídia de teste e archives pesados
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Caches de Crawlers & Browsers
+.playwright/
+storage_state.json
+chrome_profile/
+browser_state/
+cookies.json
+node_modules/
+
+# Test & Typecheck artifacts
 .mypy_cache/
 .ruff_cache/
-
-# Local config
-.env
-.env.local
-*.local.yaml
-
-# Build artifacts
-dist/
-build/
-*.egg
-*.whl

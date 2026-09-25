@@ -1,0 +1,195 @@
+{
+  "last_runs": [
+    "2026-07-28",
+    "2026-08-15",
+    "2026-08-30",
+    "2026-08-14",
+    "2026-07-27",
+    "2026-08-24",
+    "2026-08-29",
+    "2026-08-17",
+    "2026-08-12",
+    "2026-08-26",
+    "2026-08-25",
+    "2026-08-02",
+    "2026-08-21",
+    "2026-07-30",
+    "2026-08-23",
+    "2026-08-19",
+    "2026-07-23",
+    "2026-08-11",
+    "2026-08-28",
+    "2026-09-03",
+    "2026-09-05",
+    "2026-08-27",
+    "2026-08-05",
+    "2026-08-03",
+    "2026-08-10",
+    "2026-07-31",
+    "2026-07-26",
+    "2026-08-13",
+    "2026-08-20",
+    "2026-08-01",
+    "2026-08-06",
+    "2026-08-09",
+    "2026-08-22",
+    "2026-08-31",
+    "2026-09-02",
+    "2026-08-16",
+    "2026-09-01",
+    "2026-07-25",
+    "2026-08-04",
+    "2026-08-07",
+    "2026-07-29",
+    "2026-08-08",
+    "2026-09-04"
+  ],
+  "_budget": {
+    "spent_today_usd": 0.0,
+    "budget_reset_date": "2026-09-05"
+  },
+  "_failures": 0,
+  "_health_score": 96.0,
+  "_cycle_history": [
+    {
+      "ts": 1788544860.1480393,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Ja executado hoje (2026-09-04)"
+    },
+    {
+      "ts": 1788548460.1486068,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Ja executado hoje (2026-09-04)"
+    },
+    {
+      "ts": 1788552063.2114723,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Ja executado hoje (2026-09-04)"
+    },
+    {
+      "ts": 1788555663.2268765,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Ja executado hoje (2026-09-04)"
+    },
+    {
+      "ts": 1788559263.240722,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Ja executado hoje (2026-09-04)"
+    },
+    {
+      "ts": 1788562863.2524412,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Ja executado hoje (2026-09-04)"
+    },
+    {
+      "ts": 1788566463.2724721,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Ja executado hoje (2026-09-04)"
+    },
+    {
+      "ts": 1788570063.278171,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Ja executado hoje (2026-09-04)"
+    },
+    {
+      "ts": 1788573663.285223,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Ja executado hoje (2026-09-04)"
+    },
+    {
+      "ts": 1788577263.2977455,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Fora da janela de catch-up (08:00 -> +6h)"
+    },
+    {
+      "ts": 1788580863.3005998,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Fora da janela de catch-up (08:00 -> +6h)"
+    },
+    {
+      "ts": 1788584463.3288147,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Fora da janela de catch-up (08:00 -> +6h)"
+    },
+    {
+      "ts": 1788588063.3324468,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Fora da janela de catch-up (08:00 -> +6h)"
+    },
+    {
+      "ts": 1788591663.3448956,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Fora da janela de catch-up (08:00 -> +6h)"
+    },
+    {
+      "ts": 1788595263.3652442,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Fora da janela de catch-up (08:00 -> +6h)"
+    },
+    {
+      "ts": 1788598863.3802261,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Fora da janela de catch-up (08:00 -> +6h)"
+    },
+    {
+      "ts": 1788602463.383456,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Fora da janela de catch-up (08:00 -> +6h)"
+    },
+    {
+      "ts": 1788605999.393382,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Fora da janela de catch-up (08:00 -> +6h)"
+    },
+    {
+      "ts": 1788606059.5969,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.2,
+      "summary": "Relatorio enviado"
+    },
+    {
+      "ts": 1788609660.4174404,
+      "ok": true,
+      "cost": 0.0,
+      "latency": 0.0,
+      "summary": "Ja executado hoje (2026-09-05)"
+    }
+  ]
+}
