@@ -46,6 +46,7 @@ function renderNav() {
     const nav = $('#nav');
     nav.innerHTML = `
         <button data-view="browse" class="active">📚 Browse (${state.index.length})</button>
+        <button data-view="skills">🔌 MCP & Skills (226)</button>
         <button data-view="diff">🔀 Diff</button>
         <button data-view="validate">✅ Validate</button>
         <button data-view="generate">✨ Generate</button>
@@ -59,6 +60,7 @@ function switchView(view) {
     state.view = view;
     $$('#nav button').forEach(b => b.classList.toggle('active', b.dataset.view === view));
     if (view === 'browse') renderBrowse();
+    else if (view === 'skills') renderSkills();
     else if (view === 'diff') renderDiff();
     else if (view === 'validate') renderValidate();
     else if (view === 'generate') renderGenerate();
@@ -442,6 +444,93 @@ async function generatePrompt() {
         setTimeout(runValidation, 200);
     });
 }
+
+// ============ MCP & Skills ============
+async function renderSkills() {
+    const c = $('#content');
+    c.innerHTML = `
+        <h2>🔌 FastMCP Server & Curated Skills Registry</h2>
+        <div class="v-summary" style="border-color: var(--accent); text-align: left; margin-bottom: 20px;">
+            <h3>🤖 Connect Promptograph to Your AI Agents</h3>
+            <p class="v-verdict" style="text-align: left;">Promptograph includes an official <strong>FastMCP Server</strong> exposing 7 tools to search 20,475 real prompts and 226 curated engineering skills blueprints across 37 domains.</p>
+            <div style="margin-top: 10px;">
+                <strong>Configuration for Claude Desktop / Cursor / Antigravity:</strong>
+                <pre style="margin-top: 6px;">{
+  \"mcpServers\": {
+    \"promptograph\": {
+      \"command\": \"python\",
+      \"args\": [\"scripts/promptograph_mcp_server.py\"]
+    }
+  }
+}</pre>
+            </div>
+        </div>
+        <div class="filters">
+            <input id="skills-search" placeholder="🔍 Search skills (e.g., audio, clean-code, agents, quant)..." />
+        </div>
+        <div id="skills-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; margin-top: 16px;">
+            <p class="muted">Loading skills...</p>
+        </div>
+    `;
+
+    try {
+        const res = await fetch('/api/skills');
+        const data = await res.json();
+        const skills = data.skills || data;
+        
+        function renderSkillsList(list) {
+            const listEl = $('#skills-list');
+            if (!list.length) {
+                listEl.innerHTML = '<p class="muted">No skills found matching your query.</p>';
+                return;
+            }
+            listEl.innerHTML = list.map(s => `
+                <div class="item" style="background: var(--bg2); padding: 14px; border: 1px solid var(--border);">
+                    <div class="item-title" style="color: var(--accent2); font-weight: 600;">${escapeHtml(s.name)}</div>
+                    <div style="font-size: 0.75rem; color: var(--text2); margin-bottom: 6px;">📂 ${escapeHtml(s.category)}</div>
+                    <p style="font-size: 0.85rem; color: var(--text); margin-bottom: 10px;">${escapeHtml(s.description)}</p>
+                    <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;">
+                        ${(s.tags || []).map(t => `<span class="badge">${escapeHtml(t)}</span>`).join('')}
+                    </div>
+                    <button class="secondary" style="font-size: 0.8rem; padding: 4px 10px;" onclick="copySkillBlueprint('${escapeHtml(s.id)}')">📋 Copy Blueprint</button>
+                </div>
+            `).join('');
+        }
+
+        renderSkillsList(skills);
+
+        $('#skills-search').addEventListener('input', (e) => {
+            const q = e.target.value.toLowerCase().trim();
+            const filtered = skills.filter(s => 
+                s.name.toLowerCase().includes(q) || 
+                s.description.toLowerCase().includes(q) || 
+                s.category.toLowerCase().includes(q) || 
+                (s.tags || []).some(t => t.toLowerCase().includes(q))
+            );
+            renderSkillsList(filtered);
+        });
+
+    } catch (e) {
+        $('#skills-list').innerHTML = `
+            <div class="item" style="grid-column: 1 / -1; background: var(--bg2);">
+                <p>226 Curated Skills available in <code style="color:var(--accent2);">data/skills_manifest.json</code>.</p>
+                <p style="margin-top: 8px;">Run the backend server to search interactively, or connect directly via FastMCP.</p>
+            </div>
+        `;
+    }
+}
+
+window.copySkillBlueprint = async function(id) {
+    try {
+        const r = await fetch('/api/skills/blueprint?id=' + encodeURIComponent(id));
+        const d = await r.json();
+        const text = d.blueprint || d.description || id;
+        navigator.clipboard.writeText(text);
+        alert('Skill Blueprint copied to clipboard!');
+    } catch (e) {
+        alert('Could not copy blueprint. See data/skills_manifest.json directly.');
+    }
+};
 
 // ============ Utils ============
 function escapeHtml(s) {

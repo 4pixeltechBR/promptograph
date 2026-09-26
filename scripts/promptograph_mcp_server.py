@@ -1,11 +1,11 @@
 """scripts/promptograph_mcp_server.py — MCP server stdio para o Promptograph.
 
 Expõe ferramentas completas via MCP (Model Context Protocol):
-  1. Engenharia de Prompts (5.317 prompts reais):
+  1. Engenharia de Prompts (20.475 prompts reais de 55 repositórios):
      - promptograph_search(query, company?, model?, limit?) -> busca prompts indexados
      - promptograph_validate(content) -> pontua 0-100%, nota A+ a F (13 regras)
      - promptograph_generate(preset_name?, spec_json?) -> gera prompt de preset ou custom
-     - promptograph_stats() -> estatísticas do índice de prompts
+     - promptograph_stats() -> estatísticas completas do corpus (20.475 prompts)
   2. Arsenal de Skills Curadas (226+ skills em 37 categorias):
      - promptograph_skills_search(query, category?, limit?) -> busca skills curadas
      - promptograph_skills_get(skill_id) -> obtém o blueprint operacional da skill
@@ -47,24 +47,105 @@ logging.basicConfig(
     format="%(asctime)s [%(name)s] %(levelname)s: %(message)s",
 )
 
-# ── Carrega índice de prompts ──────────────────────────────────────────
+# ── Carrega e unifica índice de prompts (20.475 prompts) ────────────────
 
-_INDEX_PATHS = [
-    _ROOT / "data" / "promptograph" / "index_filtered.json",
-    _ROOT / "data" / "index_filtered.json",
-]
-_INDEX: list[dict] = []
-for p in _INDEX_PATHS:
-    if p.exists():
+def _infer_company(path: str, repo: str = "") -> str:
+    p_up = path.upper()
+    if "ANTHROPIC" in p_up or "CLAUDE" in p_up:
+        return "Anthropic"
+    if "OPENAI" in p_up or "GPT" in p_up or "CHATGPT" in p_up:
+        return "OpenAI"
+    if "GOOGLE" in p_up or "GEMINI" in p_up:
+        return "Google"
+    if "XAI" in p_up or "GROK" in p_up:
+        return "xAI"
+    if "DEEPSEEK" in p_up:
+        return "DeepSeek"
+    if "META" in p_up or "LLAMA" in p_up or "MUSE" in p_up:
+        return "Meta"
+    if "CURSOR" in p_up:
+        return "Cursor"
+    if "MISTRAL" in p_up:
+        return "Mistral"
+    if "PERPLEXITY" in p_up:
+        return "Perplexity"
+    if "COGNITION" in p_up or "DEVIN" in p_up:
+        return "Cognition"
+    if "WINDSURF" in p_up:
+        return "Windsurf"
+    if "ZHIPU" in p_up or "GLM" in p_up or "ZCODE" in p_up:
+        return "Zhipu AI"
+    if "MOONSHOT" in p_up or "KIMI" in p_up:
+        return "Moonshot AI"
+    return repo.strip("/") if repo and repo != "/" else "Community"
+
+
+def _load_prompts_index() -> list[dict[str, Any]]:
+    # 1. Carrega metadados ricos existentes se disponíveis
+    rich_map: dict[str, dict] = {}
+    rich_path = _ROOT / "data" / "promptograph" / "index_filtered.json"
+    if rich_path.exists():
         try:
-            _INDEX = json.loads(p.read_text(encoding="utf-8"))
-            log.info(f"[promptograph-mcp] Carregado {len(_INDEX)} prompts de {p}")
-            break
+            items = json.loads(rich_path.read_text(encoding="utf-8"))
+            if isinstance(items, list):
+                for item in items:
+                    key = item.get("path") or item.get("filename")
+                    if key:
+                        rich_map[key] = item
         except Exception as e:
-            log.error(f"[promptograph-mcp] Falha ao carregar {p}: {e}")
+            log.warning(f"Erro ao ler rich index: {e}")
 
-if not _INDEX:
-    log.warning("[promptograph-mcp] Nenhum índice index_filtered.json carregado")
+    # 2. Carrega índice principal de 20.475 prompts
+    main_path = _ROOT / "data" / "index_filtered.json"
+    unified: list[dict[str, Any]] = []
+
+    if main_path.exists():
+        try:
+            data = json.loads(main_path.read_text(encoding="utf-8"))
+            raw_entries = data.get("entries", []) if isinstance(data, dict) else data
+            log.info(f"[promptograph-mcp] Carregando {len(raw_entries)} prompts de {main_path}")
+
+            for p in raw_entries:
+                path = p.get("path", "")
+                filename = Path(path).name
+                rich = rich_map.get(path) or rich_map.get(filename) or {}
+
+                company = rich.get("company") or _infer_company(path, p.get("repo", ""))
+                model = rich.get("model") or p.get("title") or filename.rsplit(".", 1)[0]
+                tokens = rich.get("tokens_estimate") or (p.get("words", 0) * 4 // 3) or (p.get("size_bytes", 0) // 4)
+
+                unified.append({
+                    "id": rich.get("id") or path.replace("/", "__").replace("\\", "__"),
+                    "filename": filename,
+                    "company": company,
+                    "model": model,
+                    "tokens": tokens,
+                    "persona": rich.get("persona", "")[:120],
+                    "preview": rich.get("preview", "")[:250],
+                    "path": path,
+                })
+        except Exception as e:
+            log.error(f"[promptograph-mcp] Falha ao carregar {main_path}: {e}")
+
+    # Fallback se índice amplo não estiver presente
+    if not unified and rich_map:
+        for item in rich_map.values():
+            unified.append({
+                "id": item.get("id", ""),
+                "filename": item.get("filename", ""),
+                "company": item.get("company", "Other"),
+                "model": item.get("model", "unknown"),
+                "tokens": item.get("tokens_estimate", 0),
+                "persona": item.get("persona", "")[:120],
+                "preview": item.get("preview", "")[:250],
+                "path": item.get("path", ""),
+            })
+
+    log.info(f"[promptograph-mcp] Total indexado e operacional: {len(unified)} prompts")
+    return unified
+
+
+_INDEX: list[dict[str, Any]] = _load_prompts_index()
 
 
 # ── FastMCP Server Instance ───────────────────────────────────────────
@@ -76,44 +157,57 @@ mcp = FastMCP("promptograph")
 
 @mcp.tool()
 def promptograph_search(query: str, company: str = "", model: str = "", limit: int = 20) -> str:
-    """Busca prompts indexados no catálogo de 5.317 prompts reais de produção.
+    """Busca prompts indexados no catálogo oficial de 20.475 prompts de produção.
 
     Args:
-        query: Texto para buscar (no filename, persona, preview).
-        company: Filtra por empresa (Anthropic, OpenAI, Google, xAI, Cursor, etc).
-        model: Filtra por modelo (ex: claude-opus-4.5, gpt-5).
+        query: Texto para buscar (no filename, path, persona, model ou preview).
+        company: Filtra por empresa (Anthropic, OpenAI, Google, xAI, Meta, DeepSeek, Cursor, etc).
+        model: Filtra por modelo (ex: claude, gpt, gemini, grok, glm, kimi).
         limit: Máximo de resultados (default 20, max 100).
 
     Returns:
-        JSON com lista de prompts: id, filename, company, model, tokens, persona.
+        JSON com total encontrado e lista resumida de prompts.
     """
     limit = max(1, min(int(limit), 100))
     q_lower = query.lower().strip()
+    c_lower = company.lower().strip()
+    m_lower = model.lower().strip()
     results = []
+
     for p in _INDEX:
-        if company and p.get("company", "").lower() != company.lower():
+        if c_lower and c_lower not in p.get("company", "").lower():
             continue
-        if model and model.lower() not in p.get("model", "").lower():
+        if m_lower and m_lower not in p.get("model", "").lower() and m_lower not in p.get("filename", "").lower():
             continue
         if q_lower:
             haystack = " ".join([
                 p.get("filename", ""),
+                p.get("path", ""),
+                p.get("company", ""),
+                p.get("model", ""),
                 p.get("persona", ""),
                 p.get("preview", ""),
             ]).lower()
             if q_lower not in haystack:
                 continue
+
         results.append({
             "id": p.get("id", ""),
             "filename": p.get("filename", ""),
             "company": p.get("company", ""),
             "model": p.get("model", ""),
-            "tokens": p.get("tokens_estimate", 0),
-            "persona": p.get("persona", "")[:120],
+            "tokens": p.get("tokens", 0),
+            "persona": p.get("persona", ""),
+            "path": p.get("path", ""),
         })
         if len(results) >= limit:
             break
-    return json.dumps({"total": len(results), "results": results}, ensure_ascii=False)
+
+    return json.dumps({
+        "total": len(results),
+        "total_matches": len(results),
+        "results": results
+    }, ensure_ascii=False)
 
 
 @mcp.tool()
@@ -173,19 +267,17 @@ def promptograph_generate(preset_name: str = "", spec_json: str = "") -> str:
 
 @mcp.tool()
 def promptograph_stats() -> str:
-    """Estatísticas do catálogo de 5.317 prompts indexados.
+    """Estatísticas do catálogo completo de 20.475 prompts indexados.
 
     Returns:
-        JSON com: total, by_company, by_model (top 10), total_tokens.
+        JSON com: total, by_company (top 15), total_tokens_estimate.
     """
     from collections import Counter
-    by_company = Counter(p.get("company", "?") for p in _INDEX)
-    by_model = Counter(p.get("model", "?") for p in _INDEX)
-    total_tokens = sum(p.get("tokens_estimate", 0) for p in _INDEX)
+    by_company = Counter(p.get("company", "Other") for p in _INDEX)
+    total_tokens = sum(p.get("tokens", 0) for p in _INDEX)
     return json.dumps({
-        "total": len(_INDEX),
-        "by_company": dict(by_company.most_common()),
-        "by_model_top10": dict(by_model.most_common(10)),
+        "total_prompts": len(_INDEX),
+        "by_company_top15": dict(by_company.most_common(15)),
         "total_tokens_estimate": total_tokens,
     }, ensure_ascii=False)
 
@@ -229,7 +321,7 @@ def promptograph_skills_get(skill_id: str) -> str:
 
 @mcp.tool()
 def promptograph_skills_categories() -> str:
-    """Lista todas as categorias do arsenal de skills e a contagem de ferramentas por categoria.
+    """Lista todas as 37 categorias do arsenal de skills e a contagem por categoria.
 
     Returns:
         JSON com total de skills, total de categorias e breakdown detalhado.

@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.1] - 2026-09-25
+
+### Added — "The Agent Intelligence & Skills Release"
+- **Native FastMCP Server (`scripts/promptograph_mcp_server.py`)**: 7 active tools for Claude Code, Cursor, Windsurf, Antigravity and autonomous agents over stdio:
+  - `promptograph_search`: Search across 20,475 real-world prompts.
+  - `promptograph_validate`: 13-rule heuristic evaluation (0-100%, Grade A+ to F).
+  - `promptograph_generate`: Battle-tested presets for Claude, GPT, Cursor, Devin.
+  - `promptograph_stats`: Real-time corpus token metrics and model distributions.
+  - `promptograph_skills_search`: Search across 226+ curated engineering skills.
+  - `promptograph_skills_get`: Retrieve complete executable blueprints (`SKILL.md`).
+  - `promptograph_skills_categories`: Breakdown of 37 technical domains.
+- **Curated Agent Skills Registry (`data/skills_manifest.json`)**: 226 operational skills across 37 domains (Voz Realtime, Vídeo, Multi-Agente, Finanças Quantitativas, Engenharia de Software, Clean Code).
+- **Lightweight Summary Index (`data/skills_summary.json`)**: ~99 KB compact index for rapid vector/lexical search and low-token context budgeting.
+- **HTTP REST API extensions in `server.py`**:
+  - `GET /api/skills`: JSON manifest of all curated skills.
+  - `GET /api/skills/blueprint?id=<id>`: Single skill markdown recipe.
+  - `GET /api/skills/categories`: Domain breakdown.
+- **Security & ToS Shielding**: Complete audit against GitHub Acceptable Use Policy; zero token leaks, zero offensive exploits, strict `.gitignore` hardening against heavy files (>50MB).
+
 ## [0.3.0] - 2026-09-03
 
 ### Added — "The Frontier Update"
