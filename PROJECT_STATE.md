@@ -17,8 +17,8 @@ Estamos preparando, saneando e empacotando o projeto **Promptograph** para relea
 - **Pasta Local:** `E:\Skills\11_Engenharia_de_Prompts_e_Sabedoria\promptograph`
 - **Trilha:** 🔴 Vermelha (Rescue / Saneamento & Open-Source Packaging)
 - **Modo do usuário:** `tecnico`
-- **O que o projeto faz (estado atual):** Toolkit para navegar, comparar (diff), validar deterministicamente (0-100%, 13 regras) e sintetizar system prompts de IA. Possui interface web offline em Python, servidor FastMCP com 4 tools e dataset de prompts.
-- **Está em produção?** Parcialmente (repositório ativo no GitHub com v0.1.0 inicial; novas versões e scripts aguardando auditoria e saneamento).
+- **O que o projeto faz (estado atual):** Toolkit para navegar, comparar (diff), validar deterministicamente (0-100%, 13 regras) e sintetizar system prompts de IA. Base indexada de 20.475 prompts reais (~97M tokens), interface web offline stdlib, servidor FastMCP com 7 tools e manifesto operacional com 226 skills curadas em 37 domínios.
+- **Está em produção?** Sim (repositório ativo no GitHub com v0.3.1 oficial e tags sincronizadas).
 - **Problema principal que motivou o rescue:** Saneamento preventivo antes de commits públicos. Necessidade de auditar dados, remover riscos de ToS/DMCA e integrar apenas ativos de baixo risco e alto valor das Skills.
 - **Kill criteria:** Abandono de publicação pública se houver risco não mitigável de vazamento de credenciais ou infração direta de copyright comercial.
 - **Restrições:** Zero chaves de API / segredos; conformidade com ToS do GitHub; arquivos individuais < 50 MB; código 100% testado e funcional.
@@ -42,12 +42,12 @@ Marcação: `[➔]` fase atual · `[x]` concluída · `[ ]` futura
 ## Fase atual
 - **Fase:** Trilha Verde — Evolução Contínua
 - **Sub-tarefa ativa:** G1.0 — Monitoramento do repositório público, documentação de integração MCP para usuários e catalogação incremental
-- **Está pronto quando:** Repositório publicado e ativo em `https://github.com/4pixeltechBR/promptograph` com tags v0.2.0 e v0.3.1 disponíveis
+- **Está pronto quando:** Repositório publicado e ativo em `https://github.com/4pixeltechBR/promptograph` com tags v0.2.0, v0.3.0 e v0.3.1 disponíveis
 - **Próximo passo explícito:** Divulgação, conexões em plataformas como Awesome-MCP-Servers e expansão de novas tools sob demanda.
 
 ---
 
-## Mapa do Caos (preenchido na R1)
+## Mapa do Caos (preenchido na R1 / Atualizado na R5)
 ### Stack encontrada
 - **Linguagem:** Python 3.10+
 - **Frameworks/Libs principais:** FastMCP, Standard Library (`http.server`, `json`, `csv`, `re`, `argparse`), Vanilla JS / Tailwind / Lucide Icons na UI web estática.
@@ -56,41 +56,43 @@ Marcação: `[➔]` fase atual · `[x]` concluída · `[ ]` futura
 - **Hospedagem atual:** GitHub Pages (docs estáticos) e execução local
 
 ### Estrutura de arquivos atual
-- `data/index_filtered.json`: Dataset principal de 5.317 system prompts (~5.6 MB).
+- `data/index_filtered.json`: Dataset principal de 20.475 system prompts (~5.2 MB, 94M tokens).
+- `data/curated_skills_manifest.json`: Manifesto de 226 skills curadas em 37 categorias com links e metadados.
 - `generator/`: `builder.py`, `parser.py`, `refine_index.py` (motores de parsing e construção).
 - `validators/quality.py`: Validador heurístico de 13 regras.
-- `static/`: Interface gráfica offline (HTML/CSS/JS).
-- `scripts/`: Ferramentas CLI, FastMCP Server e testes automatizados.
-- `src/skills/promptograph/`: Módulo python encapsulado (`builder.py`, `validator.py`, `goal.py`).
+- `static/`: Interface gráfica offline (HTML/CSS/JS) com abas de Prompts, Diff e Skills MCP.
+- `scripts/`: Ferramentas CLI, FastMCP Server (7 tools) e testes automatizados.
+- `src/skills/promptograph/`: Módulo python encapsulado (`builder.py`, `validator.py`, `skills_registry.py`).
 
 ### O que funciona
-- Servidor web offline (`python server.py`) respondendo em http://localhost:8000.
-- Servidor FastMCP com 4 tools operacionais (`scripts/promptograph_mcp_server.py`).
+- Servidor web offline (`python server.py 8765`) respondendo com abas completas e endpoints de skills.
+- Servidor FastMCP com 7 tools operacionais (`scripts/promptograph_mcp_server.py`).
 - Validador heurístico (13 regras, notas A+ a F).
 - CLI de busca ultrarrápida (`scripts/search_promptograph.py`).
+- Registro dinâmico de 226 skills com extração de blueprints markdown.
 
 ### O que precisa de atenção / Risco potencial
-- `data/index_filtered.json` contém 5.317 prompts extraídos de várias fontes públicas da internet (necessário validar se há prompts com dados pessoais, chaves vazadas ou prompts comerciais protegidos).
-- Presença de caminhos absolutos ou referências a projetos internos que precisam ser sanitizados.
-- Configuração do `.gitignore` para garantir que arquivos de ambiente ou testes locais nunca subam.
+- Manter o manifesto de skills sincronizado com adições de novas skills no ecossistema local.
+- Respeitar a regra de nunca vazar dados de credenciais nem paths pessoais nos commits do GitHub.
 
 ---
 
-## Lista de Triagem (preenchida na R2)
+## Lista de Triagem (preenchida na R2 / Concluída na R5)
 
 ### P0 — Crítico (Segurança e Integridade)
 | # | Problema | Localização | Está pronto quando | Status |
 |---|----------|-------------|--------------------|--------|
-| 1 | Garantir que nenhum arquivo contenha tokens, chaves ou nomes proprietários internos | Todo o repositório | Scan de segredos passar com zero alertas | Aberto |
-| 2 | `.gitignore` blindado contra `.env`, dados temporários e caches | `.gitignore` | Regras explícitas comitadas | Aberto |
+| 1 | Garantir que nenhum arquivo contenha tokens, chaves ou nomes proprietários internos | Todo o repositório | Scan de segredos passar com zero alertas | Concluído |
+| 2 | `.gitignore` blindado contra `.env`, dados temporários e caches | `.gitignore` | Regras explícitas comitadas | Concluído |
 
 ### P1 — Urgente (Conformidade e Valor)
 | # | Problema | Localização | Está pronto quando | Status |
 |---|----------|-------------|--------------------|--------|
-| 3 | Seleção criteriosa dos prompts de baixo risco para empacotar | `data/` | Dataset filtrado e categorizado com segurança | Aberto |
-| 4 | Integração dos scripts e servidor FastMCP na árvore oficial do git | `scripts/` e `src/` | Código integrado, testado e documentado | Aberto |
+| 3 | Seleção criteriosa dos prompts de baixo risco para empacotar | `data/` | Dataset de 20.475 prompts sanitizado e categorizado | Concluído |
+| 4 | Integração dos scripts e servidor FastMCP na árvore oficial do git | `scripts/` e `src/` | Código integrado, testado (7 tools MCP) e documentado | Concluído |
 
 ---
 
 ## Decision Log
 - **[2026-09-17] [Tipo 1] Ativação da Governança VibeDev (Trilha Vermelha):** Decidido aplicar o framework VibeDev para gerenciar a preparação e auditoria do projeto Promptograph antes de qualquer commit/push no repositório `4pixeltechBR/promptograph`.
+- **[2026-09-25] [Tipo 2] Release v0.3.1 (Skills MCP Hub & 20.475 Prompts):** Harmonização integral da documentação, expansão do FastMCP para 7 tools (4 prompts + 3 skills), suporte a 226 skills curadas em 37 categorias e release oficial tag v0.3.1.

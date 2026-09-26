@@ -178,7 +178,7 @@ Add Promptograph to your MCP settings (e.g., `claude_desktop_config.json`, `.cur
 
 | Tool | Category | Description |
 |---|---|---|
-| `promptograph_search` | Prompts | Search 5,317 real prompts by company, model, or text |
+| `promptograph_search` | Prompts | Search 20,475 real prompts by company, model, or text |
 | `promptograph_validate` | Prompts | Score any prompt (0-100%, Grade A+ to F) via 13 heuristic rules |
 | `promptograph_generate` | Prompts | Generate battle-tested prompts using presets (Claude, GPT, Cursor, Devin) |
 | `promptograph_stats` | Prompts | Get token counts, company distributions, and model metrics |
@@ -403,7 +403,7 @@ promptograph/
 
 ### 🔌 Servidor FastMCP para Agentes de IA
 
-O Promptograph inclui um servidor nativo do **Model Context Protocol (MCP)** construído com `FastMCP`. Conecte-o ao **Claude Desktop**, **Claude Code**, **Cursor**, **Windsurf** ou **Antigravity** para dar aos seus assistentes e agentes acesso em tempo real à sabedoria de 5.317 system prompts de produção e a mais de 226 blueprints operacionais de skills.
+O Promptograph inclui um servidor nativo do **Model Context Protocol (MCP)** construído com `FastMCP`. Conecte-o ao **Claude Desktop**, **Claude Code**, **Cursor**, **Windsurf** ou **Antigravity** para dar aos seus assistentes e agentes acesso em tempo real à sabedoria de 20.475 system prompts de produção e a mais de 226 blueprints operacionais de skills.
 
 #### Configuração MCP
 
@@ -424,7 +424,7 @@ Adicione o Promptograph ao arquivo de configuração de MCPs do seu agente (ex: 
 
 | Ferramenta | Categoria | Descrição |
 |---|---|---|
-| `promptograph_search` | Prompts | Busca em 5.317 prompts reais por empresa, modelo ou texto |
+| `promptograph_search` | Prompts | Busca em 20.475 prompts reais por empresa, modelo ou texto |
 | `promptograph_validate` | Prompts | Pontua qualquer prompt (0-100%, Nota A+ a F) com 13 regras heurísticas |
 | `promptograph_generate` | Prompts | Gera prompts testados usando presets (Claude, GPT, Cursor, Devin) |
 | `promptograph_stats` | Prompts | Métricas de tokens, distribuição de empresas e modelos |

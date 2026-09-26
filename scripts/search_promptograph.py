@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLI de busca e validacao rapida para o acervo Promptograph (5.317 system prompts reais).
+CLI de busca e validacao rapida para o acervo Promptograph (20.475 system prompts reais).
 Uso:
     python search_promptograph.py [termo]
     python search_promptograph.py "claude" --company Anthropic
@@ -33,7 +33,10 @@ def load_index():
     ]
     for p in candidates:
         if p.exists():
-            return json.loads(p.read_text(encoding="utf-8", errors="ignore"))
+            raw = json.loads(p.read_text(encoding="utf-8", errors="ignore"))
+            if isinstance(raw, dict):
+                return raw.get("entries", [])
+            return raw
     print("Erro: indice nao encontrado em nenhum dos caminhos conhecidos.")
     sys.exit(1)
 
@@ -49,16 +52,19 @@ def show_stats():
         companies[c] = companies.get(c, 0) + 1
         m = item.get("model") or "unknown"
         models[m] = models.get(m, 0) + 1
-        total_tokens += int(item.get("tokens") or 0)
+        toks = item.get("tokens")
+        if toks is None:
+            toks = int(item.get("words", 0) * 4 // 3)
+        total_tokens += int(toks or 0)
         
     print("=" * 65)
-    print("📷 PROMPTOGRAPH — ESTATISTICAS DO INDICE DE SYSTEM PROMPTS")
+    print("📷 PROMPTOGRAPH — ESTATISTICAS DO INDICE DE SYSTEM PROMPTS (v0.3.1)")
     print("=" * 65)
     print(f"Total de Prompts Indexados: {total:,}")
-    print(f"Volume Estimado de Tokens:   {total_tokens:,} tokens (~12M)")
+    print(f"Volume Estimado de Tokens:   {total_tokens:,} tokens (~97M)")
     print("\nDistribuicao por Empresa / Lab:")
     for comp, count in sorted(companies.items(), key=lambda x: x[1], reverse=True)[:8]:
-        pct = (count / total) * 100
+        pct = (count / total) * 100 if total else 0
         print(f"  • {comp:<20} : {count:5d} ({pct:5.1f}%)")
         
     print("\nModelos mais frequentes:")
@@ -142,7 +148,7 @@ def generate_preset(preset_name):
     print(prompt)
 
 def main():
-    parser = argparse.ArgumentParser(description="Promptograph — 5.317 System Prompts Reais & Validacao Heuristica")
+    parser = argparse.ArgumentParser(description="Promptograph — 20.475 System Prompts Reais & Validacao Heuristica")
     parser.add_argument("query", nargs="?", default="", help="Termo para buscar nos prompts")
     parser.add_argument("--company", type=str, default=None, help="Filtrar por empresa (Anthropic, OpenAI, Google, etc)")
     parser.add_argument("--model", type=str, default=None, help="Filtrar por modelo (gpt-4, o3, claude, etc)")

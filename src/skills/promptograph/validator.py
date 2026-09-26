@@ -1,7 +1,7 @@
 """promptograph.validator — Valida qualidade de system prompts.
 
 Port de validators/quality.py do projeto Promptograph (MIT).
-13 boas praticas + 6 red flags extraidas de 5.317 prompts de producao.
+13 boas praticas + 6 red flags extraidas de 20.475 prompts de producao.
 Zero dependencias (apenas stdlib + re).
 """
 

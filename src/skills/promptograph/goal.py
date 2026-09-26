@@ -5,7 +5,7 @@ Roda as 08:00 todo dia. Cobia o estado do system Promptograph integrado:
   - Notas detectadas como 'prompt' (via detectors.detect_content_class)
   - Empresas/modelos detectados nos prompts do dia
   - Status da conexao WhatsApp (Evolution API) + grupo alvo
-  - Estatisticas do catalogo Promptograph (MCP, 5317 prompts)
+  - Estatisticas do catalogo Promptograph (MCP, 20.475 prompts)
   - Score medio das validacoes feitas via /validate nas ultimas 24h (via log
     file heuristic se disponivel, ou médio dos presets como baseline)
 
@@ -275,14 +275,20 @@ class PromptographDailyReportGoal:
             return f"<b>WhatsApp</b>: <i>erro ao ler status</i> - <code>{e}</code>"
 
     def _catalog_stats(self) -> list[str]:
-        """Stats do catalogo MCP indexado (5317 prompts) - stdlib only."""
+        """Stats do catalogo MCP indexado (20.475 prompts) - stdlib only."""
         try:
             from src.skills.promptograph import PRESET_TEMPLATES
-            idx_path = Path(__file__).resolve().parent.parent.parent.parent / "data" / "promptograph" / "index_filtered.json"
-            if not idx_path.exists():
-                return [f"<i>Catalogo offline ({idx_path.name} ausente)</i>"]
+            root_dir = Path(__file__).resolve().parent.parent.parent.parent
+            candidates = [
+                root_dir / "data" / "index_filtered.json",
+                root_dir / "data" / "promptograph" / "index_filtered.json",
+            ]
+            idx_path = next((p for p in candidates if p.exists()), None)
+            if not idx_path:
+                return ["<i>Catalogo offline (index_filtered.json ausente)</i>"]
             import json
-            data = json.loads(idx_path.read_text(encoding="utf-8"))
+            raw = json.loads(idx_path.read_text(encoding="utf-8"))
+            data = raw.get("entries", raw) if isinstance(raw, dict) else raw
             total = len(data)
             comp_count = Counter(p.get("company", "?") for p in data)
             top5 = comp_count.most_common(5)

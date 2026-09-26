@@ -1,7 +1,7 @@
 """promptograph skill — validação, geração e registro MCP de system prompts e skills.
 
 Port do projeto Promptograph (MIT, github.com/4pixeltechBR/promptograph).
-Baseado em 5.317 prompts reais de produção e 226+ skills curadas de engenharia e IA.
+Baseado em 20.475 prompts reais de produção e 226+ skills curadas de engenharia e IA.
 
 Módulos:
 - validator: 13 boas práticas + 6 red flags (score 0-100%, grade A+ a F)

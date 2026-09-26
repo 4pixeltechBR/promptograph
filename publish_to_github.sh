@@ -9,7 +9,7 @@
 set -e
 
 REPO_NAME="${REPO_NAME:-promptograph}"
-REPO_DESC="${REPO_DESC:-Browse, diff, validate and generate AI system prompts, built on 5,300+ real prompts from Claude, ChatGPT, Gemini, Grok, Perplexity, Cursor, Devin and more}"
+REPO_DESC="${REPO_DESC:-Browse, diff, validate and generate AI system prompts (20,475 prompts from 55 repos) + FastMCP Server with 226 curated engineering skills}"
 REPO_PRIVATE="${REPO_PRIVATE:-false}"
 GH_USER="${GH_USER:-4pixeltechBR}"
 
@@ -49,9 +49,11 @@ else
     git config user.email "$GH_USER@users.noreply.github.com"
     git branch -M main
     git add .
-    git commit -q -m "feat: initial release of Promptograph
-
-- 5,317 system prompts indexed from 20 public GitHub repos
+    git commit -q -m "feat: release Promptograph v0.3.1
+ 
+- 20,475 system prompts indexed from 55 public GitHub repos
+- 226 curated engineering skills in 37 categories
+- FastMCP server with 7 agent tools
 - Browse, Diff, Validate, Generate features
 - 5 presets: Claude Code, ChatGPT, Cursor, Perplexity, Devin
 - 13 best practices + 6 red flags in validator
@@ -73,7 +75,7 @@ echo "✅ Pronto!"
 echo "   https://github.com/$GH_USER/$REPO_NAME"
 echo ""
 echo "Próximos passos:"
-echo "  1. Settings → General → Topics: ai, prompt-engineering, llm, claude, chatgpt, system-prompts, open-source, prompt-toolkit"
+echo "  1. Settings → General → Topics: ai, prompt-engineering, llm, claude, chatgpt, system-prompts, mcp-server, agent-skills, open-source"
 echo "  2. Settings → Pages → Source: GitHub Actions (ativa GitHub Pages pra UI online)"
-echo "  3. Crie a primeira release: git tag v0.1.0 && git push --tags"
-echo "  4. Compartilhe no Twitter/LinkedIn com a hashtag #promptengineer ou #llm"
+echo "  3. Crie a release: git tag v0.3.1 && git push --tags"
+echo "  4. Compartilhe no Twitter/LinkedIn com a hashtag #promptengineer ou #mcp"
