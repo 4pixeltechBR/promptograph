@@ -1,539 +1,480 @@
 # 📷 Promptograph
 
-> **Photograph every system prompt that matters & Equip AI Agents with Curated Skills.**
-> A production toolkit and **FastMCP Server** to **browse**, **diff**, **validate**, and **generate** AI system prompts,
-> built on top of **20,475 real prompts** from 55 public repos, plus instant access to **226+ curated engineering skills** across 37 domains.
+> **Photograph every system prompt that matters & Equip AI Agents with Curated Skills.**  
+> A production toolkit, Python package, and **FastMCP Server** to **browse**, **diff**, **validate**, and **generate** AI system prompts.  
+> Built on **20,475 real-world system prompts** from 55 public repositories (~94M tokens), plus instant access to **226+ curated engineering skills** across 37 domains.
 
+[![PyPI version](https://img.shields.io/pypi/v/promptograph.svg?color=blue)](https://pypi.org/project/promptograph/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Prompts indexed](https://img.shields.io/badge/prompts-20%2C475-brightgreen.svg)](#-whats-inside)
-[![Skills indexed](https://img.shields.io/badge/skills-226%2B-blueviolet.svg)](#-agent-skills-registry)
-[![MCP Server](https://img.shields.io/badge/MCP-FastMCP_Ready-orange.svg)](#-fastmcp-server-for-ai-agents)
-[![Repos indexed](https://img.shields.io/badge/repos-55-orange.svg)](#-whats-inside)
-[![Zero deps](https://img.shields.io/badge/dependencies-zero-success.svg)](#-architecture)
-[![Live site](https://img.shields.io/badge/site-live-blueviolet)](https://4pixeltechBR.github.io/promptograph/)
+[![Prompts indexed](https://img.shields.io/badge/prompts-20%2C475-brightgreen.svg)](#-verified-metrics--breakdown)
+[![Skills indexed](https://img.shields.io/badge/skills-226%2B-blueviolet.svg)](#-verified-metrics--breakdown)
+[![Skill domains](https://img.shields.io/badge/domains-37-purple.svg)](#-verified-metrics--breakdown)
+[![FastMCP 7 Tools](https://img.shields.io/badge/MCP-7_Tools_Ready-orange.svg)](#-fastmcp-server-for-autonomous-agents)
+[![Zero install](https://img.shields.io/badge/zero--install-uvx_ready-success.svg)](#-10-second-quick-start)
+[![Live Site](https://img.shields.io/badge/site-live-blueviolet)](https://4pixeltechBR.github.io/promptograph/)
 
-[🇧🇷 Português](#-português) · [🇺🇸 English](#-english)
+---
 
-![Promptograph](https://img.shields.io/badge/📷_Promptograph-v0.3.1-blueviolet)
+### Navigation / Navegação
+[🇺🇸 English](#-english) · [🇧🇷 Português](#-português)
 
 ---
 
 ## 🇺🇸 English
 
-### What is this?
+### What is Promptograph?
 
-**Promptograph** is a self-contained toolkit for working with **AI system prompts** —
-the hidden instructions that shape how models like Claude, ChatGPT, Gemini, Grok,
-and others behave.
+**Promptograph** is a production toolkit that eliminates guesswork from prompt engineering and equips autonomous AI coding agents with ready-to-run engineering skills.
 
-It was built on top of **20,475 system prompts** extracted from **55 public
-GitHub repositories** (plus 6 HuggingFace datasets), totaling over
-**16.4 million words** of real production instructions. The goal is to
-**democratize prompt engineering** by giving you the same material the
-major AI labs use to build their products, and tools to learn from it.
+It resolves three fundamental challenges in generative AI:
+1. **The Black-Box Problem:** Most teams guess how to prompt models. Promptograph gives you indexed, searchable access to **20,475 real-world production system prompts** extracted from 55 public repositories (including Anthropic, OpenAI, Google, Cursor, xAI, Meta, DeepSeek, Perplexity, and Cognition).
+2. **Prompt Quality & Security Risks:** How do you know if your system prompt is robust before launching to production? Promptograph's **deterministic heuristic validator** audits prompts against 13 production-proven criteria and 6 red flags (scoring 0–100%, Grade A+ to F).
+3. **Agent Capability Amnesia:** AI coding agents (Claude Desktop, Cursor, Windsurf, Claude Code, Antigravity) are powerful but lack domain-specific operational recipes. Promptograph functions as a plug-and-play **FastMCP Server** streaming **226+ operational skills** across 37 domains directly into your agent's reasoning loop.
 
-### 🎯 Why we built this
+---
 
-Most AI users interact with models as black boxes. The system prompt — the
-hidden "constitution" that defines an AI's personality, capabilities,
-limitations, and tools — is the most under-discussed piece of the puzzle.
+### ⚡ 10-Second Quick Start
 
-We believe:
-- **Transparency helps everyone**: developers learn faster, researchers
-  find vulnerabilities, users make informed choices.
-- **Patterns matter more than prompts**: the best system prompts share
-  structural patterns. Learning them is more valuable than copying any
-  one prompt.
-- **Good prompts are engineered, not written**: just like code, system
-  prompts benefit from validation, testing, comparison, and iteration.
+Promptograph is published on **PyPI** and requires **zero installation** when invoked via `uvx`:
 
-### ✨ What makes Promptograph different
+#### 1. Instant CLI Search (No clone required)
+```bash
+# Search across 20,475 real production prompts
+uvx promptograph search "claude coding"
 
-There are other "prompt lens" / "prompt scope" projects out there. Here's
-what they do — and what we do that they don't:
+# Validate any prompt against 13 heuristic rules
+uvx promptograph validate "You are an expert coder. Answer briefly."
 
-| Other projects | Promptograph |
-|---|---|
-| Hook into Claude Code for one user | **Standalone tool**, anyone can use |
-| A/B testing of LLM responses | **Diff between real system prompts** |
-| LLM-as-judge prompt evaluation | **Heuristic validation** against 13 best practices extracted from production prompts |
-| Single-tool (just A, or just B) | **4 features in one**: Browse, Diff, Validate, Generate |
-| Requires API keys, npm, pip | **Zero dependencies**, runs offline |
-| English only | **Bilingual** (PT-BR + EN) |
-
-### 🎯 Use cases
-
-**For developers:** You can build a coding agent in 5 minutes — open Promptograph, filter by "claude coding agent", see how Anthropic structures theirs, customize and ship. No more starting from zero.
-
-**For prompt engineers:** Before sending a prompt to a client, run it through Validate. Get a 0-100% score with 13 checks and 6 red flags. Like a linter, but for prompts.
-
-**For product managers:** Diff Cursor vs Windsurf system prompts to understand why one converts better. Diff ChatGPT vs Claude to see how they position their tools internally. Insights you can't get from marketing pages.
-
-**For security researchers:** Search across 20k+ prompts for "refuse", "harmful", "injection". See how each company handles jailbreak, prompt injection, sensitive content. Real corpus for research.
-
-**For researchers and students:** A corpus of 20k+ real production system prompts for qualitative analysis. How did the tone change from 2023 to 2026? Which companies added the most guardrails? You can write a paper with this data.
-
-**For tech writers and creators:** Take a "creative writing" preset, customize it, get a better prompt than 99% of what's out there. Then Validate to check the quality.
-
-**For CTOs and tech leads:** Compare system prompts to evaluate AI vendors. Which is more conservative? Which has more guardrails? Which is more transparent? Technical decision based on evidence.
-
-### ✨ Features
-
-#### 📚 Browse
-Navigate 20,475+ system prompts with:
-- Full-text search (filename, model, persona)
-- Filter by company (Anthropic, OpenAI, Google, xAI, Perplexity, etc)
-- Sort by size, date, or name
-- Per-prompt metadata: model, date, persona, XML tags, tools detected
-- Inline preview of raw content
-
-#### 🔀 Diff
-Compare any two prompts side-by-side:
-- Unified diff with color highlighting (green=added, red=removed)
-- Token-level statistics
-- Change percentage
-- Up to 5,000 diff lines
-
-#### ✅ Validate
-Score any system prompt (0-100%, grade A+ to F) against 13 best practices
-extracted from the most successful production prompts:
-- Identity clarity (15 pts)
-- Tone guidelines (10 pts)
-- Refusals handling (10 pts)
-- Safety rules (10 pts)
-- Examples section (10 pts)
-- Formatting rules (8 pts)
-- Tool usage (8 pts)
-- Memory/context (6 pts)
-- Knowledge cutoff (5 pts)
-- Structured tags (5 pts)
-- Citation rules (5 pts)
-- Limits/boundaries (5 pts)
-- Length appropriateness (3 pts)
-
-Plus 6 red flags: vague identity, jailbreak vulnerability, copyright
-missing, instruction contradictions, too short, too long.
-
-#### ✨ Generate
-Build a new system prompt from a spec, using 5 presets based on real
-production prompts:
-- **Claude Code-style coding agent** (Anthropic)
-- **ChatGPT 5.5-style assistant** (OpenAI)
-- **Cursor-style IDE agent** (Anysphere)
-- **Perplexity-style search engine** (Perplexity AI)
-- **Devin-style autonomous engineer** (Cognition)
-
-Each preset produces a complete, validated prompt that scores 80%+ on the
-validator.
-
-### 🏗️ Architecture
-
-```
-promptograph/
-├── server.py                  # Python stdlib HTTP server
-├── data/
-│   ├── index.json             # 5,491 raw prompts indexed
-│   └── index_filtered.json    # 20,475 filtered (READMEs removed)
-├── generator/
-│   ├── parser.py              # Scans repos, extracts metadata
-│   ├── builder.py             # Constructs prompts from specs
-│   └── refine_index.py        # Filters out non-prompt files
-├── validators/
-│   └── quality.py             # 13 best practices + 6 red flags
-├── static/
-│   ├── index.html             # UI
-│   └── app.js                 # Frontend (vanilla JS, no build)
-├── .github/
-│   └── workflows/
-│       └── ci.yml             # GitHub Actions CI + Pages
-├── bootstrap.sh               # One-command setup
-├── publish_to_github.sh       # GitHub publish script
-├── LICENSE
-├── ATTRIBUTIONS.md
-└── README.md (this file)
+# Check corpus metrics and token distributions
+uvx promptograph stats
 ```
 
-**Stack:** Python 3.10+ (stdlib only) + Vanilla HTML/JS. Zero npm, zero pip
-### 🔌 FastMCP Server for AI Agents
+#### 2. Launch Local Web Dashboard
+```bash
+uvx promptograph web 8765
+# Open http://localhost:8765 in your browser
+```
 
-Promptograph features a native **Model Context Protocol (MCP)** server built with `FastMCP`. Connect it to **Claude Desktop**, **Claude Code**, **Cursor**, **Windsurf**, or **Antigravity** to give your AI assistants real-time access to production prompt wisdom and 226+ operational skills blueprints.
+#### 3. Standard Pip Installation
+```bash
+pip install promptograph
+# Or using uv:
+uv add promptograph
+```
 
-#### MCP Configuration
+---
 
-Add Promptograph to your MCP settings (e.g., `claude_desktop_config.json`, `.cursor/mcp.json` or your agent config):
+### 🔌 FastMCP Server for Autonomous Agents
+
+Promptograph implements the **Model Context Protocol (MCP)** using `FastMCP` over `stdio`. It connects directly to **Claude Desktop**, **Cursor**, **Windsurf**, **Claude Code**, and **Antigravity**.
+
+#### Zero-Install MCP Configuration (Recommended)
+Add this snippet to your agent's MCP configuration (`claude_desktop_config.json`, `.cursor/mcp.json`, etc.):
 
 ```json
 {
   "mcpServers": {
     "promptograph": {
-      "command": "python",
-      "args": ["scripts/promptograph_mcp_server.py"]
+      "command": "uvx",
+      "args": ["promptograph"]
     }
   }
 }
 ```
 
-#### MCP Toolset
-
-| Tool | Category | Description |
-|---|---|---|
-| `promptograph_search` | Prompts | Search 20,475 real prompts by company, model, or text |
-| `promptograph_validate` | Prompts | Score any prompt (0-100%, Grade A+ to F) via 13 heuristic rules |
-| `promptograph_generate` | Prompts | Generate battle-tested prompts using presets (Claude, GPT, Cursor, Devin) |
-| `promptograph_stats` | Prompts | Get token counts, company distributions, and model metrics |
-| `promptograph_skills_search` | Skills | Discover 226+ curated skills across 37 high-leverage domains |
-| `promptograph_skills_get` | Skills | Retrieve full executable blueprint (`SKILL.md`) for any skill |
-| `promptograph_skills_categories`| Skills | Explore the complete breakdown of skill categories |
+#### Local Clone Configuration (Alternative)
+If you prefer running from a local git clone:
+```json
+{
+  "mcpServers": {
+    "promptograph": {
+      "command": "python",
+      "args": ["/path/to/promptograph/scripts/promptograph_mcp_server.py"]
+    }
+  }
+}
+```
 
 ---
 
-### 🚀 Quick Start
+### 🛠️ The 7 MCP Agent Tools
 
-#### Local (Python)
+When connected via MCP, your AI assistant receives 7 native callable tools:
+
+| Tool | Category | Parameters | Purpose |
+|---|---|---|---|
+| `promptograph_search` | Prompts | `query`, `company`, `model`, `limit` | Searches 20,475 real prompts by lab, model, persona, or keyword |
+| `promptograph_validate` | Quality | `content` | Evaluates prompt quality (0–100%, Grade A+ to F) checking 13 rules & 6 red flags |
+| `promptograph_generate` | Synthesis | `preset_name`, `spec_json` | Generates robust prompts using battle-tested presets (Claude, GPT, Cursor, Devin) |
+| `promptograph_stats` | Metrics | — | Returns live corpus metrics, token counts, and lab distributions |
+| `promptograph_skills_search` | Skills | `query`, `category`, `limit` | Discovers relevant blueprints among 226+ curated engineering skills |
+| `promptograph_skills_get` | Skills | `skill_id` | Streams the full executable markdown blueprint (`SKILL.md`) into agent context |
+| `promptograph_skills_categories`| Skills | — | Lists all 37 technical domains with skill distribution counts |
+
+#### Example Prompts to give your Agent:
+* *"Search Promptograph for how Anthropic instructs Claude to handle tool-use errors."*
+* *"Validate this system prompt before I deploy it to our customer support chatbot."*
+* *"Look up a clean-code skill in Promptograph and apply its refactoring principles to this file."*
+
+---
+
+### 🐍 Python Library Usage
+
+You can import Promptograph directly into your Python backend or custom agent pipeline without spinning up an MCP server:
+
+```python
+from promptograph import (
+    validate_prompt,
+    build_prompt,
+    search_skills,
+    get_skill_blueprint,
+    get_skills_stats,
+    PRESET_TEMPLATES,
+)
+
+# 1. Audit a system prompt programmatically
+report = validate_prompt("You are a helpful assistant made by Acme Corp. Refuse harmful queries.")
+print(f"Score: {report['score']}% (Grade: {report['grade']})")
+print(f"Passed rules: {len(report['passed'])}/13")
+
+# 2. Discover and retrieve curated skills
+matches = search_skills(query="clean-code")
+if matches:
+    skill = get_skill_blueprint(matches[0]["id"])
+    print(f"Skill: {skill['name']} [{skill['category']}]")
+    print(skill["blueprint"][:400])  # Markdown recipe with executable code
+
+# 3. Synthesize a production prompt from a preset
+preset_spec = PRESET_TEMPLATES["claude_coding_agent"]["spec"]
+prompt_text = build_prompt(preset_spec)
+print(prompt_text[:300])
+```
+
+---
+
+### 💻 Command-Line Interface (CLI)
 
 ```bash
-git clone https://github.com/4pixeltechBR/promptograph.git
-cd promptograph
-./bootstrap.sh        # Builds the index (one-time, ~2 min)
-python3 server.py 8765
+# Default execution runs the stdio FastMCP server
+promptograph
+
+# Explicit MCP server mode
+promptograph mcp
+
+# Launch zero-dependency offline web UI
+promptograph web 8765
+
+# Full-text search across 20,475 prompts
+promptograph search "system prompt cursor"
+
+# Quick heuristic audit of a prompt string
+promptograph validate "You are a code reviewer. Do not explain syntax."
+
+# Display corpus statistics
+promptograph stats
 ```
 
-Open `http://localhost:8765` in your browser.
+---
 
-#### GitHub Pages (UI only, no backend)
+### 🌐 Offline Web Dashboard
 
-The static UI is in `static/`. Once you enable GitHub Pages on your fork,
-the UI will be live at `https://4pixeltechBR.github.io/promptograph/`.
-The API calls will fail unless you also deploy the backend (Docker below).
+Promptograph contains a complete, zero-dependency local web dashboard written in vanilla HTML/JS and Python stdlib:
+* **Prompts Explorer:** Search, filter, and inspect raw prompt text with token counts.
+* **Side-by-Side Diff:** Color-coded unified diff between model prompts (e.g., Claude 3.5 vs Claude 4, ChatGPT 4o vs o3).
+* **Heuristic Audit Lab:** Interactive score breakdown with actionable suggestions.
+* **Curated Skills Hub:** Interactive browser for all 226 skills across 37 categories with 1-click blueprint copying.
 
-#### Docker
-
+Run locally:
 ```bash
-docker build -t promptograph .
-docker run -p 8765:8765 promptograph
+promptograph web 8765
 ```
+Or view the static interface on GitHub Pages: [https://4pixeltechBR.github.io/promptograph/](https://4pixeltechBR.github.io/promptograph/)
 
-### 📊 What's inside
+---
 
-| Metric | Value |
-|---|---|
-| Prompts indexed | 20,475 |
-| Curated Skills indexed | 226+ |
-| Skill Categories | 37 domains (Agents, Audio, Video, Quant, Clean Code, etc) |
-| FastMCP Server | Included (stdio transport) |
-| Tokens indexed | ~94,000,000 |
-| Words indexed | 70.5M |
-| Lines indexed | 4.7M |
-| Companies | 40+ (Anthropic, OpenAI, Google, xAI, Meta, Mistral, DeepSeek, Moonshot, Zhipu, Cerebras, NVIDIA) |
-| Source repositories | 55 (GitHub) + 6 (HuggingFace) |
-| Date range | 2022 — 2026 |
-| Index size (JSON) | 4.8 MB (prompts) + ~380 KB (skills) |
-| Backend RAM | ~50 MB |
-| Disk after install | ~1.3GB (with archive) or ~25 MB (standalone) |
+### 📊 Verified Metrics & Breakdown
 
-### 🎯 Use cases
+| Metric | Official Count | Source / Notes |
+|---|---|---|
+| **Indexed System Prompts** | **20,475** | Sourced from 55 public GitHub repos & 6 HuggingFace datasets |
+| **Curated Skills** | **226+** | Operational blueprints with code, guidelines, and tool schemas |
+| **Skill Domains** | **37 categories** | Elite Software, Audio, Video, SRE, Quant, OSINT, Local LPs, etc. |
+| **FastMCP Tools** | **7 tools** | 4 for prompt engineering + 3 for skills dynamic retrieval |
+| **Tokens Indexed** | **~94,000,000** | Full corpus parsed and normalized |
+| **Words Indexed** | **70.5M words** | Real-world production instructions (2022–2026) |
+| **Top AI Labs Represented** | **40+ labs** | OpenAI (7.7k), DeepSeek (6.8k), Anthropic (1.8k), Google, xAI, Meta, Cursor |
+| **Package Size (PyPI Wheel)** | **~679 KB** | Compressed wheel containing prompts index + skills manifest |
+| **Runtime Memory (RAM)** | **~50 MB** | Lightweight Python stdlib execution |
 
-1. **Learn prompt engineering** — read 5,000+ real examples, identify
-   patterns, build intuition
-2. **Equip autonomous AI agents** — stream curated operational skills
-   and prompt blueprints in real time via FastMCP
-3. **Build a custom AI agent** — start from a preset, tweak, validate
-4. **Audit your product's prompt** — paste it, get a score, see what's
-   missing
-5. **Compare models** — diff Claude Fable 5 vs Claude Opus 4.8 to
-   understand what changed
-6. **Security research** — identify prompt patterns vulnerable to
-   injection
-7. **Benchmark / regression test** — track how a prompt evolves over
-   time
+---
 
-### 🛠️ API Reference
+### 🏗️ Architecture & Package Structure
 
 ```
-GET  /api/index                      → All 20,475 indexed prompts (JSON)
-GET  /api/raw?id=<id>                → Full content of one prompt
-GET  /api/stats                      → Counts and totals
-GET  /api/presets/<name>             → Preset spec (claude_coding_agent, etc)
-
-POST /api/diff                       → {left, right} → unified diff
-POST /api/validate                   → {content} → score + checks
-POST /api/generate                   → {spec} → generated prompt
+promptograph/
+├── pyproject.toml                     # Modern PEP 621 packaging (hatchling)
+├── server.py                          # Standalone stdlib HTTP server
+├── scripts/
+│   ├── promptograph_mcp_server.py     # Standalone MCP stdio server
+│   ├── search_promptograph.py         # Standalone CLI search & stats tool
+│   └── test_promptograph_mcp.py       # Comprehensive 7-tool test suite
+├── src/
+│   ├── promptograph/                  # PyPI package core
+│   │   ├── __init__.py                # Version 0.3.2, public API exports
+│   │   ├── cli.py                     # Unified entrypoint (mcp/web/search/stats/validate)
+│   │   ├── mcp_server.py              # Native FastMCP server with resilient imports
+│   │   ├── validator.py               # 13 heuristic rules + 6 red flags
+│   │   ├── builder.py                 # 5 production synthesis presets
+│   │   ├── skills_registry.py         # Dynamic resolver for 226 curated skills
+│   │   ├── data/                      # Embedded indexes (index_filtered.json, skills_manifest.json)
+│   │   └── static/                    # Embedded offline web UI (app.js, index.html)
+│   └── skills/promptograph/           # Backward-compatible import wrappers
+├── data/
+│   ├── index_filtered.json            # Unified dataset of 20,475 production prompts
+│   └── promptograph/
+│       └── skills_manifest.json       # Curated registry of 226 skills in 37 domains
+├── static/                            # Web UI assets (HTML5, Tailwind, Vanilla JS)
+├── CHANGELOG.md                       # Complete release history
+├── LICENSE                            # MIT License
+└── README.md                          # Bilingual documentation
 ```
 
-### 🤝 Contributing
+---
 
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+### 📜 License, Attribution & Ethics
 
-### 📜 License & Ethics
-
-MIT License — see [LICENSE](LICENSE).
-
-**Source prompts attribution** — see [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
-We respect the licenses of the source repositories and use them for
-research, education, and transparency.
-
-**Ethical use** — this tool is for learning, auditing, and building.
-Do not use it to bypass safety measures, attack production systems, or
-violate the Terms of Service of any AI provider.
+* **License:** MIT License — see [LICENSE](LICENSE).
+* **Attributions:** All indexed prompts belong to their respective creators, labs, and open-source curators. See [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
+* **Ethical Boundary:** Promptograph is designed strictly for research, educational transparency, prompt auditability, and empowering legitimate software engineering agents. Do not use it to craft malicious jailbreaks, bypass safety filters, or violate provider Terms of Service.
+* **Maintainer:** [@4pixeltechBR](https://github.com/4pixeltechBR) — 4Pixel Tech.
 
 ---
 
 ## 🇧🇷 Português
 
-### O que é isso?
+### O que é o Promptograph?
 
-**Promptograph** é um toolkit auto-contido para trabalhar com **system
-prompts de IA** — as instruções ocultas que moldam o comportamento de
-modelos como Claude, ChatGPT, Gemini, Grok e outros.
+O **Promptograph** é um toolkit profissional que acaba com o "chutômetro" na engenharia de prompts e equipa agentes de IA com habilidades técnicas operacionais prontas para uso.
 
-Foi construído em cima de **20.475 system prompts** extraídos de 55
-repositórios públicos do GitHub, totalizando mais de **12 milhões de
-tokens** de instruções reais de produção. O objetivo é **democratizar
-a engenharia de prompts** dando a você o mesmo material que os grandes
-laboratórios de IA usam para construir seus produtos, e ferramentas
-para aprender com ele.
+Ele resolve três gargalos fundamentais do ecossistema de inteligência artificial:
+1. **O Fim da Adivinhação:** A maioria dos desenvolvedores interage com modelos como caixas-pretas. O Promptograph entrega uma biblioteca pesquisável com **20.475 system prompts reais de produção** extraídos de 55 repositórios públicos (incluindo Anthropic, OpenAI, Google, Cursor, xAI, Meta, DeepSeek, Perplexity e Cognition).
+2. **Auditoria de Qualidade e Segurança:** Como saber se as instruções do seu assistente são seguras e completas antes de ir para produção? O **validador heurístico determinístico** do Promptograph avalia seu prompt contra 13 boas práticas comprovadas e 6 alertas vermelhos (nota de 0 a 100%, conceitos A+ a F).
+3. **Cinto de Utilidades para Agentes de Código:** Agentes autônomos (Claude Desktop, Cursor, Windsurf, Claude Code, Antigravity) frequentemente têm "amnésia" técnica de domínio. O Promptograph funciona como um **Servidor FastMCP** plugável com **226 skills curadas** em 37 categorias de engenharia que o agente consulta e executa em tempo real.
 
-### 🎯 Por que construímos isso
+---
 
-A maioria dos usuários de IA interage com modelos como caixas-pretas. O
-system prompt — a "constituição" oculta que define a personalidade,
-capacidades, limitações e tools de uma IA — é a peça mais subestimada
-do quebra-cabeça.
+### ⚡ Início Rápido em 10 Segundos
 
-Acreditamos que:
-- **Transparência ajuda todo mundo**: devs aprendem mais rápido,
-  pesquisadores acham vulnerabilidades, usuários fazem escolhas
-  informadas
-- **Padrões importam mais que prompts**: os melhores system prompts
-  compartilham padrões estruturais. Aprender esses padrões vale mais
-  que copiar qualquer prompt individual
-- **Bons prompts são engineered, não escritos**: assim como código,
-  system prompts se beneficiam de validação, teste, comparação e iteração
+O Promptograph está publicado no **PyPI** e pode ser executado com **zero instalação** via `uvx`:
 
-### ✨ O que diferencia o Promptograph
+#### 1. Busca Instantânea via Terminal (Sem clonar repositório)
+```bash
+# Buscar nos 20.475 prompts reais de produção
+uvx promptograph search "claude coding"
 
-Existem outros projetos "prompt lens" / "prompt scope" por aí. Veja o
-que eles fazem — e o que a gente faz que eles não fazem:
+# Validar a qualidade de um prompt contra 13 regras
+uvx promptograph validate "Você é um assistente de código. Seja direto e objetivo."
 
-| Outros projetos | Promptograph |
-|---|---|
-| Hook no Claude Code pra um usuário | **Ferramenta standalone**, qualquer um usa |
-| A/B testing de respostas LLM | **Diff entre system prompts reais** |
-| LLM-como-juiz pra avaliar prompts | **Validação heurística** contra 13 práticas extraídas de prompts de produção |
-| Single-tool (só A, ou só B) | **4 features em uma**: Browse, Diff, Validate, Generate |
-| Requer API keys, npm, pip | **Zero dependências**, roda offline |
-| Só inglês | **Bilíngue** (PT-BR + EN) |
-
-### ✨ Funcionalidades
-
-#### 📚 Browse
-Navegue por 20.475+ system prompts com:
-- Busca full-text (nome do arquivo, modelo, persona)
-- Filtro por empresa (Anthropic, OpenAI, Google, xAI, Perplexity, etc)
-- Ordenação por tamanho, data ou nome
-- Metadata por prompt: modelo, data, persona, tags XML, tools detectadas
-- Preview inline do conteúdo raw
-
-#### 🔀 Diff
-Compare dois prompts lado-a-lado:
-- Diff unified com cores (verde=adicionado, vermelho=removido)
-- Estatísticas em tokens
-- Porcentagem de mudança
-- Até 5.000 linhas de diff
-
-#### ✅ Validate
-Pontue qualquer system prompt (0-100%, nota A+ a F) contra 13 boas
-práticas extraídas dos prompts de produção mais bem-sucedidos:
-- Clareza de identidade (15 pts)
-- Diretrizes de tom (10 pts)
-- Tratamento de recusas (10 pts)
-- Regras de segurança (10 pts)
-- Seção de exemplos (10 pts)
-- Regras de formatação (8 pts)
-- Uso de tools (8 pts)
-- Memória/contexto (6 pts)
-- Knowledge cutoff (5 pts)
-- Tags estruturadas (5 pts)
-- Regras de citação (5 pts)
-- Limites/boundaries (5 pts)
-- Tamanho apropriado (3 pts)
-
-Mais 6 red flags: identidade vaga, vulnerabilidade a jailbreak,
-copyright ausente, contradições de instrução, muito curto, muito longo.
-
-#### ✨ Generate
-Construa um novo system prompt a partir de uma spec, usando 5 presets
-baseados em prompts reais de produção:
-- **Claude Code-style coding agent** (Anthropic)
-- **ChatGPT 5.5-style assistant** (OpenAI)
-- **Cursor-style IDE agent** (Anysphere)
-- **Perplexity-style search engine** (Perplexity AI)
-- **Devin-style autonomous engineer** (Cognition)
-
-Cada preset produz um prompt completo e validado que tira 80%+ no
-validador.
-
-### 🏗️ Arquitetura
-
+# Exibir estatísticas completas e distribuição de laboratórios
+uvx promptograph stats
 ```
-promptograph/
-├── server.py                  # Servidor HTTP Python stdlib
-├── data/
-│   ├── index.json             # 5.491 prompts brutos indexados
-│   └── index_filtered.json    # 20.475 filtrados (READMEs removidos)
-├── generator/
-│   ├── parser.py              # Varre repos, extrai metadata
-│   ├── builder.py             # Constrói prompts a partir de specs
-│   └── refine_index.py        # Filtra arquivos não-prompt
-├── validators/
-│   └── quality.py             # 13 boas práticas + 6 red flags
-├── static/
-│   ├── index.html             # UI
-│   └── app.js                 # Frontend (vanilla JS, sem build)
-├── .github/
-│   └── workflows/
-│       └── ci.yml             # GitHub Actions CI + Pages
-├── bootstrap.sh               # Setup em um comando
-├── publish_to_github.sh       # Script de publish
-├── LICENSE
-├── ATTRIBUTIONS.md
-└── README.md (este arquivo)
+
+#### 2. Iniciar Dashboard Web Local
+```bash
+uvx promptograph web 8765
+# Acesse http://localhost:8765 no seu navegador
 ```
+
+#### 3. Instalação via Pip / UV
+```bash
+pip install promptograph
+# Ou com o uv:
+uv add promptograph
+```
+
+---
 
 ### 🔌 Servidor FastMCP para Agentes de IA
 
-O Promptograph inclui um servidor nativo do **Model Context Protocol (MCP)** construído com `FastMCP`. Conecte-o ao **Claude Desktop**, **Claude Code**, **Cursor**, **Windsurf** ou **Antigravity** para dar aos seus assistentes e agentes acesso em tempo real à sabedoria de 20.475 system prompts de produção e a mais de 226 blueprints operacionais de skills.
+O Promptograph implementa nativamente o **Model Context Protocol (MCP)** usando `FastMCP` sobre `stdio`. Ele conecta instantaneamente ao **Claude Desktop**, **Cursor**, **Windsurf**, **Claude Code** e **Antigravity**.
 
-#### Configuração MCP
-
-Adicione o Promptograph ao arquivo de configuração de MCPs do seu agente (ex: `claude_desktop_config.json`, `.cursor/mcp.json` ou similar):
+#### Configuração MCP Zero-Install (Recomendada)
+Basta adicionar este bloco ao arquivo de configuração MCP do seu aplicativo (`claude_desktop_config.json`, `.cursor/mcp.json`, etc.):
 
 ```json
 {
   "mcpServers": {
     "promptograph": {
-      "command": "python",
-      "args": ["scripts/promptograph_mcp_server.py"]
+      "command": "uvx",
+      "args": ["promptograph"]
     }
   }
 }
 ```
 
-#### Conjunto de Ferramentas MCP
+#### Configuração via Clone Local (Alternativa)
+Se você clonou o repositório localmente:
+```json
+{
+  "mcpServers": {
+    "promptograph": {
+      "command": "python",
+      "args": ["/caminho/para/promptograph/scripts/promptograph_mcp_server.py"]
+    }
+  }
+}
+```
 
-| Ferramenta | Categoria | Descrição |
+---
+
+### 🛠️ As 7 Ferramentas MCP Explicadas
+
+Assim que conectado via MCP, o seu assistente de IA ganha 7 ferramentas nativas:
+
+| Ferramenta | Categoria | Parâmetros | O que ela faz |
+|---|---|---|---|
+| `promptograph_search` | Prompts | `query`, `company`, `model`, `limit` | Busca em 20.475 prompts de produção por empresa, modelo ou palavra-chave |
+| `promptograph_validate` | Qualidade | `content` | Avalia o prompt (0–100%, Nota A+ a F) checando 13 regras estruturais e 6 red flags |
+| `promptograph_generate` | Síntese | `preset_name`, `spec_json` | Gera prompts completos baseados em presets validados (Claude, GPT, Cursor, Devin) |
+| `promptograph_stats` | Métricas | — | Retorna contagens de tokens, distribuição de empresas e modelos do acervo |
+| `promptograph_skills_search` | Skills | `query`, `category`, `limit` | Pesquisa entre 226+ blueprints operacionais em 37 domínios técnicos |
+| `promptograph_skills_get` | Skills | `skill_id` | Recupera o manual executável completo (`SKILL.md`) com códigos para o agente rodar |
+| `promptograph_skills_categories`| Skills | — | Lista todas as 37 categorias técnicas com a quantidade de skills em cada uma |
+
+#### Exemplos de comandos para dar ao seu agente:
+* *"Pesquise no Promptograph como o Claude define regras para escrever código limpo."*
+* *"Valide este system prompt que escrevi antes de eu colocar no bot de atendimento."*
+* *"Busque uma skill de normalização de áudio no Promptograph e aplique o código no meu projeto."*
+
+---
+
+### 🐍 Uso como Biblioteca Python
+
+Você pode importar o Promptograph diretamente no código do seu projeto ou agente Python, sem overhead de servidor:
+
+```python
+from promptograph import (
+    validate_prompt,
+    build_prompt,
+    search_skills,
+    get_skill_blueprint,
+    get_skills_stats,
+    PRESET_TEMPLATES,
+)
+
+# 1. Auditar um prompt de sistema programaticamente
+relatorio = validate_prompt("Você é um tutor de Python. Explique conceitos com exemplos.")
+print(f"Nota: {relatorio['grade']} ({relatorio['score']}%)")
+print(f"Regras aprovadas: {len(relatorio['passed'])}/13")
+
+# 2. Descobrir e carregar skills operacionais
+resultados = search_skills(query="clean-code")
+if resultados:
+    skill = get_skill_blueprint(resultados[0]["id"])
+    print(f"Skill carregada: {skill['name']} [{skill['category']}]")
+    print(skill["blueprint"][:400])  # Markdown com instruções e código executável
+
+# 3. Gerar prompt profissional a partir de presets
+spec_preset = PRESET_TEMPLATES["claude_coding_agent"]["spec"]
+prompt_gerado = build_prompt(spec_preset)
+print(prompt_gerado[:300])
+```
+
+---
+
+### 💻 Interface de Linha de Comando (CLI)
+
+```bash
+# Execução padrão inicia o servidor MCP stdio (usado pelo uvx)
+promptograph
+
+# Modo explícito de servidor FastMCP
+promptograph mcp
+
+# Inicia a interface web offline zero-dependency
+promptograph web 8765
+
+# Busca rápida de texto em 20.475 prompts
+promptograph search "system prompt cursor"
+
+# Validação rápida de um texto de prompt
+promptograph validate "Você é um assistente de suporte. Responda educadamente."
+
+# Exibe estatísticas globais do acervo
+promptograph stats
+```
+
+---
+
+### 🌐 Dashboard Web Offline
+
+O Promptograph inclui uma interface gráfica local completa em HTML5/JS puro e Python stdlib:
+* **Explorador de Prompts:** Busca instantânea, filtros por lab e visualização de tokens e personas.
+* **Diff Comparativo Lado a Lado:** Comparador visual com destaque de alterações (verde/vermelho) entre versões de prompts.
+* **Laboratório de Auditoria Heurística:** Avaliação interativa em tempo real com sugestões práticas de correção.
+* **Catálogo Visual de Skills MCP:** Navegação pelas 226 skills em 37 categorias com cópia de blueprints em 1 clique.
+
+Para rodar localmente:
+```bash
+promptograph web 8765
+```
+Ou acesse a versão online no GitHub Pages: [https://4pixeltechBR.github.io/promptograph/](https://4pixeltechBR.github.io/promptograph/)
+
+---
+
+### 📊 Estatísticas Oficiais & Distribuição
+
+| Métrica | Contagem Oficial | Detalhes |
 |---|---|---|
-| `promptograph_search` | Prompts | Busca em 20.475 prompts reais por empresa, modelo ou texto |
-| `promptograph_validate` | Prompts | Pontua qualquer prompt (0-100%, Nota A+ a F) com 13 regras heurísticas |
-| `promptograph_generate` | Prompts | Gera prompts testados usando presets (Claude, GPT, Cursor, Devin) |
-| `promptograph_stats` | Prompts | Métricas de tokens, distribuição de empresas e modelos |
-| `promptograph_skills_search` | Skills | Descobre 226+ skills curadas distribuídas em 37 domínios de engenharia |
-| `promptograph_skills_get` | Skills | Recupera o blueprint operacional executável (`SKILL.md`) de qualquer skill |
-| `promptograph_skills_categories`| Skills | Relatório completo de categorias disponíveis e contagens |
+| **Prompts Indexados** | **20.475** | Extraídos de 55 repositórios GitHub e 6 datasets do HuggingFace |
+| **Skills Curadas** | **226+** | Blueprints operacionais com código executável e diretrizes |
+| **Categorias de Skills** | **37 domínios** | Engenharia de Software, Áudio, Vídeo, SRE, Quant, OSINT, LPs, etc. |
+| **Ferramentas FastMCP** | **7 ferramentas** | 4 dedicadas a prompts + 3 dedicadas a skills de agentes |
+| **Tokens Indexados** | **~94.000.000** | Corpus completo auditado e normalizado |
+| **Palavras Indexadas** | **70,5M palavras** | Instruções de produção reais de 2022 a 2026 |
+| **Principais Laboratórios** | **40+ empresas** | OpenAI (7.7k), DeepSeek (6.8k), Anthropic (1.8k), Google, xAI, Meta, Cursor |
+| **Tamanho do Pacote (Wheel PyPI)** | **~679 KB** | Pacote comprimido contendo índice e manifesto de skills |
+| **Consumo de Memória (RAM)** | **~50 MB** | Execução leve em Python padrão sem dependências pesadas |
 
 ---
 
-### 🚀 Quick Start
-
-#### Local (Python)
-
-```bash
-git clone https://github.com/4pixeltechBR/promptograph.git
-cd promptograph
-./bootstrap.sh        # Constrói o índice (uma vez, ~2 min)
-python3 server.py 8765
-```
-
-Abra `http://localhost:8765` no navegador.
-
-#### GitHub Pages (só UI, sem backend)
-
-A UI estática está em `static/`. Quando você ativar GitHub Pages no seu
-fork, a UI fica em `https://4pixeltechBR.github.io/promptograph/`. As
-chamadas de API vão falhar a menos que você faça deploy do backend
-(Docker abaixo).
-
-#### Docker
-
-```bash
-docker build -t promptograph .
-docker run -p 8765:8765 promptograph
-```
-
-### 📊 O que tem dentro
-
-| Métrica | Valor |
-|---|---|
-| Prompts indexados | 20.475 |
-| Skills Curadas indexadas | 226+ |
-| Categorias de Skills | 37 domínios (Agentes, Áudio, Vídeo, Quant, Clean Code, etc) |
-| Servidor FastMCP | Incluso (transporte stdio nativo) |
-| Tokens indexados | ~94.000.000 |
-| Palavras indexadas | 70,5M |
-| Empresas | 40+ (Anthropic, OpenAI, Google, xAI, Meta, Mistral, DeepSeek, Moonshot, Zhipu, Cerebras, NVIDIA) |
-| Repositórios fonte | 55 (GitHub) + 6 (HuggingFace) |
-| Período | 2022 — 2026 |
-| Tamanho do índice (JSON) | 4,8 MB (prompts) + ~380 KB (skills) |
-| RAM do backend | ~50 MB |
-| Disco após instalação | ~1,3 GB (com archive) ou ~25 MB (standalone) |
-
-### 🎯 Casos de uso
-
-1. **Aprender engenharia de prompts** — leia 5.000+ exemplos reais,
-   identifique padrões, construa intuição
-2. **Equipar agentes autônomos de IA** — injete skills operacionais e
-   blueprints prontas em tempo real via FastMCP sem inchar o contexto
-3. **Construir um agente de IA customizado** — comece de um preset,
-   ajuste, valide
-4. **Auditar o prompt do seu produto** — cole, receba um score, veja o
-   que falta
-5. **Comparar modelos** — faça diff entre Claude Fable 5 e Claude
-   Opus 4.8 pra entender o que mudou
-6. **Pesquisa de segurança** — identifique padrões de prompt
-   vulneráveis a injeção
-7. **Benchmark / regression test** — acompanhe como um prompt evolui
-   com o tempo
-
-### 🛠️ Referência da API
+### 🏗️ Arquitetura do Pacote
 
 ```
-GET  /api/index                      → Todos os 20.475 prompts indexados (JSON)
-GET  /api/raw?id=<id>                → Conteúdo completo de um prompt
-GET  /api/stats                      → Contagens e totais
-GET  /api/presets/<nome>             → Spec de um preset
-
-POST /api/diff                       → {left, right} → diff unified
-POST /api/validate                   → {content} → score + checks
-POST /api/generate                   → {spec} → prompt gerado
+promptograph/
+├── pyproject.toml                     # Configuração de build moderna PEP 621 (hatchling)
+├── server.py                          # Servidor HTTP standalone Python stdlib
+├── scripts/
+│   ├── promptograph_mcp_server.py     # Servidor FastMCP standalone
+│   ├── search_promptograph.py         # CLI standalone de busca e estatísticas
+│   └── test_promptograph_mcp.py       # Suíte completa de testes das 7 ferramentas
+├── src/
+│   ├── promptograph/                  # Núcleo do pacote PyPI
+│   │   ├── __init__.py                # Versão 0.3.2 e exports da API pública
+│   │   ├── cli.py                     # Entrypoint unificado (mcp/web/search/stats/validate)
+│   │   ├── mcp_server.py              # Servidor FastMCP com importações resilientes
+│   │   ├── validator.py               # 13 regras heurísticas + 6 red flags
+│   │   ├── builder.py                 # 5 presets de produção
+│   │   ├── skills_registry.py         # Registro e busca das 226 skills curadas
+│   │   ├── data/                      # Índices embutidos (index_filtered.json, skills_manifest.json)
+│   │   └── static/                    # UI web embutida (app.js, index.html)
+│   └── skills/promptograph/           # Wrappers de retrocompatibilidade
+├── data/
+│   ├── index_filtered.json            # Dataset unificado de 20.475 prompts reais
+│   └── promptograph/
+│       └── skills_manifest.json       # Manifesto curado de 226 skills em 37 domínios
+├── static/                            # Arquivos do frontend (HTML5, Tailwind, Vanilla JS)
+├── CHANGELOG.md                       # Histórico completo de releases
+├── LICENSE                            # Licença MIT
+└── README.md                          # Documentação bilíngue oficial
 ```
-
-### 🤝 Contribuindo
-
-Contribuições são bem-vindas! Veja [CONTRIBUTING.md](CONTRIBUTING.md)
-para diretrizes.
-
-### 📜 Licença e Ética
-
-MIT License — veja [LICENSE](LICENSE).
-
-**Atribuição dos prompts fonte** — veja [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
-Respeitamos as licenças dos repositórios fonte e os usamos para
-pesquisa, educação e transparência.
-
-**Uso ético** — esta ferramenta é para aprender, auditar e construir.
-Não use para burlar medidas de segurança, atacar sistemas de produção
-ou violar os Termos de Serviço de qualquer provedor de IA.
 
 ---
 
-## 🤝 Créditos
+### 📜 Licença, Atribuição e Ética
 
-Construído por **Mavis (MiniMax Agent)** com base no trabalho de dezenas
-de mantenedores de repositórios open source. Veja [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
-
-**Maintainer:** [@4pixeltechBR](https://github.com/4pixeltechBR)
-
-## 📜 License
-
-MIT © 2026
+* **Licença:** MIT License — veja [LICENSE](LICENSE).
+* **Atribuição:** Todos os prompts indexados pertencem aos seus respectivos autores, laboratórios e curadores da comunidade open source. Veja [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
+* **Uso Ético:** O Promptograph foi concebido para pesquisa, transparência, educação técnica e expansão legítima de agentes autônomos de engenharia. É expressamente proibido usá-lo para desenhar ataques maliciosos, contornar travas de segurança ou violar Termos de Serviço de provedores de IA.
+* **Maintainer:** [@4pixeltechBR](https://github.com/4pixeltechBR) — 4Pixel Tech.
